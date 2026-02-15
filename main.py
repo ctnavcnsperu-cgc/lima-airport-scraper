@@ -87,6 +87,13 @@ def setup_google_sheet():
         sh = gc.create(SHEET_NAME)
         if folder_id:
             drive_service.files().update(fileId=sh.id, addParents=folder_id, removeParents='root').execute()
+        
+        # 🔑 COMPARTIR CON EL USUARIO (Para que aparezca en tu Drive)
+        try:
+            sh.share('ctnavcnsperu@gmail.com', perm_type='user', role='writer')
+            print("👤 Hoja compartida con ctnavcnsperu@gmail.com")
+        except Exception as e:
+            print(f"⚠️ No se pudo compartir la hoja: {e}")
 
     try:
         worksheet = sh.worksheet(WORKSHEET_NAME)
