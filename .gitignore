@@ -1,0 +1,15 @@
+# Credenciales y archivos sensibles
+*.json
+cuenta.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+vwen/
+env/
+.env
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+gspread
+pandas
+requests==2.32.4
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+beautifulsoup4
+selenium
+webdriver-manager
