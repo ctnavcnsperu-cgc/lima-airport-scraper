@@ -10,12 +10,12 @@ GitHub ofrece servidores gratuitos (runners) para ejecutar scripts de Python de 
 
 ## 🛠️ Pasos para Implementar GitHub Actions
 
-1. **Configuración en Google Cloud (Paso a Paso)**:
+1. **Configuración en Google Cloud (CRÍTICO)**:
    - **Consola**: Entra a [console.cloud.google.com](https://console.cloud.google.com/).
    - **Proyecto**: Haz clic en el selector de proyectos (arriba a la izquierda) > **PROYECTO NUEVO**. Nombre sugerido: `Lima Airport Scraper`.
-   - **APIs**: Busca y haz clic en **HABILITAR** para:
-     - `Google Sheets API`
-     - `Google Drive API`
+   - **Habilitar APIs (Sin esto el robot fallará)**: Busca y haz clic en **HABILITAR** para estas DOS librerías:
+     1. `Google Sheets API` (Para escribir los datos).
+     2. `Google Drive API` (Para buscar carpetas, crear archivos y compartirlos contigo). **<-- ¡Asegúrate de que ambas estén activas!**
    - **Cuenta de Servicio (El Robot)**: 
      - Ve a `IAM y administración` > `Cuentas de servicio`.
      - `+ CREAR CUENTA DE SERVICIO`. Nombre: `scraper-bot`.
@@ -26,8 +26,12 @@ GitHub ofrece servidores gratuitos (runners) para ejecutar scripts de Python de 
      - Pestaña `CLAVES` > `AGREGAR CLAVE` > `Crear clave nueva`.
      - Selecciona `JSON` y dale a **CREAR**. (Se descargará el archivo llave).
    - **Email del Robot**: Copia el email largo que termina en `gserviceaccount.com`.
-2. **Permisos en la Hoja**:
-   - Compartir tu Google Sheet con la dirección del "robot" (email de la cuenta de servicio): scraper-bot@lima-airport-scraper.iam.gserviceaccount.com
+
+2. **Permisos en la Carpeta (Para que guarde los archivos donde quieres)**:
+   - Ve a tu Google Drive y busca la carpeta `"LIMA AIRPORT"`.
+   - Haz clic derecho > **Compartir**.
+   - Agrega el "Email del Robot" (ej: `scraper-bot@...gserviceaccount.com`) como **EDITOR**. 
+   - De esta forma, cada vez que el robot cree la hoja de datos, aparecerá automáticamente dentro de tu carpeta.
 
 3. **Repositorio en GitHub (Configuración de Seguridad)**:
    - **Crear Repositorio**: 
