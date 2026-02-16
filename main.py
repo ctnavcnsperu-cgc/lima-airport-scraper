@@ -221,12 +221,15 @@ def scan_for_cancelled_flights():
             # Debug mejorado: Ver toda la fila para entender la estructura
             print(f"DEBUG ROW: {texts}")
             
-            # Buscar específicamente la palabra "CANCELADO" en el estado
-            estado = texts[-1].upper().strip()
+            # Unir toda la fila para buscar la palabra clave sin importar la columna
+            fila_texto_completa = " ".join(texts).upper()
             
+            # Buscar palabra clave en toda la fila
+            if "LLAMADA" not in fila_texto_completa:
+                continue
             
-            if "CONFIRMADO" not in estado:
-                continue  # Saltar si no está cancelado
+            # Estado es probablemente la penúltima o última columna con texto
+            estado = texts[-2] if texts[-1].strip() == "" else texts[-1]
             
             # Extraer horarios
             h_prog, h_real = "", ""
