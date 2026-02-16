@@ -1,9 +1,8 @@
 name: Lima Airport Flight Scraper
 
 on:
-  schedule:
-    # Corre cada 20 minutos de 9 AM a 6 PM hora Lima (14:00 a 23:00 UTC)
-    - cron: '*/20 14-23 * * *'
+  # schedule:
+  #   - cron: '*/20 14-23 * * *'
   workflow_dispatch:
     # Permite ejecución manual
 
