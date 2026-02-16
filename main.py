@@ -218,14 +218,11 @@ def scan_for_cancelled_flights():
             if not texts or len(texts) < 2:
                 continue
             
-            # Debug mejorado: Ver toda la fila para entender la estructura
-            print(f"DEBUG ROW: {texts}")
-            
             # Unir toda la fila para buscar la palabra clave sin importar la columna
             fila_texto_completa = " ".join(texts).upper()
             
             # Buscar palabra clave en toda la fila
-            if "LLAMADA" not in fila_texto_completa:
+            if "CANCELADO" not in fila_texto_completa:
                 continue
             
             # Estado es probablemente la penúltima o última columna con texto
