@@ -218,9 +218,11 @@ def scan_for_cancelled_flights():
             if not texts or len(texts) < 2:
                 continue
             
+            # Debug mejorado: Ver toda la fila para entender la estructura
+            print(f"DEBUG ROW: {texts}")
+            
             # Buscar específicamente la palabra "CANCELADO" en el estado
             estado = texts[-1].upper().strip()
-            print(f"DEBUG: Vuelo a {texts[1]} tiene estado -> '{estado}'")
             
             
             if "CONFIRMADO" not in estado:
