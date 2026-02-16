@@ -221,7 +221,7 @@ def scan_for_cancelled_flights():
             # Buscar específicamente la palabra "CANCELADO" en el estado
             estado = texts[-1].upper().strip()
             
-            if "CANCELADO" not in estado:
+            if "CONFIRMADO" not in estado:
                 continue  # Saltar si no está cancelado
             
             # Extraer horarios
