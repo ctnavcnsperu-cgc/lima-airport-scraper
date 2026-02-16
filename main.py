@@ -1,17 +1,13 @@
 # ==============================================================================
-# PROYECTO: LIMA AIRPORT FLIGHT DATA SCRAPER - GITHUB ACTIONS VERSION
+# PROYECTO: LIMA AIRPORT CANCELATION ALERTS - TELEGRAM BOT
 # ==============================================================================
 
-import gspread
-import pandas as pd
-import requests
-import time
 import os
 import re
+import time
 import json
+import requests
 from datetime import datetime, timedelta, timezone
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -21,44 +17,133 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
 # ------------------------------------------------------------------------------
-# 1. CONFIGURACIÓN DE AUTENTICACIÓN (GITHUB SECRETS)
+# 1. CONFIGURACIÓN DE TELEGRAM BOT
 # ------------------------------------------------------------------------------
-print("🔐 Iniciando autenticación mediante GitHub Secrets...")
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+SUBSCRIBERS_FILE = 'suscriptores.txt'
+SENT_ALERTS_FILE = 'alertas_enviadas.txt'
 
-def get_google_creds():
-    # Buscamos la llave en las variables de entorno de GitHub
-    service_account_info = os.environ.get('GCP_SERVICE_ACCOUNT_KEY')
-    
-    if not service_account_info:
-        raise Exception("❌ ERROR: No se encontró la variable 'GCP_SERVICE_ACCOUNT_KEY' en los Secrets de GitHub.")
-    
-    # Cargamos el JSON desde el string guardado en el Secret
-    info = json.loads(service_account_info)
-    
-    scopes = [
-        'https://www.googleapis.com/auth/spreadsheets',
-        'https://www.googleapis.com/auth/drive'
-    ]
-    
-    creds = service_account.Credentials.from_service_account_info(info, scopes=scopes)
-    return creds
-
-# Inicialización de clientes
-try:
-    creds = get_google_creds()
-    gc = gspread.authorize(creds)
-    drive_service = build('drive', 'v3', credentials=creds)
-except Exception as e:
-    print(f"❌ Error en autenticación: {e}")
+if not TELEGRAM_BOT_TOKEN:
+    print("❌ ERROR: Variable TELEGRAM_BOT_TOKEN no encontrada en Secrets")
     exit(1)
 
-# ------------------------------------------------------------------------------
-# 2. CONFIGURACIÓN DE INFRAESTRUCTURA
-# ------------------------------------------------------------------------------
-SHEET_NAME = "Lima Airport Data"
-WORKSHEET_NAME = "Data"
+TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
 
-# DICCIONARIO MAESTRO DE DESTINOS (PERÚ) - SIN TILDES Y EN MAYÚSCULAS
+# ------------------------------------------------------------------------------
+# 2. FUNCIONES DE TELEGRAM
+# ------------------------------------------------------------------------------
+
+def get_subscribers():
+    """Lee la lista de usuarios suscritos"""
+    if not os.path.exists(SUBSCRIBERS_FILE):
+        return []
+    with open(SUBSCRIBERS_FILE, 'r') as f:
+        return [line.strip() for line in f.readlines() if line.strip()]
+
+def add_subscriber(chat_id):
+    """Agrega un nuevo suscriptor"""
+    subscribers = get_subscribers()
+    if str(chat_id) not in subscribers:
+        with open(SUBSCRIBERS_FILE, 'a') as f:
+            f.write(f"{chat_id}\n")
+        return True
+    return False
+
+def remove_subscriber(chat_id):
+    """Elimina un suscriptor"""
+    subscribers = get_subscribers()
+    if str(chat_id) in subscribers:
+        subscribers.remove(str(chat_id))
+        with open(SUBSCRIBERS_FILE, 'w') as f:
+            f.write('\n'.join(subscribers) + '\n')
+        return True
+    return False
+
+def send_telegram_message(chat_id, text):
+    """Envía un mensaje de Telegram a un chat específico"""
+    try:
+        url = f"{TELEGRAM_API_URL}/sendMessage"
+        data = {
+            "chat_id": chat_id,
+            "text": text,
+            "parse_mode": "HTML"
+        }
+        response = requests.post(url, data=data, timeout=10)
+        return response.json().get('ok', False)
+    except Exception as e:
+        print(f"⚠️ Error enviando mensaje a {chat_id}: {e}")
+        return False
+
+def process_telegram_updates():
+    """Procesa mensajes nuevos de usuarios (suscripciones)"""
+    try:
+        url = f"{TELEGRAM_API_URL}/getUpdates"
+        response = requests.get(url, timeout=10)
+        data = response.json()
+        
+        if not data.get('ok'):
+            return
+        
+        for update in data.get('result', []):
+            message = update.get('message', {})
+            chat_id = message.get('chat', {}).get('id')
+            text = message.get('text', '').lower().strip()
+            
+            if not chat_id:
+                continue
+            
+            if text == '/start':
+                if add_subscriber(chat_id):
+                    send_telegram_message(
+                        chat_id,
+                        "✅ <b>Suscripción activada</b>\n\n"
+                        "Recibirás alertas automáticas cuando se detecten vuelos cancelados "
+                        "en el Aeropuerto de Lima.\n\n"
+                        "Comandos disponibles:\n"
+                        "/start - Suscribirse a alertas\n"
+                        "/stop - Cancelar suscripción"
+                    )
+                else:
+                    send_telegram_message(chat_id, "ℹ️ Ya estabas suscrito a las alertas.")
+            
+            elif text == '/stop':
+                if remove_subscriber(chat_id):
+                    send_telegram_message(
+                        chat_id,
+                        "🔕 <b>Suscripción cancelada</b>\n\n"
+                        "Ya no recibirás alertas. Escribe /start para volver a suscribirte."
+                    )
+                else:
+                    send_telegram_message(chat_id, "ℹ️ No estabas suscrito.")
+        
+        # Limpiar updates procesados
+        if data.get('result'):
+            last_update_id = data['result'][-1]['update_id']
+            requests.get(f"{TELEGRAM_API_URL}/getUpdates?offset={last_update_id + 1}", timeout=5)
+    
+    except Exception as e:
+        print(f"⚠️ Error procesando updates de Telegram: {e}")
+
+# ------------------------------------------------------------------------------
+# 3. SISTEMA DE MEMORIA DE ALERTAS
+# ------------------------------------------------------------------------------
+
+def get_sent_alerts():
+    """Lee las alertas ya enviadas"""
+    if not os.path.exists(SENT_ALERTS_FILE):
+        return set()
+    with open(SENT_ALERTS_FILE, 'r') as f:
+        return set(line.strip() for line in f.readlines())
+
+def mark_alert_as_sent(flight_key):
+    """Marca una alerta como enviada"""
+    with open(SENT_ALERTS_FILE, 'a') as f:
+        f.write(f"{flight_key}\n")
+
+# ------------------------------------------------------------------------------
+# 4. FUNCIONES DE SCRAPING
+# ------------------------------------------------------------------------------
+
 DESTINOS_PERU = [
     "AREQUIPA", "AYACUCHO", "CAJAMARCA", "CHACHAPOYAS", "CHICLAYO", "CUSCO", 
     "HUANUCO", "ANTA - HUARAZ", "IQUITOS", "JAUJA", "JAEN", 
@@ -67,59 +152,8 @@ DESTINOS_PERU = [
     "TINGO MARIA", "ANDAHUAYLAS", "NUEVO MUNDO"
 ]
 
-def setup_google_sheet():
-    print("🔍 Buscando carpeta y hoja en Google Drive...")
-    
-    # Buscar carpeta 'lima airport'
-    q_folder = "(name = 'lima airport' or name = 'LIMA AIRPORT') and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
-    folders = drive_service.files().list(q=q_folder, fields='files(id)').execute().get('files', [])
-    folder_id = folders[0]['id'] if folders else None
-
-    # Buscar la hoja de cálculo
-    q_sheet = f"name = '{SHEET_NAME}' and mimeType = 'application/vnd.google-apps.spreadsheet' and trashed = false"
-    sheets = drive_service.files().list(q=q_sheet, fields='files(id)').execute().get('files', [])
-    
-    if sheets:
-        sh = gc.open_by_key(sheets[0]['id'])
-        print(f"✅ Hoja encontrada: {SHEET_NAME}")
-    else:
-        print(f"📝 Creando nueva hoja: {SHEET_NAME}")
-        sh = gc.create(SHEET_NAME)
-        if folder_id:
-            drive_service.files().update(fileId=sh.id, addParents=folder_id, removeParents='root').execute()
-        
-        # 🔑 COMPARTIR CON EL USUARIO (Para que aparezca en tu Drive)
-        try:
-            sh.share('ctnavcnsperu@gmail.com', perm_type='user', role='writer')
-            print("👤 Hoja compartida con ctnavcnsperu@gmail.com")
-        except Exception as e:
-            print(f"⚠️ No se pudo compartir la hoja: {e}")
-
-    try:
-        worksheet = sh.worksheet(WORKSHEET_NAME)
-    except:
-        print(f"📝 Creando pestaña específica: {WORKSHEET_NAME}")
-        worksheet = sh.add_worksheet(title=WORKSHEET_NAME, rows="2000", cols="15")
-        try: sh.del_worksheet(sh.worksheet('Sheet1'))
-        except: pass
-
-    # Encabezados
-    headers = ["Fecha", "Hora Prog.", "Nueva Hora", "Destino", "Vuelo", "Aerolínea", "Puerta", "Check-in", "Estado", "Última Actualización"]
-    worksheet.clear()
-    worksheet.append_row(headers)
-    
-    # Formato de cabecera (Azul oscuro, Texto blanco negrita)
-    worksheet.format("A1:J1", {
-        "backgroundColor": {"red": 0.0, "green": 0.1, "blue": 0.3}, 
-        "textFormat": {"foregroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}, "bold": True}
-    })
-    worksheet.freeze(rows=1)
-    return worksheet
-
-# ------------------------------------------------------------------------------
-# 3. FUNCIONES DE SCRAPING
-# ------------------------------------------------------------------------------
 def clean_destination_and_flight(text):
+    """Extrae destino y número de vuelo del texto combinado"""
     text = text.upper().strip()
     text = text.replace("HOMOLOGADO", " ").strip()
     text = re.sub(r'\s+', ' ', text)
@@ -146,102 +180,174 @@ def clean_destination_and_flight(text):
 
     return found_dest, found_flight
 
-def get_flight_data(vuelo_tipo="salidas"):
-    print(f"📡 Iniciando extracción de {vuelo_tipo.upper()}...")
+def scan_for_cancelled_flights():
+    """Escanea la web en busca de vuelos cancelados"""
+    print("📡 Iniciando escaneo de vuelos cancelados...")
     
     chrome_options = Options()
-    chrome_options.add_argument('--headless') # Requerido para servidores
+    chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
-    chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36')
+    chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    
+    cancelled_flights = []
     
     try:
-        # Usamos service y webdriver-manager para asegurar la compatibilidad en GitHub
         service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=chrome_options)
         
-        url = f"https://www.lima-airport.com/pasajeros/vuelos?adi={'departures' if vuelo_tipo == 'salidas' else 'arrivals'}"
+        url = "https://www.lima-airport.com/pasajeros/vuelos?adi=departures"
         driver.get(url)
         
         wait = WebDriverWait(driver, 60)
         wait.until(EC.presence_of_element_located((By.XPATH, "//tr[td]")))
         
-        # Scroll para cargar contenido dinámico
-        for _ in range(8):
+        # Scroll optimizado (solo 3 veces para reducir tiempo)
+        for _ in range(3):
             driver.execute_script("window.scrollBy(0, 1000);")
-            time.sleep(3)
+            time.sleep(2)
         
         rows = driver.find_elements(By.XPATH, "//tr[td]")
-        flights_list = []
-        peru_now = datetime.now(timezone(timedelta(hours=-5))) # Hora Perú
-        now_str = peru_now.strftime("%H:%M:%S")
+        peru_now = datetime.now(timezone(timedelta(hours=-5)))
         fecha_today = peru_now.strftime("%d/%m/%Y")
-
+        
         for row in rows:
             cells = row.find_elements(By.TAG_NAME, "td")
             texts = [c.get_attribute("textContent").strip() for c in cells]
-            if not texts or len(texts) < 2: continue
-
+            
+            if not texts or len(texts) < 2:
+                continue
+            
+            # Buscar específicamente la palabra "CANCELADO" en el estado
+            estado = texts[-1].upper().strip()
+            
+            if "CANCELADO" not in estado:
+                continue  # Saltar si no está cancelado
+            
+            # Extraer horarios
             h_prog, h_real = "", ""
             time_text = texts[0].replace("N/A", "").strip()
-            if len(time_text) >= 10: 
+            if len(time_text) >= 10:
                 h_prog, h_real = time_text[:5], time_text[5:10]
             elif len(time_text) >= 5:
                 h_prog = time_text[:5]
-            else:
-                h_prog = time_text if time_text else ""
-
+            
+            # Extraer otros datos
             num_cols = len(texts)
-            check_in, puerta, estado = "", "", ""
+            check_in, puerta = "", ""
             
             if num_cols >= 6:
-                estado = texts[-1]
                 puerta = texts[-2]
                 check_in = texts[-3]
-                
-                if num_cols >= 7:
-                    raw_dest_vuelo = f"{texts[1]} {texts[2]}"
-                else:
-                    raw_dest_vuelo = texts[1]
+                raw_dest_vuelo = f"{texts[1]} {texts[2]}" if num_cols >= 7 else texts[1]
             else:
                 raw_dest_vuelo = texts[1]
-                estado = texts[2] if num_cols > 2 else ""
-
+            
             destino, vuelo = clean_destination_and_flight(raw_dest_vuelo)
-
+            
+            # Extraer aerolínea
             airline = "AEROLÍNEA"
             try:
                 img = row.find_element(By.TAG_NAME, "img")
                 airline = img.get_attribute("title") or img.get_attribute("alt") or airline
-            except: pass
-
-            data_row = [fecha_today, h_prog, h_real, destino, vuelo, airline, puerta, check_in, estado, now_str]
-            if vuelo != "": flights_list.append(data_row)
-
+            except:
+                pass
+            
+            cancelled_flights.append({
+                'fecha': fecha_today,
+                'hora_prog': h_prog,
+                'hora_real': h_real,
+                'destino': destino,
+                'vuelo': vuelo,
+                'aerolinea': airline,
+                'puerta': puerta,
+                'checkin': check_in,
+                'estado': estado
+            })
+        
         driver.quit()
-        print(f"📊 Total vuelos extraídos: {len(flights_list)}")
-        return flights_list
+        print(f"🔍 Vuelos cancelados encontrados: {len(cancelled_flights)}")
+        return cancelled_flights
+    
     except Exception as e:
-        print(f"❌ Error durante el scraping: {e}")
-        if 'driver' in locals(): driver.quit()
+        print(f"❌ Error durante el escaneo: {e}")
+        if 'driver' in locals():
+            driver.quit()
         return []
 
-def sync_to_sheets(ws, data):
-    if not data: return
-    print(f"♻️ Sincronizando {len(data)} filas con Google Sheets...")
-    # Limpiamos datos antiguos (excepto cabecera)
-    try: ws.delete_rows(2, 3000)
-    except: pass
-    ws.append_rows(data, value_input_option="USER_ENTERED")
-    print("✨ ¡Sincronización completada!")
+# ------------------------------------------------------------------------------
+# 5. SISTEMA DE ALERTAS
+# ------------------------------------------------------------------------------
+
+def send_cancellation_alerts(cancelled_flights):
+    """Envía alertas de vuelos cancelados a todos los suscriptores"""
+    if not cancelled_flights:
+        print("✅ No hay vuelos cancelados para alertar.")
+        return
+    
+    subscribers = get_subscribers()
+    
+    if not subscribers:
+        print("ℹ️ No hay suscriptores registrados.")
+        return
+    
+    sent_alerts = get_sent_alerts()
+    
+    for flight in cancelled_flights:
+        # Crear identificador único del vuelo
+        flight_key = f"{flight['fecha']}_{flight['vuelo']}_{flight['destino']}"
+        
+        # Verificar si ya se envió esta alerta
+        if flight_key in sent_alerts:
+            print(f"⏭️ Alerta ya enviada para: {flight['vuelo']} - {flight['destino']}")
+            continue
+        
+        # Construir mensaje
+        message = (
+            f"🚨 <b>VUELO CANCELADO</b>\n\n"
+            f"📅 <b>Fecha:</b> {flight['fecha']}\n"
+            f"✈️ <b>Vuelo:</b> {flight['vuelo']}\n"
+            f"🌍 <b>Destino:</b> {flight['destino']}\n"
+            f"🏢 <b>Aerolínea:</b> {flight['aerolinea']}\n"
+            f"🕐 <b>Hora Prog.:</b> {flight['hora_prog']}\n"
+        )
+        
+        if flight['hora_real']:
+            message += f"🕑 <b>Nueva Hora:</b> {flight['hora_real']}\n"
+        if flight['puerta']:
+            message += f"🚪 <b>Puerta:</b> {flight['puerta']}\n"
+        if flight['checkin']:
+            message += f"🎫 <b>Check-in:</b> {flight['checkin']}\n"
+        
+        message += f"\n❌ <b>Estado:</b> {flight['estado']}"
+        
+        # Enviar a todos los suscriptores
+        for chat_id in subscribers:
+            send_telegram_message(chat_id, message)
+        
+        # Marcar como enviada
+        mark_alert_as_sent(flight_key)
+        print(f"✉️ Alerta enviada: {flight['vuelo']} - {flight['destino']}")
 
 # ------------------------------------------------------------------------------
-# 4. EJECUCIÓN PRINCIPAL
+# 6. EJECUCIÓN PRINCIPAL
 # ------------------------------------------------------------------------------
+
 if __name__ == "__main__":
     try:
-        ws_data = setup_google_sheet()
-        data_vuelos = get_flight_data("salidas")
-        sync_to_sheets(ws_data, data_vuelos)
+        print("🤖 Lima Airport Alert Bot - Iniciando...")
+        
+        # Procesar suscripciones nuevas
+        print("📨 Procesando comandos de usuarios...")
+        process_telegram_updates()
+        
+        # Escanear vuelos cancelados
+        cancelled_flights = scan_for_cancelled_flights()
+        
+        # Enviar alertas
+        send_cancellation_alerts(cancelled_flights)
+        
+        print("✨ Proceso completado con éxito.")
+    
     except Exception as e:
         print(f"\n⚠️ El proceso falló: {e}")
