@@ -152,6 +152,71 @@ DESTINOS_PERU = [
     "TINGO MARIA", "ANDAHUAYLAS", "NUEVO MUNDO"
 ]
 
+AEROLINEAS = {
+    "LA": "LATAM Airlines",
+    "H2": "Sky Airline",
+    "SKY": "Sky Airline", # A veces aparece como SKY
+    "CC": "LATAM Airlines", # Codigo secundario
+    "LP": "LATAM Airlines Peru",
+    "XL": "LATAM Airlines Ecuador",
+    "4C": "LATAM Airlines Colombia",
+    "AV": "Avianca",
+    "A0": "Avianca Peru",
+    "2K": "Avianca Ecuador",
+    "CM": "Copa Airlines",
+    "AA": "American Airlines",
+    "DL": "Delta Air Lines",
+    "UA": "United Airlines",
+    "AC": "Air Canada",
+    "AM": "Aeroméxico",
+    "IB": "Iberia",
+    "UX": "Air Europa",
+    "AF": "Air France",
+    "KL": "KLM",
+    "AR": "Aerolíneas Argentinas",
+    "JA": "JetSmart",
+    "JZ": "JetSmart",
+    "VV": "Viva Air",
+    "P9": "Peruvian Airlines", # Historico
+    "2I": "Star Peru",
+    "L5": "Atlas Air", # Carga
+    "M0": "Aero Mongolia", # Poco probable pero por si acaso
+    "V0": "Conviasa",
+    "QL": "LASER Airlines",
+    "R7": "Aserca Airlines",
+    "Z8": "Amaszonas",
+    "OB": "Boliviana de Aviación",
+    "H8": "Latin American Wings",
+    "NK": "Spirit Airlines",
+    "B6": "JetBlue",
+    "F9": "Frontier Airlines",
+    "WN": "Southwest Airlines", 
+    "AT": "Royal Air Maroc",
+    "LH": "Lufthansa", 
+    "LX": "Swiss International Air Lines",
+    "OS": "Austrian Airlines",
+    "SN": "Brussels Airlines",
+    "TK": "Turkish Airlines",
+    "TP": "TAP Air Portugal",
+    "VS": "Virgin Atlantic",
+    "BA": "British Airways",
+    "AZ": "ITA Airways",
+    "KE": "Korean Air",
+    "NH": "All Nippon Airways",
+    "JL": "Japan Airlines",
+    "CX": "Cathay Pacific",
+    "QF": "Qantas",
+    "NZ": "Air New Zealand",
+    "EK": "Emirates",
+    "QR": "Qatar Airways",
+    "EY": "Etihad Airways",
+    "AI": "Air India",
+    "SA": "South African Airways",
+    "ET": "Ethiopian Airlines",
+    "MS": "EgyptAir", 
+    "AT": "Royal Air Maroc"
+}
+
 def clean_destination_and_flight(text):
     """Extrae destino y número de vuelo del texto combinado"""
     text = text.upper().strip()
@@ -249,13 +314,29 @@ def scan_for_cancelled_flights():
             
             destino, vuelo = clean_destination_and_flight(raw_dest_vuelo)
             
-            # Extraer aerolínea
-            airline = "AEROLÍNEA"
-            try:
-                img = row.find_element(By.TAG_NAME, "img")
-                airline = img.get_attribute("title") or img.get_attribute("alt") or airline
-            except:
-                pass
+            # Extraer aerolínea basado en el código de vuelo primero
+            airline = "AEROLÍNEA DESCONOCIDA"
+            
+            # Intentar obtener por código IATA (2 letras)
+            if vuelo and len(vuelo) >= 2:
+                code = vuelo[:2]
+                if code in AEROLINEAS:
+                    airline = AEROLINEAS[code]
+                else:
+                    # Intentar código de 3 letras por si acaso
+                    code3 = vuelo[:3]
+                    if code3 in AEROLINEAS:
+                        airline = AEROLINEAS[code3]
+
+            # Si no se encontró por código, intentar por imagen como fallback
+            if airline == "AEROLÍNEA DESCONOCIDA":
+                try:
+                    img = row.find_element(By.TAG_NAME, "img")
+                    alt_text = img.get_attribute("title") or img.get_attribute("alt")
+                    if alt_text and "airline" not in alt_text.lower() and len(alt_text) > 2:
+                        airline = alt_text
+                except:
+                    pass
             
             cancelled_flights.append({
                 'fecha': fecha_today,
