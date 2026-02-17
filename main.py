@@ -222,7 +222,7 @@ def scan_for_cancelled_flights():
             fila_texto_completa = " ".join(texts).upper()
             
             # Buscar palabra clave en toda la fila
-            if "DEMORADO" not in fila_texto_completa:
+            if "CANCELADO" not in fila_texto_completa:
                 continue
             
             # Estado es probablemente la penúltima o última columna con texto
