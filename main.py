@@ -308,7 +308,7 @@ def send_cancellation_alerts(cancelled_flights):
         
         # Construir mensaje
         message = (
-            f"🚨 <b>VUELO CANCELADO</b>\n\n"
+            f"🚨 <b>SALIDA CANCELADA</b>\n\n"
             f"📅 <b>Fecha:</b> {flight['fecha']}\n"
             f"✈️ <b>Vuelo:</b> {flight['vuelo']}\n"
             f"🌍 <b>Destino:</b> {flight['destino']}\n"
