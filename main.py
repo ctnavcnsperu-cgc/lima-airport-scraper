@@ -246,9 +246,10 @@ def clean_destination_and_flight(text):
 
     return found_dest, found_flight
 
-def scan_for_cancelled_flights():
-    """Escanea la web en busca de vuelos cancelados"""
-    print("📡 Iniciando escaneo de vuelos cancelados...")
+def scan_for_cancelled_flights(tipo="SALIDAS"):
+    """Escanea la web en busca de vuelos cancelados (SALIDAS o LLEGADAS)"""
+    url = config.URL_SALIDAS if tipo == "SALIDAS" else config.URL_LLEGADAS
+    print(f"📡 Iniciando escaneo de {tipo} cancelados en {url}...")
     
     chrome_options = Options()
     chrome_options.add_argument('--headless')
@@ -262,13 +263,12 @@ def scan_for_cancelled_flights():
         service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=chrome_options)
         
-        url = config.URL_SALIDAS
         driver.get(url)
         
         wait = WebDriverWait(driver, 60)
         wait.until(EC.presence_of_element_located((By.XPATH, "//tr[td]")))
         
-        # Scroll optimizado (solo 3 veces para reducir tiempo)
+        # Scroll optimizado
         for _ in range(3):
             driver.execute_script("window.scrollBy(0, 1000);")
             time.sleep(2)
@@ -284,14 +284,11 @@ def scan_for_cancelled_flights():
             if not texts or len(texts) < 2:
                 continue
             
-            # Unir toda la fila para buscar la palabra clave sin importar la columna
             fila_texto_completa = " ".join(texts).upper()
             
-            # Buscar palabra clave en toda la fila
             if "CANCELADO" not in fila_texto_completa:
                 continue
             
-            # Estado es probablemente la penúltima o última columna con texto
             estado = texts[-2] if texts[-1].strip() == "" else texts[-1]
             
             # Extraer horarios
@@ -313,23 +310,19 @@ def scan_for_cancelled_flights():
             else:
                 raw_dest_vuelo = texts[1]
             
-            destino, vuelo = clean_destination_and_flight(raw_dest_vuelo)
+            destino_origen, vuelo = clean_destination_and_flight(raw_dest_vuelo)
             
             # Extraer aerolínea basado en el código de vuelo primero
             airline = "AEROLÍNEA DESCONOCIDA"
-            
-            # Intentar obtener por código IATA (2 letras)
             if vuelo and len(vuelo) >= 2:
                 code = vuelo[:2]
                 if code in config.AEROLINEAS:
                     airline = config.AEROLINEAS[code]
                 else:
-                    # Intentar código de 3 letras por si acaso
                     code3 = vuelo[:3]
                     if code3 in config.AEROLINEAS:
                         airline = config.AEROLINEAS[code3]
 
-            # Si no se encontró por código, intentar por imagen como fallback
             if airline == "AEROLÍNEA DESCONOCIDA":
                 try:
                     img = row.find_element(By.TAG_NAME, "img")
@@ -340,10 +333,11 @@ def scan_for_cancelled_flights():
                     pass
             
             cancelled_flights.append({
+                'tipo': tipo,
                 'fecha': fecha_today,
                 'hora_prog': h_prog,
                 'hora_real': h_real,
-                'destino': destino,
+                'ciudad': destino_origen,
                 'vuelo': vuelo,
                 'aerolinea': airline,
                 'puerta': puerta,
@@ -352,11 +346,11 @@ def scan_for_cancelled_flights():
             })
         
         driver.quit()
-        print(f"🔍 Vuelos cancelados encontrados: {len(cancelled_flights)}")
+        print(f"🔍 {tipo} cancelados encontrados: {len(cancelled_flights)}")
         return cancelled_flights
     
     except Exception as e:
-        print(f"❌ Error durante el escaneo: {e}")
+        print(f"❌ Error durante el escaneo de {tipo}: {e}")
         if 'driver' in locals():
             driver.quit()
         return []
@@ -368,52 +362,49 @@ def scan_for_cancelled_flights():
 def send_cancellation_alerts(cancelled_flights):
     """Envía alertas de vuelos cancelados a todos los suscriptores"""
     if not cancelled_flights:
-        print("✅ No hay vuelos cancelados para alertar.")
         return
     
     subscribers = get_subscribers()
-    
     if not subscribers:
-        print("ℹ️ No hay suscriptores registrados.")
         return
     
     sent_alerts = get_sent_alerts()
     
     for flight in cancelled_flights:
         # Crear identificador único del vuelo
-        flight_key = f"{flight['fecha']}_{flight['vuelo']}_{flight['destino']}"
+        flight_key = f"{flight['fecha']}_{flight['vuelo']}_{flight['ciudad']}_{flight['tipo']}"
         
-        # Verificar si ya se envió esta alerta
         if flight_key in sent_alerts:
-            print(f"⏭️ Alerta ya enviada para: {flight['vuelo']} - {flight['destino']}")
             continue
+        
+        # Etiquetas dinámicas
+        label_tipo = "SALIDA" if flight['tipo'] == "SALIDAS" else "LLEGADA"
+        emoji_ciudad = "🌍" if flight['tipo'] == "SALIDAS" else "📍"
+        label_ciudad = "Destino" if flight['tipo'] == "SALIDAS" else "Origen"
         
         # Construir mensaje
         message = (
-            f"🚨 <b>SALIDA CANCELADA</b>\n\n"
+            f"🚨 <b>{label_tipo} CANCELADA</b>\n\n"
             f"📅 <b>Fecha:</b> {flight['fecha']}\n"
             f"✈️ <b>Vuelo:</b> {flight['vuelo']}\n"
-            f"🌍 <b>Destino:</b> {flight['destino']}\n"
+            f"{emoji_ciudad} <b>{label_ciudad}:</b> {flight['ciudad']}\n"
             f"🏢 <b>Aerolínea:</b> {flight['aerolinea']}\n"
             f"🕐 <b>Hora Prog.:</b> {flight['hora_prog']}\n"
         )
         
         if flight['hora_real']:
             message += f"🕑 <b>Nueva Hora:</b> {flight['hora_real']}\n"
-        if flight['puerta']:
-            message += f"🚪 <b>Puerta:</b> {flight['puerta']}\n"
-        if flight['checkin']:
-            message += f"🎫 <b>Check-in:</b> {flight['checkin']}\n"
+        if flight['tipo'] == "SALIDAS":
+            if flight['puerta']: message += f"🚪 <b>Puerta:</b> {flight['puerta']}\n"
+            if flight['checkin']: message += f"🎫 <b>Check-in:</b> {flight['checkin']}\n"
         
         message += f"\n❌ <b>Estado:</b> {flight['estado']}"
         
-        # Enviar a todos los suscriptores
         for chat_id in subscribers:
             send_telegram_message(chat_id, message)
         
-        # Marcar como enviada
         mark_alert_as_sent(flight_key)
-        print(f"✉️ Alerta enviada: {flight['vuelo']} - {flight['destino']}")
+        print(f"✉️ Alerta enviada ({flight['tipo']}): {flight['vuelo']} - {flight['ciudad']}")
 
 # ------------------------------------------------------------------------------
 # 6. EJECUCIÓN PRINCIPAL
@@ -431,11 +422,16 @@ if __name__ == "__main__":
         print("📨 Procesando comandos de usuarios...")
         process_telegram_updates()
         
-        # 3. Escanear vuelos cancelados
-        cancelled_flights = scan_for_cancelled_flights()
+        # 3. Escanear Salidas y Llegadas
+        vuelos_finales = []
+        vuelos_finales.extend(scan_for_cancelled_flights("SALIDAS"))
+        vuelos_finales.extend(scan_for_cancelled_flights("LLEGADAS"))
         
-        # 4. Enviar alertas
-        send_cancellation_alerts(cancelled_flights)
+        # 4. Enviar todas las alertas
+        if vuelos_finales:
+            send_cancellation_alerts(vuelos_finales)
+        else:
+            print("✅ No se detectaron vuelos cancelados en esta ronda.")
         
         # 5. Sincronizar datos finales de vuelta al repo privado
         print("🔄 Sincronizando cambios de vuelta al repositorio privado...")

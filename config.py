@@ -10,8 +10,8 @@ SENT_ALERTS_FILE = 'alertas_enviadas.txt'
 GITHUB_DATA_REPO = "ctnavcnsperu-cgc/lima-airport-data"
 
 # 2. URLs DEL AEROPUERTO
-URL_SALIDAS = "https://www.lima-airport.com/pasajeros/vuelos?adi=departures"
-URL_LLEGADAS = "https://www.lima-airport.com/pasajeros/vuelos?adi=arrivals"
+URL_SALIDAS = "https://www.lima-airport.com/pasajeros/vuelos?day=today&adi=departures"
+URL_LLEGADAS = "https://www.lima-airport.com/pasajeros/vuelos?day=today&adi=arrivals"
 
 # 3. LISTA DE DESTINOS DOMÉSTICOS (PERÚ)
 DESTINOS_PERU = [
