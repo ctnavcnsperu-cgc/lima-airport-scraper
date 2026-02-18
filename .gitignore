@@ -1,6 +1,8 @@
 # Credenciales y archivos sensibles
 *.json
 cuenta.txt
+suscriptores.txt
+alertas_enviadas.txt
 
 # Python
 __pycache__/
@@ -9,6 +11,11 @@ __pycache__/
 vwen/
 env/
 .env
+
+# Backups y otros
+backups/
+/backups
+*.zip
 
 # OS
 .DS_Store

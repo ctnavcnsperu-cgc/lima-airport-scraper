@@ -6,6 +6,7 @@ import os
 import re
 import time
 import json
+import base64
 import requests
 from datetime import datetime, timedelta, timezone
 from selenium import webdriver
@@ -15,13 +16,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
+import config
 
 # ------------------------------------------------------------------------------
 # 1. CONFIGURACIÓN DE TELEGRAM BOT
 # ------------------------------------------------------------------------------
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
-SUBSCRIBERS_FILE = 'suscriptores.txt'
-SENT_ALERTS_FILE = 'alertas_enviadas.txt'
+DATA_REPO_TOKEN = os.environ.get('DATA_REPO_TOKEN')
+SUBSCRIBERS_FILE = config.SUBSCRIBERS_FILE
+SENT_ALERTS_FILE = config.SENT_ALERTS_FILE
+DATA_REPO = config.GITHUB_DATA_REPO
 
 if not TELEGRAM_BOT_TOKEN:
     print("❌ ERROR: Variable TELEGRAM_BOT_TOKEN no encontrada en Secrets")
@@ -125,6 +129,76 @@ def process_telegram_updates():
         print(f"⚠️ Error procesando updates de Telegram: {e}")
 
 # ------------------------------------------------------------------------------
+# 2.5 SISTEMA DE SINCRONIZACIÓN CON REPO PRIVADO
+# ------------------------------------------------------------------------------
+
+def sync_from_private_repo():
+    """Descarga los archivos de datos desde el repositorio privado"""
+    if not DATA_REPO_TOKEN:
+        print("ℹ️ No hay DATA_REPO_TOKEN. Saltando descarga de datos.")
+        return
+
+    headers = {"Authorization": f"token {DATA_REPO_TOKEN}"}
+    for filename in [SUBSCRIBERS_FILE, SENT_ALERTS_FILE]:
+        try:
+            url = f"https://api.github.com/repos/{DATA_REPO}/contents/{filename}"
+            response = requests.get(url, headers=headers)
+            if response.status_code == 200:
+                content = base64.b64decode(response.json()['content']).decode('utf-8')
+                with open(filename, 'w') as f:
+                    f.write(content)
+                print(f"✅ {filename} descargado con éxito desde el repo privado.")
+            else:
+                print(f"ℹ️ {filename} no encontrado en el repo privado (iniciando nuevo).")
+        except Exception as e:
+            print(f"⚠️ Error al descargar {filename}: {e}")
+
+def sync_to_private_repo():
+    """Sube los archivos de datos actualizados al repositorio privado"""
+    if not DATA_REPO_TOKEN:
+        print("ℹ️ No hay DATA_REPO_TOKEN. Saltando subida de datos.")
+        return
+
+    headers = {"Authorization": f"token {DATA_REPO_TOKEN}"}
+    for filename in [SUBSCRIBERS_FILE, SENT_ALERTS_FILE]:
+        if not os.path.exists(filename):
+            continue
+
+        try:
+            # 1. Leer contenido local
+            with open(filename, 'r') as f:
+                content = f.read()
+            
+            # 2. Obtener el SHA del archivo actual en GitHub (si existe) para poder actualizarlo
+            url = f"https://api.github.com/repos/{DATA_REPO}/contents/{filename}"
+            response = requests.get(url, headers=headers)
+            sha = ""
+            if response.status_code == 200:
+                sha = response.json()['sha']
+                # Si el contenido es igual, no subimos nada
+                current_github_content = base64.b64decode(response.json()['content']).decode('utf-8')
+                if current_github_content == content:
+                    print(f"⏭️ {filename} no tiene cambios. Saltando subida.")
+                    continue
+
+            # 3. Subir/Actualizar archivo
+            message = f"Update {filename} - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+            data = {
+                "message": message,
+                "content": base64.b64encode(content.encode('utf-8')).decode('utf-8'),
+                "sha": sha
+            }
+            if not sha: del data["sha"]
+
+            put_response = requests.put(url, headers=headers, json=data)
+            if put_response.status_code in [200, 201]:
+                print(f"🚀 {filename} subido con éxito al repo privado.")
+            else:
+                print(f"❌ Error al subir {filename}: {put_response.json()}")
+        except Exception as e:
+            print(f"⚠️ Error general sincronizando {filename}: {e}")
+
+# ------------------------------------------------------------------------------
 # 3. SISTEMA DE MEMORIA DE ALERTAS
 # ------------------------------------------------------------------------------
 
@@ -144,79 +218,6 @@ def mark_alert_as_sent(flight_key):
 # 4. FUNCIONES DE SCRAPING
 # ------------------------------------------------------------------------------
 
-DESTINOS_PERU = [
-    "AREQUIPA", "AYACUCHO", "CAJAMARCA", "CHACHAPOYAS", "CHICLAYO", "CUSCO", 
-    "HUANUCO", "ANTA - HUARAZ", "IQUITOS", "JAUJA", "JAEN", 
-    "JULIACA", "MAZAMARI", "PIURA", "PUCALLPA", "PUERTO MALDONADO", "TACNA", 
-    "TALARA", "TARAPOTO", "TRUJILLO", "TUMBES", "YURIMAGUAS", "ILO", "PISCO",
-    "TINGO MARIA", "ANDAHUAYLAS", "NUEVO MUNDO"
-]
-
-AEROLINEAS = {
-    "LA": "LATAM Airlines",
-    "H2": "Sky Airline",
-    "SKY": "Sky Airline", # A veces aparece como SKY
-    "CC": "LATAM Airlines", # Codigo secundario
-    "LP": "LATAM Airlines Peru",
-    "XL": "LATAM Airlines Ecuador",
-    "4C": "LATAM Airlines Colombia",
-    "AV": "Avianca",
-    "A0": "Avianca Peru",
-    "2K": "Avianca Ecuador",
-    "CM": "Copa Airlines",
-    "AA": "American Airlines",
-    "DL": "Delta Air Lines",
-    "UA": "United Airlines",
-    "AC": "Air Canada",
-    "AM": "Aeroméxico",
-    "IB": "Iberia",
-    "UX": "Air Europa",
-    "AF": "Air France",
-    "KL": "KLM",
-    "AR": "Aerolíneas Argentinas",
-    "JA": "JetSmart",
-    "JZ": "JetSmart",
-    "VV": "Viva Air",
-    "P9": "Peruvian Airlines", # Historico
-    "2I": "Star Peru",
-    "L5": "Atlas Air", # Carga
-    "M0": "Aero Mongolia", # Poco probable pero por si acaso
-    "V0": "Conviasa",
-    "QL": "LASER Airlines",
-    "R7": "Aserca Airlines",
-    "Z8": "Amaszonas",
-    "OB": "Boliviana de Aviación",
-    "H8": "Latin American Wings",
-    "NK": "Spirit Airlines",
-    "B6": "JetBlue",
-    "F9": "Frontier Airlines",
-    "WN": "Southwest Airlines", 
-    "AT": "Royal Air Maroc",
-    "LH": "Lufthansa", 
-    "LX": "Swiss International Air Lines",
-    "OS": "Austrian Airlines",
-    "SN": "Brussels Airlines",
-    "TK": "Turkish Airlines",
-    "TP": "TAP Air Portugal",
-    "VS": "Virgin Atlantic",
-    "BA": "British Airways",
-    "AZ": "ITA Airways",
-    "KE": "Korean Air",
-    "NH": "All Nippon Airways",
-    "JL": "Japan Airlines",
-    "CX": "Cathay Pacific",
-    "QF": "Qantas",
-    "NZ": "Air New Zealand",
-    "EK": "Emirates",
-    "QR": "Qatar Airways",
-    "EY": "Etihad Airways",
-    "AI": "Air India",
-    "SA": "South African Airways",
-    "ET": "Ethiopian Airlines",
-    "MS": "EgyptAir", 
-    "AT": "Royal Air Maroc"
-}
-
 def clean_destination_and_flight(text):
     """Extrae destino y número de vuelo del texto combinado"""
     text = text.upper().strip()
@@ -225,7 +226,7 @@ def clean_destination_and_flight(text):
     found_dest = "DESCONOCIDO"
     found_flight = "---"
 
-    for d in DESTINOS_PERU:
+    for d in config.DESTINOS_PERU:
         if text.startswith(d) or d.startswith(text[:6]):
             found_dest = d
             potential_flight = text.replace(found_dest, "").replace(found_dest[:6], "").strip()
@@ -261,7 +262,7 @@ def scan_for_cancelled_flights():
         service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=chrome_options)
         
-        url = "https://www.lima-airport.com/pasajeros/vuelos?adi=departures"
+        url = config.URL_SALIDAS
         driver.get(url)
         
         wait = WebDriverWait(driver, 60)
@@ -320,13 +321,13 @@ def scan_for_cancelled_flights():
             # Intentar obtener por código IATA (2 letras)
             if vuelo and len(vuelo) >= 2:
                 code = vuelo[:2]
-                if code in AEROLINEAS:
-                    airline = AEROLINEAS[code]
+                if code in config.AEROLINEAS:
+                    airline = config.AEROLINEAS[code]
                 else:
                     # Intentar código de 3 letras por si acaso
                     code3 = vuelo[:3]
-                    if code3 in AEROLINEAS:
-                        airline = AEROLINEAS[code3]
+                    if code3 in config.AEROLINEAS:
+                        airline = config.AEROLINEAS[code3]
 
             # Si no se encontró por código, intentar por imagen como fallback
             if airline == "AEROLÍNEA DESCONOCIDA":
@@ -422,15 +423,23 @@ if __name__ == "__main__":
     try:
         print("🤖 Lima Airport Alert Bot - Iniciando...")
         
-        # Procesar suscripciones nuevas
+        # 1. Sincronizar datos iniciales
+        print("🔄 Sincronizando datos con el repositorio privado...")
+        sync_from_private_repo()
+        
+        # 2. Procesar suscripciones nuevas
         print("📨 Procesando comandos de usuarios...")
         process_telegram_updates()
         
-        # Escanear vuelos cancelados
+        # 3. Escanear vuelos cancelados
         cancelled_flights = scan_for_cancelled_flights()
         
-        # Enviar alertas
+        # 4. Enviar alertas
         send_cancellation_alerts(cancelled_flights)
+        
+        # 5. Sincronizar datos finales de vuelta al repo privado
+        print("🔄 Sincronizando cambios de vuelta al repositorio privado...")
+        sync_to_private_repo()
         
         print("✨ Proceso completado con éxito.")
     
