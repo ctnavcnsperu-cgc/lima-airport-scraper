@@ -85,5 +85,6 @@ AEROLINEAS = {
     "AI": "Air India",
     "SA": "South African Airways",
     "ET": "Ethiopian Airlines",
-    "MS": "EgyptAir"
+    "MS": "EgyptAir",
+    "4A": "ATSA Aero Transporte"
 }
