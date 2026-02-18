@@ -8,6 +8,7 @@ import os
 SUBSCRIBERS_FILE = 'suscriptores.txt'
 SENT_ALERTS_FILE = 'alertas_enviadas.txt'
 GITHUB_DATA_REPO = "ctnavcnsperu-cgc/lima-airport-data"
+TELEGRAM_ADMIN_ID = os.environ.get('TELEGRAM_ADMIN_ID')
 
 # 2. URLs DEL AEROPUERTO
 URL_SALIDAS = "https://www.lima-airport.com/pasajeros/vuelos?day=today&adi=departures"

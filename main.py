@@ -23,6 +23,7 @@ import config
 # ------------------------------------------------------------------------------
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 DATA_REPO_TOKEN = os.environ.get('DATA_REPO_TOKEN')
+TELEGRAM_ADMIN_ID = config.TELEGRAM_ADMIN_ID  # ID del administrador para control de acceso
 SUBSCRIBERS_FILE = config.SUBSCRIBERS_FILE
 SENT_ALERTS_FILE = config.SENT_ALERTS_FILE
 DATA_REPO = config.GITHUB_DATA_REPO
@@ -79,7 +80,7 @@ def send_telegram_message(chat_id, text):
         return False
 
 def process_telegram_updates():
-    """Procesa mensajes nuevos de usuarios (suscripciones)"""
+    """Procesa mensajes nuevos (Solo para el Administrador)"""
     try:
         url = f"{TELEGRAM_API_URL}/getUpdates"
         response = requests.get(url, timeout=10)
@@ -96,6 +97,11 @@ def process_telegram_updates():
             if not chat_id:
                 continue
             
+            # FILTRO DE SEGURIDAD: Solo el administrador puede interactuar con el bot
+            if TELEGRAM_ADMIN_ID and str(chat_id) != str(TELEGRAM_ADMIN_ID):
+                print(f"🔒 Intento de acceso bloqueado desde chat_id: {chat_id}")
+                continue
+
             if text == '/start':
                 if add_subscriber(chat_id):
                     send_telegram_message(
