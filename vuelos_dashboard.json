@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "28/02/2026 17:40:50",
-    "conteo": 15,
+    "ultima_sincronizacion": "28/02/2026 17:50:49",
+    "conteo": 17,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -150,6 +150,26 @@
             "ciudad": "AREQUIPA",
             "vuelo": "H25142",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "19:25",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2069",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "23:20",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2070",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
