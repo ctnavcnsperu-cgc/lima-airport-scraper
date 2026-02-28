@@ -1,29 +1,85 @@
 {
-    "ultima_sincronizacion": "28/02/2026 18:10:45",
-    "conteo": 2,
+    "ultima_sincronizacion": "28/02/2026 14:40:42",
+    "conteo": 8,
     "vuelos": [
         {
             "tipo": "SALIDAS",
             "fecha": "28/02/2026",
-            "hora_prog": "16:30",
+            "hora_prog": "--:--",
             "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "H25011",
-            "aerolinea": "Sky Airline",
-            "puerta": "",
-            "checkin": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2203",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
             "fecha": "28/02/2026",
-            "hora_prog": "20:15",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2204",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2291",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2290",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2141",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2142",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25011",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "H25012",
             "aerolinea": "Sky Airline",
-            "puerta": "",
-            "checkin": "",
             "estado": "CANCELADO"
         }
     ]
