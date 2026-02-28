@@ -93,13 +93,20 @@ def ejecutar_ciclo_completo():
         # 2. Procesar suscripciones nuevas (Viene de main.py)
         main.process_telegram_updates()
 
-        # 3. Escanear vuelos cancelados (Viene de main.py - Producción Telegram)
-        # Esto asegura que se sigan enviando los Telegrams
-        main.scan_for_cancelled_flights("SALIDAS")
-        main.scan_for_cancelled_flights("LLEGADAS")
-        # El Scraper de main ya envía las alertas internamente en cada scan
+        # 3. Escanear vuelos cancelados (Viene de main.py)
+        # Recogemos los vuelos nuevos de este momento para enviarlos a Telegram
+        vuelos_recientes = []
+        vuelos_recientes.extend(main.scan_for_cancelled_flights("SALIDAS"))
+        vuelos_recientes.extend(main.scan_for_cancelled_flights("LLEGADAS"))
 
-        # 4. GENERAR DATOS HISTÓRICOS PARA EL DASHBOARD
+        # 4. ENVIAR ALERTAS A TELEGRAM (CRÍTICO)
+        # Esto es lo que hace sonar los celulares
+        if vuelos_recientes:
+            main.send_cancellation_alerts(vuelos_recientes)
+        else:
+            print("✅ Todo despejado: No se detectaron cancelaciones nuevas para Telegram.")
+
+        # 5. GENERAR DATOS HISTÓRICOS PARA EL DASHBOARD
         # Leemos el archivo que el scraper acaba de actualizar
         vuelos_hoy = parse_historial_vuelos()
         
