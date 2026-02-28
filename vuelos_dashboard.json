@@ -1,15 +1,15 @@
 {
-    "ultima_sincronizacion": "28/02/2026 10:04:22",
-    "conteo": 4,
+    "ultima_sincronizacion": "28/02/2026 18:10:45",
+    "conteo": 2,
     "vuelos": [
         {
             "tipo": "SALIDAS",
             "fecha": "28/02/2026",
-            "hora_prog": "08:31",
+            "hora_prog": "16:30",
             "hora_real": "",
-            "ciudad": "CAJAMARCA",
-            "vuelo": "LA2291",
-            "aerolinea": "LATAM Airlines",
+            "ciudad": "CUSCO",
+            "vuelo": "H25011",
+            "aerolinea": "Sky Airline",
             "puerta": "",
             "checkin": "",
             "estado": "CANCELADO"
@@ -17,35 +17,11 @@
         {
             "tipo": "LLEGADAS",
             "fecha": "28/02/2026",
-            "hora_prog": "08:10",
+            "hora_prog": "20:15",
             "hora_real": "",
-            "ciudad": "CAJAMARCA",
-            "vuelo": "LA2290",
-            "aerolinea": "LATAM Airlines",
-            "puerta": "",
-            "checkin": "",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "28/02/2026",
-            "hora_prog": "09:20",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2142",
-            "aerolinea": "LATAM Airlines",
-            "puerta": "",
-            "checkin": "",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "28/02/2026",
-            "hora_prog": "10:35",
-            "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "LA2204",
-            "aerolinea": "LATAM Airlines",
+            "ciudad": "CUSCO",
+            "vuelo": "H25012",
+            "aerolinea": "Sky Airline",
             "puerta": "",
             "checkin": "",
             "estado": "CANCELADO"
