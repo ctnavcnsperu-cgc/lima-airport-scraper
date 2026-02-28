@@ -1,5 +1,5 @@
 {
-    "ultima_sincronizacion": "28/02/2026 15:30:50",
+    "ultima_sincronizacion": "28/02/2026 15:39:57",
     "conteo": 9,
     "vuelos": [
         {
@@ -85,7 +85,7 @@
         {
             "tipo": "LLEGADAS",
             "fecha": "28/02/2026",
-            "hora_prog": "--:--",
+            "hora_prog": "14:15",
             "hora_real": "",
             "ciudad": "AREQUIPA",
             "vuelo": "LA2108",
