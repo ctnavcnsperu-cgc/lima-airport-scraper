@@ -538,11 +538,7 @@
             attribution: 'Tiles &copy; Esri'
         });
 
-        /* 
-        ===========================================================================
-        ESTE BLOQUE ES PARA CUANDO LA PÁGINA ESTÉ ONLINE (PRODUCCIÓN)
-        ===========================================================================
-        // Capas Meteorológicas PRO (RainViewer - Datos Reales)
+        // Capas Meteorológicas (RainViewer - Datos Reales)
         const nowTs = Math.floor(Date.now() / 1000 / 600) * 600;
 
         const capaPrecipitacion = L.tileLayer(`https://tilecache.rainviewer.com/v2/radar/${nowTs}/256/{z}/{x}/{y}/2/1_1.png`, {
@@ -557,25 +553,21 @@
             zIndex: 900
         });
 
-        const overlaysProd = { 
-            "🌧️ Radar de Lluvia": capaPrecipitacion, 
-            "☁️ Capa de Nubes": capaNubes 
-        };
-        
-        // Cuando estés online, reemplazar la línea L.control.layers de abajo por esta:
-        // L.control.layers(baseMaps, overlaysProd, { position: 'topright', collapsed: false }).addTo(map);
-        ===========================================================================
-        */
-
-        // Añadir la estándar por defecto
-        mapaEstandar.addTo(map);
-
         const baseMaps = {
             "🗺️ Mapa Estándar": mapaEstandar,
             "🛰️ Vista Satélite": mapaSatelite
         };
 
-        L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
+        const overlays = {
+            "🌧️ Radar de Lluvia": capaPrecipitacion,
+            "☁️ Capa de Nubes": capaNubes
+        };
+
+        // Añadir la estándar por defecto
+        mapaEstandar.addTo(map);
+
+        // Control de capas completo
+        L.control.layers(baseMaps, overlays, { position: 'topright' }).addTo(map);
 
         // Crear Botón de Reset View (🏠) debajo del Zoom
         L.Control.ResetView = L.Control.extend({
