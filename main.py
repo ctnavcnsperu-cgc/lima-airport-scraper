@@ -377,12 +377,15 @@ def send_cancellation_alerts(cancelled_flights):
     sent_alerts = get_sent_alerts()
     
     for flight in cancelled_flights:
-        # Crear identificador único del vuelo (Ahora INCLUYE LA HORA PROGRAMADA)
-        # Formato anterior: FECHA_VUELO_CIUDAD_SENTIDO
-        # Formato nuevo: FECHA_HORA_VUELO_CIUDAD_SENTIDO
+        # 1. Crear la nueva llave (con hora)
         flight_key = f"{flight['fecha']}_{flight['hora_prog']}_{flight['vuelo']}_{flight['ciudad']}_{flight['tipo']}"
         
-        if flight_key in sent_alerts:
+        # 2. Crear una llave compatible (formato viejo sin hora) para seguridad
+        legacy_key_today = f"{flight['fecha']}_{flight['vuelo']}_{flight['ciudad']}_{flight['tipo']}"
+        
+        # 3. Comprobación de doble seguridad: 
+        # Si el vuelo ya se envió hoy con CUALQUIERA de los dos formatos, lo saltamos.
+        if flight_key in sent_alerts or legacy_key_today in sent_alerts:
             continue
         
         # Etiquetas dinámicas
