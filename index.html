@@ -538,20 +538,39 @@
             attribution: 'Tiles &copy; Esri'
         });
 
-        // Capas Meteorológicas (RainViewer - Datos Reales)
-        const nowTs = Math.floor(Date.now() / 1000 / 600) * 600;
-
-        const capaPrecipitacion = L.tileLayer(`https://tilecache.rainviewer.com/v2/radar/${nowTs}/256/{z}/{x}/{y}/2/1_1.png`, {
+        // Capas Meteorológicas Dinámicas (RainViewer)
+        const capaPrecipitacion = L.tileLayer('', {
             attribution: 'Radar de Lluvia &copy; RainViewer',
             opacity: 0.6,
             zIndex: 1000
         });
 
-        const capaNubes = L.tileLayer(`https://tilecache.rainviewer.com/v2/satellite/${nowTs}/256/{z}/{x}/{y}/2/0_0.png`, {
+        const capaNubes = L.tileLayer('', {
             attribution: 'Nubes &copy; RainViewer',
             opacity: 0.5,
             zIndex: 900
         });
+
+        async function updateWeatherLayers() {
+            try {
+                const response = await fetch('https://api.rainviewer.com/public/weather-maps.json');
+                const data = await response.json();
+
+                if (data.radar && data.radar.past && data.radar.past.length > 0) {
+                    const lastRadar = data.radar.past[data.radar.past.length - 1].time;
+                    capaPrecipitacion.setUrl(`https://tilecache.rainviewer.com/v2/radar/${lastRadar}/256/{z}/{x}/{y}/2/1_1.png`);
+                    console.log("Radar actualizado:", new Date(lastRadar * 1000).toLocaleString());
+                }
+
+                if (data.satellite && data.satellite.infrared && data.satellite.infrared.length > 0) {
+                    const lastSat = data.satellite.infrared[data.satellite.infrared.length - 1].time;
+                    capaNubes.setUrl(`https://tilecache.rainviewer.com/v2/satellite/${lastSat}/256/{z}/{x}/{y}/2/0_0.png`);
+                    console.log("Nubes actualizadas:", new Date(lastSat * 1000).toLocaleString());
+                }
+            } catch (e) {
+                console.error("Error al actualizar clima:", e);
+            }
+        }
 
         const baseMaps = {
             "🗺️ Mapa Estándar": mapaEstandar,
@@ -563,8 +582,10 @@
             "☁️ Capa de Nubes": capaNubes
         };
 
-        // Añadir la estándar por defecto
+        // Iniciar capas
         mapaEstandar.addTo(map);
+        updateWeatherLayers();
+        setInterval(updateWeatherLayers, 600000); // Actualizar cada 10 min
 
         // Control de capas completo
         L.control.layers(baseMaps, overlays, { position: 'topright' }).addTo(map);
@@ -575,7 +596,6 @@
             onAdd: function (map) {
                 const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
                 const button = L.DomUtil.create('a', 'leaflet-control-reset', container);
-                // Icono de visor de 4 esquinas (SVG para nitidez)
                 button.innerHTML = `
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--azul-oscuro); display: block;">
                         <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
