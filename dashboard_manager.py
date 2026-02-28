@@ -83,7 +83,7 @@ def parse_historial_vuelos():
         vuelos_historial.append({
             'tipo': sentido,
             'fecha': fecha,
-            'hora_prog': "--:--", # En el historial no guardamos la hora, pero el mapa lo necesita
+            'hora_prog': hora, # Ahora usamos la hora real capturada (ej: 14:15)
             'hora_real': "",
             'ciudad': ciudad,
             'vuelo': vuelo,
