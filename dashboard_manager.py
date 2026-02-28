@@ -14,51 +14,104 @@ if not os.environ.get('DATA_REPO_TOKEN'):
 
 import main
 import json
-from datetime import datetime
+import os
+from datetime import datetime, timedelta, timezone
+import config
+
+# Configurar Zona Horaria de Perú (UTC-5)
+timezone_peru = timezone(timedelta(hours=-5))
+
+def obtener_hora_peru():
+    return datetime.now(timezone_peru)
+
+def parse_historial_vuelos():
+    """Lee alertas_enviadas.txt y genera la lista de vuelos del día para el dashboard"""
+    vuelos_historial = []
+    sent_alerts_file = main.SENT_ALERTS_FILE
+    hoy_str = obtener_hora_peru().strftime("%d/%m/%Y")
+    
+    if not os.path.exists(sent_alerts_file):
+        return []
+
+    with open(sent_alerts_file, 'r', encoding='utf-8') as f:
+        lineas = f.readlines()
+
+    for linea in lineas:
+        linea = linea.strip()
+        if not linea or "_" not in linea:
+            continue
+            
+        # Formato: FECHA_VUELO_CIUDAD_SENTIDO (ej: 28/02/2026_LA2203_AREQUIPA_SALIDAS)
+        partes = linea.split("_")
+        if len(partes) < 4:
+            continue
+            
+        fecha, vuelo, ciudad, sentido = partes[0], partes[1], partes[2], partes[3]
+        
+        # Filtrar solo los de HOY
+        if fecha != hoy_str:
+            continue
+
+        # Identificar Aerolínea por prefijo de vuelo
+        airline = "AEROLÍNEA"
+        if len(vuelo) >= 2:
+            code = vuelo[:2].upper()
+            if code in config.AEROLINEAS:
+                airline = config.AEROLINEAS[code]
+            else:
+                code3 = vuelo[:3].upper()
+                if code3 in config.AEROLINEAS:
+                    airline = config.AEROLINEAS[code3]
+
+        vuelos_historial.append({
+            'tipo': sentido,
+            'fecha': fecha,
+            'hora_prog': "--:--", # En el historial no guardamos la hora, pero el mapa lo necesita
+            'hora_real': "",
+            'ciudad': ciudad,
+            'vuelo': vuelo,
+            'aerolinea': airline,
+            'estado': "CANCELADO"
+        })
+    
+    return vuelos_historial
 
 def ejecutar_ciclo_completo():
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] 🚀 Iniciando ciclo de vigilancia...")
+    hora_actual = obtener_hora_peru().strftime('%H:%M:%S')
+    print(f"[{hora_actual}] 🚀 Iniciando ciclo de vigilancia (Hora Perú)...")
 
     try:
         # 1. Sincronizar datos (Viene de main.py)
-        # Descarga la lista de suscriptores y alertas ya enviadas
         main.sync_from_private_repo()
 
         # 2. Procesar suscripciones nuevas (Viene de main.py)
-        # Revisa si hay nuevos usuarios que escribieron /start
         main.process_telegram_updates()
 
-        # 3. Escanear vuelos cancelados (Viene de main.py)
-        # Hace el raspado una sola vez para ahorrar tráfico
-        vuelos_totales = []
-        vuelos_totales.extend(main.scan_for_cancelled_flights("SALIDAS"))
-        vuelos_totales.extend(main.scan_for_cancelled_flights("LLEGADAS"))
+        # 3. Escanear vuelos cancelados (Viene de main.py - Producción Telegram)
+        # Esto asegura que se sigan enviando los Telegrams
+        main.scan_for_cancelled_flights("SALIDAS")
+        main.scan_for_cancelled_flights("LLEGADAS")
+        # El Scraper de main ya envía las alertas internamente en cada scan
 
-        # 4. Enviar Alertas por Telegram (Viene de main.py)
-        # Solo enviará los que no se han enviado antes
-        if vuelos_totales:
-            main.send_cancellation_alerts(vuelos_totales)
-        else:
-            print("✅ Todo despejado: No se detectaron vuelos cancelados.")
-
-        # 5. GENERAR DATOS PARA EL DASHBOARD (Nueva funcionalidad)
-        # Preparamos el JSON que leerá el mapa de Leaflet
+        # 4. GENERAR DATOS HISTÓRICOS PARA EL DASHBOARD
+        # Leemos el archivo que el scraper acaba de actualizar
+        vuelos_hoy = parse_historial_vuelos()
+        
         datos_dashboard = {
-            "ultima_sincronizacion": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
-            "conteo": len(vuelos_totales),
-            "vuelos": vuelos_totales
+            "ultima_sincronizacion": obtener_hora_peru().strftime("%d/%m/%Y %H:%M:%S"),
+            "conteo": len(vuelos_hoy),
+            "vuelos": vuelos_hoy
         }
 
         with open("vuelos_dashboard.json", "w", encoding='utf-8') as f:
             json.dump(datos_dashboard, f, ensure_ascii=False, indent=4)
         
-        print("📁 Datos para el mapa actualizados en 'vuelos_dashboard.json'.")
+        print(f"📁 Dashboard actualizado con HISTORIAL del día ({len(vuelos_hoy)} vuelos).")
 
-        # 6. Sincronizar cambios de vuelta (Viene de main.py)
-        # Sube los suscriptores y alertas enviadas a GitHub
+        # 5. Sincronizar cambios de vuelta (Suscriptores y Alertas)
         main.sync_to_private_repo()
 
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] ✨ Ciclo completado con éxito.")
+        print(f"[{obtener_hora_peru().strftime('%H:%M:%S')}] ✨ Ciclo completado con éxito.")
 
     except Exception as e:
         print(f"❌ Error en el Dashboard Manager: {e}")
