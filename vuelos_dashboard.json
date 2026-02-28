@@ -1,0 +1,54 @@
+{
+    "ultima_sincronizacion": "28/02/2026 10:04:22",
+    "conteo": 4,
+    "vuelos": [
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "08:31",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2291",
+            "aerolinea": "LATAM Airlines",
+            "puerta": "",
+            "checkin": "",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "08:10",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2290",
+            "aerolinea": "LATAM Airlines",
+            "puerta": "",
+            "checkin": "",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "09:20",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2142",
+            "aerolinea": "LATAM Airlines",
+            "puerta": "",
+            "checkin": "",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "10:35",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2204",
+            "aerolinea": "LATAM Airlines",
+            "puerta": "",
+            "checkin": "",
+            "estado": "CANCELADO"
+        }
+    ]
+}
