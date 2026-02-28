@@ -32,8 +32,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run scraper
+    - name: Run scraper and generate dashboard
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         DATA_REPO_TOKEN: ${{ secrets.DATA_REPO_TOKEN }}
-      run: python main.py
+      run: python dashboard_manager.py
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "GitHub Action Bot"
+        git config --global user.email "actions@github.com"
+        git add vuelos_dashboard.json
+        # Solo hacer commit si hubo cambios para evitar errores
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update dashboard data" && git push)
