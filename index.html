@@ -556,14 +556,14 @@
         });
 
         const baseMaps = {
-            "🌚 MODO CENTRO CONTROL": mapaOscuro,
             "🗺️ MAPA ESTÁNDAR": mapaEstandar,
             "🛰️ VISTA SATÉLITE": mapaSatelite,
-            "�️ RELIEVE DE LOS ANDES": mapaRelieve
+            "🏔️ RELIEVE DE LOS ANDES": mapaRelieve,
+            "🌚 MODO CENTRO CONTROL": mapaOscuro
         };
 
-        // Iniciar con Modo Oscuro por defecto
-        mapaOscuro.addTo(map);
+        // Iniciar con Mapa Estándar por defecto
+        mapaEstandar.addTo(map);
 
         // Control de capas simple
         L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
