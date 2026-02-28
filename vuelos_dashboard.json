@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "28/02/2026 15:00:53",
-    "conteo": 8,
+    "ultima_sincronizacion": "28/02/2026 15:10:48",
+    "conteo": 9,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -80,6 +80,16 @@
             "ciudad": "CUSCO",
             "vuelo": "H25012",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2108",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
