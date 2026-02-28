@@ -148,6 +148,14 @@
             border: 1px solid var(--borde-card);
         }
 
+        /* Estilo para capas meteorológicas inactivas */
+        .layer-disabled {
+            opacity: 0.4 !important;
+            filter: grayscale(1);
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+
         .legend-dot {
             width: 12px;
             height: 12px;
@@ -556,17 +564,33 @@
                 const response = await fetch('https://api.rainviewer.com/public/weather-maps.json');
                 const data = await response.json();
 
-                if (data.radar && data.radar.past && data.radar.past.length > 0) {
+                const hasRadar = data.radar && data.radar.past && data.radar.past.length > 0;
+                const hasSat = data.satellite && data.satellite.infrared && data.satellite.infrared.length > 0;
+
+                if (hasRadar) {
                     const lastRadar = data.radar.past[data.radar.past.length - 1].time;
                     capaPrecipitacion.setUrl(`https://tilecache.rainviewer.com/v2/radar/${lastRadar}/256/{z}/{x}/{y}/2/1_1.png`);
                     console.log("Radar actualizado:", new Date(lastRadar * 1000).toLocaleString());
                 }
 
-                if (data.satellite && data.satellite.infrared && data.satellite.infrared.length > 0) {
+                if (hasSat) {
                     const lastSat = data.satellite.infrared[data.satellite.infrared.length - 1].time;
                     capaNubes.setUrl(`https://tilecache.rainviewer.com/v2/satellite/${lastSat}/256/{z}/{x}/{y}/2/0_0.png`);
                     console.log("Nubes actualizadas:", new Date(lastSat * 1000).toLocaleString());
                 }
+
+                // Control visual de los checkboxes (difuminar si no hay data)
+                const overlayLabels = document.querySelectorAll('.leaflet-control-layers-overlays label');
+                overlayLabels.forEach(label => {
+                    const text = label.innerText;
+                    if (text.includes('Radar de Lluvia')) {
+                        label.classList.toggle('layer-disabled', !hasRadar);
+                    }
+                    if (text.includes('Capa de Nubes')) {
+                        label.classList.toggle('layer-disabled', !hasSat);
+                    }
+                });
+
             } catch (e) {
                 console.error("Error al actualizar clima:", e);
             }
