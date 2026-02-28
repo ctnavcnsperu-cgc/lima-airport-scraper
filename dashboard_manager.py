@@ -41,22 +41,33 @@ def parse_historial_vuelos():
         if not linea or "_" not in linea:
             continue
             
-        # Formato Viejo: FECHA_VUELO_CIUDAD_SENTIDO (4 partes)
-        # Formato Nuevo: FECHA_HORA_VUELO_CIUDAD_SENTIDO (5 partes)
         partes = linea.split("_")
-        num_partes = len(partes)
-        
-        if num_partes < 4:
+        if len(partes) < 4:
             continue
             
-        if num_partes == 5:
-            fecha, hora, vuelo, ciudad, sentido = partes[0], partes[1], partes[2], partes[3], partes[4]
-        else:
-            fecha, hora, vuelo, ciudad, sentido = partes[0], "--:--", partes[1], partes[2], partes[3]
-        
-        # Filtrar solo los de HOY
+        # Detección inteligente de campos
+        fecha = partes[0]
+        # Filtrar solo los de HOY de inmediato para ahorrar proceso
         if fecha != hoy_str:
             continue
+
+        hora = "--:--"
+        vuelo = ""
+        ciudad = ""
+        sentido = ""
+
+        # Si tenemos la hora (ej: 14:15), buscamos la parte que tenga ":"
+        if ":" in partes[1] and len(partes[1]) == 5:
+            hora = partes[1]
+            vuelo = partes[2]
+            ciudad = partes[3]
+            sentido = partes[4] if len(partes) > 4 else "DESCONOCIDO"
+        else:
+            # Formato viejo o sin hora
+            hora = "--:--"
+            vuelo = partes[1]
+            ciudad = partes[2]
+            sentido = partes[3] if len(partes) > 3 else "DESCONOCIDO"
 
         # Identificar Aerolínea por prefijo de vuelo
         airline = "AEROLÍNEA"
