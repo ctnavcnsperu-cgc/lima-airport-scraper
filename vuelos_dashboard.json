@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "28/02/2026 16:00:47",
-    "conteo": 9,
+    "ultima_sincronizacion": "28/02/2026 16:10:42",
+    "conteo": 15,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -90,6 +90,66 @@
             "ciudad": "AREQUIPA",
             "vuelo": "LA2108",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "21:15",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25415",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "21:35",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25363",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "21:45",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25018",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "22:05",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25080",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "22:55",
+            "hora_real": "",
+            "ciudad": "PIURA",
+            "vuelo": "H25229",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "23:45",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25142",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
