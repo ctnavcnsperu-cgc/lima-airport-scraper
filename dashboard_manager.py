@@ -41,12 +41,18 @@ def parse_historial_vuelos():
         if not linea or "_" not in linea:
             continue
             
-        # Formato: FECHA_VUELO_CIUDAD_SENTIDO (ej: 28/02/2026_LA2203_AREQUIPA_SALIDAS)
+        # Formato Viejo: FECHA_VUELO_CIUDAD_SENTIDO (4 partes)
+        # Formato Nuevo: FECHA_HORA_VUELO_CIUDAD_SENTIDO (5 partes)
         partes = linea.split("_")
-        if len(partes) < 4:
+        num_partes = len(partes)
+        
+        if num_partes < 4:
             continue
             
-        fecha, vuelo, ciudad, sentido = partes[0], partes[1], partes[2], partes[3]
+        if num_partes == 5:
+            fecha, hora, vuelo, ciudad, sentido = partes[0], partes[1], partes[2], partes[3], partes[4]
+        else:
+            fecha, hora, vuelo, ciudad, sentido = partes[0], "--:--", partes[1], partes[2], partes[3]
         
         # Filtrar solo los de HOY
         if fecha != hoy_str:

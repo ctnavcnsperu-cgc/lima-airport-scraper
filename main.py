@@ -377,8 +377,10 @@ def send_cancellation_alerts(cancelled_flights):
     sent_alerts = get_sent_alerts()
     
     for flight in cancelled_flights:
-        # Crear identificador único del vuelo
-        flight_key = f"{flight['fecha']}_{flight['vuelo']}_{flight['ciudad']}_{flight['tipo']}"
+        # Crear identificador único del vuelo (Ahora INCLUYE LA HORA PROGRAMADA)
+        # Formato anterior: FECHA_VUELO_CIUDAD_SENTIDO
+        # Formato nuevo: FECHA_HORA_VUELO_CIUDAD_SENTIDO
+        flight_key = f"{flight['fecha']}_{flight['hora_prog']}_{flight['vuelo']}_{flight['ciudad']}_{flight['tipo']}"
         
         if flight_key in sent_alerts:
             continue
