@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "01/03/2026 04:40:54",
-    "conteo": 2,
+    "ultima_sincronizacion": "01/03/2026 04:50:53",
+    "conteo": 3,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -19,6 +19,16 @@
             "hora_real": "",
             "ciudad": "TRUJILLO",
             "vuelo": "LA2141",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "01/03/2026",
+            "hora_prog": "09:20",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2142",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
