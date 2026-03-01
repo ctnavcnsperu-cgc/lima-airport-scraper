@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "01/03/2026 01:40:46",
-    "conteo": 1,
+    "ultima_sincronizacion": "01/03/2026 01:50:47",
+    "conteo": 2,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -9,6 +9,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2238",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "01/03/2026",
+            "hora_prog": "06:15",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2141",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
