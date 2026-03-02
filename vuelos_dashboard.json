@@ -1,45 +1,85 @@
 {
-    "ultima_sincronizacion": "01/03/2026 23:50:47",
-    "conteo": 4,
+    "ultima_sincronizacion": "02/03/2026 00:00:58",
+    "conteo": 8,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "01/03/2026",
-            "hora_prog": "10:15",
+            "fecha": "02/03/2026",
+            "hora_prog": "10:10",
             "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2238",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "01/03/2026",
-            "hora_prog": "06:15",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2141",
-            "aerolinea": "LATAM Airlines",
+            "ciudad": "PUCALLPA",
+            "vuelo": "H25422",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "01/03/2026",
-            "hora_prog": "09:20",
+            "fecha": "02/03/2026",
+            "hora_prog": "10:20",
             "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2142",
-            "aerolinea": "LATAM Airlines",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25702",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "01/03/2026",
-            "hora_prog": "13:45",
+            "fecha": "02/03/2026",
+            "hora_prog": "11:15",
             "hora_real": "",
             "ciudad": "CUSCO",
-            "vuelo": "LA2239",
-            "aerolinea": "LATAM Airlines",
+            "vuelo": "H25712",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "14:40",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25008",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "21:15",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25415",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "21:35",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25363",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "21:45",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25018",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "22:05",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25080",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
