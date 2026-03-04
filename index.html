@@ -653,6 +653,61 @@
             color: var(--text-bright) !important;
             background: transparent !important;
         }
+
+        /* Custom Zoom Slider Styling */
+        .zoom-slider-container {
+            background: rgba(26, 29, 35, 0.9);
+            border: 1px solid var(--border-dark);
+            padding: 10px 5px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .zoom-slider-label {
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .vertical-slider {
+            -webkit-appearance: none;
+            width: 4px;
+            height: 120px;
+            background: var(--border-dark);
+            outline: none;
+            border-radius: 2px;
+            writing-mode: bt-lr;
+            /* For some browsers */
+            appearance: slider-vertical;
+            /* For modern browsers */
+        }
+
+        .vertical-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background: #FFD700;
+            cursor: pointer;
+            border-radius: 2px;
+            border: 2px solid #1a1d23;
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        .vertical-slider::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            background: #FFD700;
+            cursor: pointer;
+            border-radius: 2px;
+            border: 2px solid #1a1d23;
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
     </style>
 </head>
 
@@ -781,8 +836,6 @@
             maxBoundsViscosity: 1.0
         }).setView(initialCenter, initialZoom);
 
-        L.control.zoom({ position: 'topleft' }).addTo(map);
-
         const mapaEstandar = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' });
         const mapaSatelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: 'Tiles &copy; Esri' });
         const mapaOscuro = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; CartoDB' });
@@ -803,12 +856,46 @@
             onAdd: function (map) {
                 const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
                 const button = L.DomUtil.create('a', 'leaflet-control-reset', container);
+                button.setAttribute('title', 'Resetear Vista');
                 button.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--azul-oscuro); display: block;"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path><circle cx="12" cy="12" r="1" fill="currentColor"></circle></svg>`;
                 L.DomEvent.on(button, 'click', (e) => { L.DomEvent.stopPropagation(e); map.setView(initialCenter, initialZoom); });
                 return container;
             }
         });
+
+        L.Control.ZoomSlider = L.Control.extend({
+            options: { position: 'topleft' },
+            onAdd: function (map) {
+                const container = L.DomUtil.create('div', 'zoom-slider-container leaflet-control');
+                container.innerHTML = `
+                    <span class="zoom-slider-label">IN</span>
+                    <input type="range" class="vertical-slider" id="map-zoom-slider" 
+                           min="${map.getMinZoom()}" max="${map.getMaxZoom()}" 
+                           step="0.1" value="${map.getZoom()}" 
+                           orient="vertical">
+                    <span class="zoom-slider-label">OUT</span>
+                `;
+
+                const slider = container.querySelector('#map-zoom-slider');
+
+                // Prevenir que el mapa se mueva al arrastrar el slider
+                L.DomEvent.disableClickPropagation(container);
+                L.DomEvent.disableScrollPropagation(container);
+
+                L.DomEvent.on(slider, 'input', (e) => {
+                    map.setZoom(e.target.value);
+                });
+
+                map.on('zoomend', () => {
+                    slider.value = map.getZoom();
+                });
+
+                return container;
+            }
+        });
+
         map.addControl(new L.Control.ResetView());
+        map.addControl(new L.Control.ZoomSlider());
 
         let lastData = null;
         let activeFilters = { tipo: [], vuelo: [], aerolinea: [], ciudad: [] };
