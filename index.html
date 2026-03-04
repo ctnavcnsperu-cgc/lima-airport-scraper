@@ -11,15 +11,22 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         :root {
-            --azul-oscuro: #004a7c;
-            --azul-notam: #005691;
-            --celeste-fondo: #fcfdfe;
-            --blanco: #ffffff;
-            --punto-alerta: #e74c3c;
-            /* Rojo vibrante */
-            --rojo-alerta: #e74c3c;
-            --gris-texto: #334155;
-            --borde-card: #e2e8f0;
+            --bg-principal: #0f1115;
+            /* Gris casi negro profundo */
+            --card-bg: #1a1d23;
+            /* Gris pizarra oscuro */
+            --header-bg: #21262e;
+            /* Gris técnico de cabecera */
+            --accent-tech: #e2e8f0;
+            /* Gris claro para acentos técnicos */
+            --text-bright: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-dark: #334155;
+            --punto-alerta: #ff3e3e;
+            /* Rojo puro para alertas críticas */
+            --azul-notam: #e2e8f0;
+            --azul-oscuro: #0f1115;
+            --linea-separadora: rgba(226, 232, 240, 0.15);
         }
 
         * {
@@ -30,8 +37,8 @@
         }
 
         body {
-            background-color: var(--celeste-fondo);
-            color: var(--gris-texto);
+            background-color: var(--bg-principal);
+            color: var(--text-bright);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -39,14 +46,14 @@
         }
 
         header {
-            background: linear-gradient(to bottom, var(--azul-notam), var(--azul-oscuro));
-            color: white;
-            padding: 10px 20px;
+            background: var(--header-bg);
+            color: var(--accent-tech);
+            padding: 12px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #003355;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            border-bottom: 2px solid var(--border-dark);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
             z-index: 1100;
         }
 
@@ -75,12 +82,12 @@
         }
 
         .card-container {
-            background: var(--blanco);
-            border: 1px solid var(--borde-card);
-            border-radius: 6px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-dark);
+            border-radius: 4px;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
             position: relative;
             flex: 1;
             min-width: 450px;
@@ -89,14 +96,16 @@
 
         .card-title-fixed {
             padding: 12px 15px;
-            border-bottom: 1px solid var(--borde-card);
+            border-bottom: 1px solid var(--border-dark);
             font-weight: 700;
-            color: var(--azul-oscuro);
-            font-size: 0.9rem;
+            color: var(--accent-tech);
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 10px;
             text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.03);
+            letter-spacing: 0.5px;
         }
 
         .card-title-fixed::before {
@@ -114,6 +123,11 @@
             z-index: 10;
         }
 
+        /* Efecto de atenuado tipo Centro de Control para resaltar información */
+        .leaflet-tile-pane {
+            filter: brightness(0.5) contrast(1.1) saturate(0.7);
+        }
+
         .leaflet-container {
             background-color: #f8fafc !important;
         }
@@ -123,16 +137,17 @@
             bottom: 20px;
             left: 20px;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(26, 29, 35, 0.95);
             padding: 8px 15px;
             border-radius: 4px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             gap: 10px;
             font-size: 0.75rem;
             font-weight: 600;
-            border: 1px solid var(--borde-card);
+            border: 1px solid var(--border-dark);
+            color: var(--text-bright);
         }
 
         .legend-dot {
@@ -146,17 +161,17 @@
 
         /* Filtros Pro en Cabecera */
         .table-header-pro {
-            background: #f8fafc;
+            background: var(--header-bg);
             padding: 12px 15px;
-            border-bottom: 1px solid var(--borde-card);
+            border-bottom: 1px solid var(--border-dark);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .table-header-pro h2 {
-            font-size: 0.9rem;
-            color: var(--azul-oscuro);
+            font-size: 0.85rem;
+            color: var(--accent-tech);
             font-weight: 700;
         }
 
@@ -175,8 +190,11 @@
             position: sticky;
             top: 0;
             z-index: 20;
-            background: #f1f5f9;
-            border-bottom: 2px solid var(--borde-card);
+            background: var(--header-bg);
+            border-bottom: 2px solid var(--border-dark);
+            color: var(--accent-tech);
+            text-transform: uppercase;
+            font-size: 0.75rem;
         }
 
         .filter-trigger {
@@ -186,7 +204,7 @@
         }
 
         th:hover .filter-trigger {
-            color: var(--azul-oscuro);
+            color: var(--accent-tech);
         }
 
         .filter-trigger.active {
@@ -197,11 +215,10 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--borde-card);
-            border-radius: 8px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            background: var(--header-bg);
+            border: 1px solid var(--border-dark);
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
             z-index: 3000;
             min-width: 200px;
             max-height: 300px;
@@ -210,6 +227,7 @@
             padding: 8px 0;
             margin-top: 5px;
             text-align: left;
+            color: var(--text-bright);
         }
 
         .filter-panel.show {
@@ -231,16 +249,22 @@
 
         .filter-search {
             padding: 8px 12px;
-            border-bottom: 1px solid #f1f5f9;
+            border-bottom: 1px solid var(--border-dark);
         }
 
         .filter-search input {
             width: 100%;
             padding: 6px 10px;
-            border: 1px solid var(--borde-card);
+            border: 1px solid var(--border-dark);
+            background: var(--bg-principal);
+            color: var(--text-bright);
             border-radius: 4px;
             font-size: 0.8rem;
             outline: none;
+        }
+
+        .filter-search input:focus {
+            border-color: var(--accent-tech);
         }
 
         .filter-item {
@@ -251,37 +275,44 @@
             gap: 10px;
             cursor: pointer;
             transition: background 0.2s;
-            color: var(--gris-texto);
+            color: var(--text-muted);
         }
 
         .filter-item:hover {
-            background: #f8fafc;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-bright);
         }
 
         .filter-item input[type="checkbox"] {
             width: 16px;
             height: 16px;
             cursor: pointer;
-            accent-color: var(--azul-oscuro);
+            accent-color: var(--accent-tech);
         }
 
         .filter-actions {
             padding: 8px 12px;
-            border-top: 1px solid #f1f5f9;
+            border-top: 1px solid var(--border-dark);
             display: flex;
             justify-content: space-between;
-            background: #fcfdfe;
+            background: var(--header-bg);
         }
 
         .btn-text {
             background: none;
             border: none;
-            color: var(--azul-oscuro);
+            color: var(--accent-tech);
             font-weight: 700;
             font-size: 0.75rem;
             cursor: pointer;
             padding: 4px 8px;
             border-radius: 4px;
+            opacity: 0.8;
+        }
+
+        .btn-text:hover {
+            opacity: 1;
+            text-decoration: underline;
         }
 
         .btn-clear-all {
@@ -310,12 +341,13 @@
 
         td {
             padding: 12px 15px;
-            font-size: 0.85rem;
-            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.8rem;
+            border-bottom: 1px solid var(--border-dark);
+            color: var(--text-bright);
         }
 
         tr:hover {
-            background-color: #f8fafc;
+            background-color: rgba(255, 255, 255, 0.03);
         }
 
         /* Marcadores Mapa */
