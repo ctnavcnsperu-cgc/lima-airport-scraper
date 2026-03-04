@@ -450,8 +450,14 @@
         }
 
         .vuelo-id {
-            color: var(--azul-oscuro);
+            color: var(--accent-tech);
             font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .text-soft {
+            color: var(--text-muted);
+            font-weight: 500;
         }
 
         .counter-badge {
@@ -724,9 +730,9 @@
                     const row = `<tr>
                         <td><span class="${badgeClass}">${isSalida ? '🛫 SALIDA' : '🛬 LLEGADA'}</span></td>
                         <td class="vuelo-id">${vuelo.vuelo}</td>
-                        <td style="color: #64748b; font-size: 0.8rem;">${vuelo.aerolinea}</td>
-                        <td><b>${vuelo.ciudad}</b></td>
-                        <td>${vuelo.hora_prog}</td>
+                        <td style="color: var(--text-muted); font-size: 0.75rem; opacity: 0.8;">${vuelo.aerolinea}</td>
+                        <td class="text-soft"><b>${vuelo.ciudad}</b></td>
+                        <td class="text-soft">${vuelo.hora_prog}</td>
                         <td><span class="badge-cancel">CANCELADO</span></td>
                     </tr>`;
                     tableBody.innerHTML += row;
