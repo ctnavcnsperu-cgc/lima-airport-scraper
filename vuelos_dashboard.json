@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "04/03/2026 09:40:51",
-    "conteo": 11,
+    "ultima_sincronizacion": "04/03/2026 09:50:50",
+    "conteo": 12,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -110,6 +110,16 @@
             "ciudad": "CUSCO",
             "vuelo": "H25080",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "14:45",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2228",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
