@@ -838,14 +838,12 @@
 
         const mapaEstandar = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' });
         const mapaSatelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: 'Tiles &copy; Esri' });
-        const mapaOscuro = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; CartoDB' });
         const mapaRelieve = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}', { attribution: 'Tiles &copy; Esri', maxZoom: 13 });
 
         const baseMaps = {
             "🗺️ MAPA ESTÁNDAR": mapaEstandar,
             "🛰️ VISTA SATÉLITE": mapaSatelite,
-            "🏔️ RELIEVE DE LOS ANDES": mapaRelieve,
-            "🌚 MODO CENTRO CONTROL": mapaOscuro
+            "🏔️ RELIEVE DE LOS ANDES": mapaRelieve
         };
 
         mapaEstandar.addTo(map);
