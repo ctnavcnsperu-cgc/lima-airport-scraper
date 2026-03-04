@@ -491,25 +491,25 @@
         }
 
         .hub-radar-pulse {
-            width: 120px;
-            /* Pulso muy amplio como pidió el usuario */
-            height: 120px;
+            width: 80px;
+            /* Regresado a tamaño anterior */
+            height: 80px;
             background: rgba(255, 215, 0, 0.1);
-            border: 2px solid #FFD700;
+            border: 1.5px solid #FFD700;
             border-radius: 50%;
             position: absolute;
-            animation: hub-radar-anim 4s infinite ease-out;
+            animation: hub-radar-anim 3s infinite ease-out;
             pointer-events: none;
         }
 
         @keyframes hub-radar-anim {
             0% {
-                transform: scale(0.1);
-                opacity: 0.9;
+                transform: scale(0.2);
+                opacity: 0.8;
             }
 
             100% {
-                transform: scale(4.5);
+                transform: scale(3.5);
                 opacity: 0;
             }
         }
@@ -843,7 +843,7 @@
 
                 // 1. Dibujar HUB LIMA con pulso muy amplio y lento
                 const hubHtml = `<div class="hub-container"><div class="hub-radar-pulse"></div><div class="hub-center-dot"></div></div>`;
-                const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [120, 120], iconAnchor: [60, 60] });
+                const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [80, 80], iconAnchor: [40, 40] });
                 const hubMarker = L.marker(LIMA_COORDS, { icon: hubMarkIcon }).addTo(map);
                 hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -15] });
 
