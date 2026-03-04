@@ -532,13 +532,16 @@
         }
 
         .airplane-pulse {
-            width: 30px;
-            height: 30px;
-            background: rgba(255, 215, 0, 0.15);
-            border: 1.5px solid #FFD700;
+            width: 80px;
+            /* Tamaño igual al HUB para crear la malla */
+            height: 80px;
+            background: rgba(255, 215, 0, 0.05);
+            /* Opacidad muy baja para elegancia */
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 50%;
             position: absolute;
-            animation: airplane-pulse-anim 2s infinite ease-out;
+            animation: hub-radar-anim 3s infinite ease-out;
+            /* Misma animación que el HUB */
             pointer-events: none;
         }
 
@@ -867,8 +870,8 @@
                         const planeIcon = L.divIcon({
                             className: 'airplane-marker',
                             html: airplaneSvg,
-                            iconSize: [28, 28],
-                            iconAnchor: [14, 14]
+                            iconSize: [80, 80],
+                            iconAnchor: [40, 40]
                         });
 
                         const marker = L.marker([lat, lon], { icon: planeIcon }).addTo(map);
