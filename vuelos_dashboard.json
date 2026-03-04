@@ -1,10 +1,20 @@
 {
-    "ultima_sincronizacion": "03/03/2026 23:50:42",
-    "conteo": 9,
+    "ultima_sincronizacion": "04/03/2026 00:01:05",
+    "conteo": 11,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "03/03/2026",
+            "fecha": "04/03/2026",
+            "hora_prog": "09:00",
+            "hora_real": "",
+            "ciudad": "TUMBES",
+            "vuelo": "H25924",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/03/2026",
             "hora_prog": "09:10",
             "hora_real": "",
             "ciudad": "PIURA",
@@ -13,18 +23,8 @@
             "estado": "CANCELADO"
         },
         {
-            "tipo": "LLEGADAS",
-            "fecha": "03/03/2026",
-            "hora_prog": "10:20",
-            "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "H25702",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
             "tipo": "SALIDAS",
-            "fecha": "03/03/2026",
+            "fecha": "04/03/2026",
             "hora_prog": "10:10",
             "hora_real": "",
             "ciudad": "PUCALLPA",
@@ -34,7 +34,17 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "03/03/2026",
+            "fecha": "04/03/2026",
+            "hora_prog": "10:20",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25702",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
             "hora_prog": "11:15",
             "hora_real": "",
             "ciudad": "CUSCO",
@@ -44,7 +54,17 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "03/03/2026",
+            "fecha": "04/03/2026",
+            "hora_prog": "13:20",
+            "hora_real": "",
+            "ciudad": "TUMBES",
+            "vuelo": "H25925",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
             "hora_prog": "14:40",
             "hora_real": "",
             "ciudad": "CUSCO",
@@ -54,7 +74,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "03/03/2026",
+            "fecha": "04/03/2026",
             "hora_prog": "21:15",
             "hora_real": "",
             "ciudad": "TARAPOTO",
@@ -64,7 +84,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "03/03/2026",
+            "fecha": "04/03/2026",
             "hora_prog": "21:35",
             "hora_real": "",
             "ciudad": "IQUITOS",
@@ -74,7 +94,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "03/03/2026",
+            "fecha": "04/03/2026",
             "hora_prog": "21:45",
             "hora_real": "",
             "ciudad": "CUSCO",
@@ -84,7 +104,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "03/03/2026",
+            "fecha": "04/03/2026",
             "hora_prog": "22:05",
             "hora_real": "",
             "ciudad": "CUSCO",
