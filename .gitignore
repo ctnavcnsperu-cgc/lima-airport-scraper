@@ -1,5 +1,9 @@
 # Credenciales y archivos sensibles
+# Evitar subir JSONs sensibles, pero permitir los del dashboard
 *.json
+!vuelos_dashboard.json
+!vuelos_history.json
+!lima-airport-scraper-*.json
 cuenta.txt
 suscriptores.txt
 alertas_enviadas.txt
