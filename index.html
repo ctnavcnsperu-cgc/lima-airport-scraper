@@ -481,6 +481,64 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
+        /* HUB y Trayectorias */
+        .flight-path {
+            opacity: 0.5;
+            filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.2));
+            pointer-events: none;
+        }
+
+        .hub-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hub-radar-pulse {
+            width: 80px;
+            /* Pulso muy amplio como pidió el usuario */
+            height: 80px;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1.5px solid #FFD700;
+            border-radius: 50%;
+            position: absolute;
+            animation: hub-radar-anim 3s infinite ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes hub-radar-anim {
+            0% {
+                transform: scale(0.2);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(3.5);
+                opacity: 0;
+            }
+        }
+
+        .hub-center-dot {
+            width: 14px;
+            height: 14px;
+            background: #FFD700;
+            border: 2px solid #1a1d23;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+            z-index: 1000;
+        }
+
+        .leaflet-tooltip-hub {
+            background: none !important;
+            border: none !important;
+            color: #FFD700 !important;
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 
@@ -757,11 +815,28 @@
                     vuelosPorCiudad[ciudadUpper].push(vuelo);
                 });
 
+                const LIMA_COORDS = COORDENADAS["LIMA"];
+
+                // 1. Dibujar HUB LIMA con pulso amplio
+                const hubHtml = `<div class="hub-container"><div class="hub-radar-pulse"></div><div class="hub-center-dot"></div></div>`;
+                const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [80, 80], iconAnchor: [40, 40] });
+                const hubMarker = L.marker(LIMA_COORDS, { icon: hubMarkIcon }).addTo(map);
+                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -10] });
+
                 Object.keys(vuelosPorCiudad).forEach(ciudadKey => {
                     const vuelosLugar = vuelosPorCiudad[ciudadKey];
-                    if (COORDENADAS[ciudadKey]) {
+                    if (COORDENADAS[ciudadKey] && ciudadKey !== "LIMA") {
                         const [lat, lon] = COORDENADAS[ciudadKey];
                         const isSalida = vuelosLugar.some(v => v.tipo === 'SALIDAS');
+
+                        // 2. Dibujar Lineas de Trayectoria sin tocar la tabla
+                        L.polyline([LIMA_COORDS, [lat, lon]], {
+                            color: isSalida ? '#94a3b8' : '#7dd3fc',
+                            weight: 1.2,
+                            opacity: 0.4,
+                            dashArray: '6, 6',
+                            className: 'flight-path'
+                        }).addTo(map);
 
                         // Airplane Icon SVG (similar to FlightRadar24)
                         const airplaneSvg = `
