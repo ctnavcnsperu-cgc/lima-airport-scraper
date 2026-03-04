@@ -482,13 +482,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* HUB y Trayectorias */
-        .flight-path {
-            opacity: 0.5;
-            filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.2));
-            pointer-events: none;
-        }
-
+        /* Radar Pulse System */
         .hub-container {
             position: relative;
             display: flex;
@@ -497,47 +491,77 @@
         }
 
         .hub-radar-pulse {
-            width: 80px;
+            width: 120px;
             /* Pulso muy amplio como pidió el usuario */
-            height: 80px;
+            height: 120px;
             background: rgba(255, 215, 0, 0.1);
-            border: 1.5px solid #FFD700;
+            border: 2px solid #FFD700;
             border-radius: 50%;
             position: absolute;
-            animation: hub-radar-anim 3s infinite ease-out;
+            animation: hub-radar-anim 4s infinite ease-out;
             pointer-events: none;
         }
 
         @keyframes hub-radar-anim {
             0% {
-                transform: scale(0.2);
-                opacity: 0.8;
+                transform: scale(0.1);
+                opacity: 0.9;
             }
 
             100% {
-                transform: scale(3.5);
+                transform: scale(4.5);
                 opacity: 0;
             }
         }
 
         .hub-center-dot {
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             background: #FFD700;
-            border: 2px solid #1a1d23;
+            border: 3px solid #1a1d23;
             border-radius: 50%;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 1);
             z-index: 1000;
+        }
+
+        .airplane-radar-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .airplane-pulse {
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 215, 0, 0.15);
+            border: 1.5px solid #FFD700;
+            border-radius: 50%;
+            position: absolute;
+            animation: airplane-pulse-anim 2s infinite ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes airplane-pulse-anim {
+            0% {
+                transform: scale(0.5);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
         }
 
         .leaflet-tooltip-hub {
             background: none !important;
             border: none !important;
             color: #FFD700 !important;
-            font-weight: 800;
-            font-size: 0.95rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            letter-spacing: 0.5px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -817,11 +841,11 @@
 
                 const LIMA_COORDS = COORDENADAS["LIMA"];
 
-                // 1. Dibujar HUB LIMA con pulso amplio
+                // 1. Dibujar HUB LIMA con pulso muy amplio y lento
                 const hubHtml = `<div class="hub-container"><div class="hub-radar-pulse"></div><div class="hub-center-dot"></div></div>`;
-                const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [80, 80], iconAnchor: [40, 40] });
+                const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [120, 120], iconAnchor: [60, 60] });
                 const hubMarker = L.marker(LIMA_COORDS, { icon: hubMarkIcon }).addTo(map);
-                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -10] });
+                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -15] });
 
                 Object.keys(vuelosPorCiudad).forEach(ciudadKey => {
                     const vuelosLugar = vuelosPorCiudad[ciudadKey];
@@ -829,27 +853,15 @@
                         const [lat, lon] = COORDENADAS[ciudadKey];
                         const isSalida = vuelosLugar.some(v => v.tipo === 'SALIDAS');
 
-                        // 2. Dibujar Trayectorias Amarillas y Curvadas
-                        const midpoint = [
-                            (LIMA_COORDS[0] + lat) / 2 + (lon - LIMA_COORDS[1]) * 0.15,
-                            (LIMA_COORDS[1] + lon) / 2 + (LIMA_COORDS[0] - lat) * 0.15
-                        ];
-
-                        L.polyline([LIMA_COORDS, midpoint, [lat, lon]], {
-                            color: '#FFD700',
-                            weight: 2.2,
-                            opacity: 0.8,
-                            dashArray: '8, 8',
-                            smoothFactor: 1.5,
-                            className: 'flight-path'
-                        }).addTo(map);
-
-                        // 3. Dibujar el Avión (sin cambios)
+                        // 2. Dibujar el Avión con su propio pulso de radar (quité líneas)
                         const airplaneSvg = `
-                            <div class="airplane-icon-wrapper ${isSalida ? 'airplane-departure' : 'airplane-arrival'}">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                                </svg>
+                            <div class="airplane-radar-wrapper">
+                                <div class="airplane-pulse"></div>
+                                <div class="airplane-icon-wrapper ${isSalida ? 'airplane-departure' : 'airplane-arrival'}">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                                    </svg>
+                                </div>
                             </div>`;
 
                         const planeIcon = L.divIcon({
