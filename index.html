@@ -402,22 +402,11 @@
             letter-spacing: 0.5px;
         }
 
-        /* Popups Mapa Dark */
-        .leaflet-popup-content-wrapper,
-        .leaflet-popup-tip {
-            background: var(--card-bg) !important;
-            color: var(--text-bright) !important;
-            border: 1px solid var(--border-dark);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .leaflet-popup-close-button {
-            color: var(--text-muted) !important;
-            padding: 8px !important;
-        }
-
-        .leaflet-popup-close-button:hover {
-            color: var(--text-bright) !important;
+        .leaflet-tooltip-left::before,
+        .leaflet-tooltip-right::before,
+        .leaflet-tooltip-top::before,
+        .leaflet-tooltip-bottom::before {
+            display: none !important;
         }
 
         .badge-salida {
@@ -582,6 +571,87 @@
             text-shadow: none !important;
             /* Quitar sombra negra */
             letter-spacing: 1px;
+        }
+
+        /* Estilos personalizados para el Popup (Dark Mode) */
+        .leaflet-popup-tip-container {
+            display: none !important;
+        }
+
+        .leaflet-popup-content-wrapper {
+            background: var(--card-bg) !important;
+            color: var(--text-bright) !important;
+            border: 1px solid var(--border-dark) !important;
+            border-radius: 4px !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7) !important;
+        }
+
+        .leaflet-popup-content {
+            margin: 12px 15px !important;
+            line-height: 1.4 !important;
+        }
+
+        .popup-header {
+            text-align: center;
+            border-bottom: 2px solid var(--punto-alerta);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+        }
+
+        .popup-header b {
+            font-size: 1.1rem;
+            color: var(--accent-tech);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .popup-flight-item {
+            border-bottom: 1px solid var(--linea-separadora);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .popup-flight-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .popup-flight-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .popup-flight-id {
+            color: var(--text-bright);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .popup-flight-time {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .popup-flight-info {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .leaflet-popup-close-button {
+            color: var(--text-muted) !important;
+            padding: 8px 8px 0 0 !important;
+        }
+
+        .leaflet-popup-close-button:hover {
+            color: var(--text-bright) !important;
+            background: transparent !important;
         }
     </style>
 </head>
@@ -895,21 +965,26 @@
 
                         marker.bindTooltip(vuelosLugar.map(v => v.vuelo).join('-'), { permanent: true, direction: 'right', className: 'leaflet-tooltip-own', offset: [12, 0], interactive: true });
 
-                        let popup = `<div style="font-family: 'Inter', sans-serif; min-width: 220px; padding: 5px;">
-                            <div style="text-align:center; border-bottom: 2px solid var(--punto-alerta); margin-bottom: 12px; padding-bottom: 8px;">
-                                <b style="font-size:1.1rem; color:var(--text-bright); text-transform:uppercase;">${ciudadKey}</b>
-                            </div><div style="display:flex; flex-direction:column; gap:10px;">`;
+                        let popup = `
+                            <div class="popup-header">
+                                <b>${ciudadKey}</b>
+                            </div>
+                            <div style="display:flex; flex-direction:column;">`;
 
                         vuelosLugar.forEach(v => {
-                            popup += `<div style="border-bottom: 1px solid var(--border-dark); padding-bottom: 8px;">
-                                <div style="display:flex; justify-content:space-between; align-items:center;">
-                                    <b style="color:var(--text-bright);">${v.vuelo}</b>
-                                    <span style="font-size:0.75rem; color:var(--text-muted);">${v.hora_prog}</span>
-                                </div>
-                                <div style="font-size:0.75rem; color:var(--text-muted);">${v.tipo === 'SALIDAS' ? '🛫' : '🛬'} ${v.aerolinea}</div>
-                            </div>`;
+                            popup += `
+                                <div class="popup-flight-item">
+                                    <div class="popup-flight-row">
+                                        <span class="popup-flight-id">${v.vuelo}</span>
+                                        <span class="popup-flight-time">${v.hora_prog}</span>
+                                    </div>
+                                    <div class="popup-flight-info">
+                                        <span>${v.tipo === 'SALIDAS' ? '🛫' : '🛬'}</span>
+                                        <span>${v.aerolinea}</span>
+                                    </div>
+                                </div>`;
                         });
-                        popup += `</div></div>`;
+                        popup += `</div>`;
                         marker.bindPopup(popup);
                     }
                 });
