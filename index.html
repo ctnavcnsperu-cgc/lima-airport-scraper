@@ -388,6 +388,8 @@
         .leaflet-tooltip-own {
             background: none !important;
             border: none !important;
+            box-shadow: none !important;
+            /* Quitar recuadro fantasma */
             color: #FFD700 !important;
             font-weight: 700;
             font-size: 0.8rem;
@@ -561,10 +563,13 @@
         .leaflet-tooltip-hub {
             background: none !important;
             border: none !important;
+            box-shadow: none !important;
+            /* Quitar recuadro fantasma */
             color: #FFD700 !important;
             font-weight: 900;
             font-size: 1.1rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+            text-shadow: none !important;
+            /* Quitar sombra negra */
             letter-spacing: 1px;
         }
     </style>
@@ -849,7 +854,7 @@
                 const hubHtml = `<div class="hub-container"><div class="hub-radar-pulse"></div><div class="hub-center-dot"></div></div>`;
                 const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [80, 80], iconAnchor: [40, 40] });
                 const hubMarker = L.marker(LIMA_COORDS, { icon: hubMarkIcon }).addTo(map);
-                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -5] });
+                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -25] });
 
                 Object.keys(vuelosPorCiudad).forEach(ciudadKey => {
                     const vuelosLugar = vuelosPorCiudad[ciudadKey];
