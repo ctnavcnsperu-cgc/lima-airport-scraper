@@ -1,0 +1,1396 @@
+{
+    "ultima_sincronizacion": "04/03/2026 16:31:52",
+    "conteo": 139,
+    "vuelos": [
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "17/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2277",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2007",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2008",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "JAUJA",
+            "vuelo": "H25440",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "JAUJA",
+            "vuelo": "H25441",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2258",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2259",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A068",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A069",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2297",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2296",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2078",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "19/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "JAEN",
+            "vuelo": "LA2680",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "19/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "JAEN",
+            "vuelo": "LA2681",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "19/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2131",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "19/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2132",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "19/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2142",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "19/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "SAN JUAN DE MARCON",
+            "vuelo": "A4A1983",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "19/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2322",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "19/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2110",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2119",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2356",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2276",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2118",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2357",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2277",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CHACHAPOYAS",
+            "vuelo": "4A4001",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CHACHAPOYAS",
+            "vuelo": "4A4002",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "LA2234",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "LA2235",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "JULIACA",
+            "vuelo": "LA2212",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2035",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2036",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25360",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25361",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2110",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25107",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25108",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2113",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2330",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2112",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2034",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TUMBES",
+            "vuelo": "H25324",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TUMBES",
+            "vuelo": "H25325",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "22/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25005",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25006",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "22/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "JA7318",
+            "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "22/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2291",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2290",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "JA7319",
+            "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2124",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "22/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2123",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "23/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2110",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "23/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2034",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "23/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2330",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "25/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A068",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "25/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A069",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "25/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "GUAYAQUI",
+            "vuelo": "L4A2108",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "25/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "SAN JUAN DE MARCON",
+            "vuelo": "A4A1875",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "25/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "SAN JUAN DE MARCON",
+            "vuelo": "A4A1875",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "25/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2062",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25001",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "H25262",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "H25263",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25002",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "JA7318",
+            "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2011",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "JA7319",
+            "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2010",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2005",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2115",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2114",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2294",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "PIA",
+            "vuelo": "S4A025",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "MAZAMARI",
+            "vuelo": "4A4095",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "SAN JUAN DE MARCON",
+            "vuelo": "A4A1985",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "MAZAMARI",
+            "vuelo": "4A4096",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "SAN JUAN DE MARCON",
+            "vuelo": "A4A1985",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "SAN JUAN DE MARCON",
+            "vuelo": "A4A1875",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "SAN JUAN DE MARCON",
+            "vuelo": "A4A1875",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2356",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2357",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2217",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2218",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "JULIACA",
+            "vuelo": "LA2208",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "27/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2034",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2203",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2204",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2291",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2290",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2141",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2142",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25011",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25012",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "14:15",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2108",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "21:15",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25415",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "21:35",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25363",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "21:45",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25018",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "22:05",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25080",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "22:55",
+            "hora_real": "",
+            "ciudad": "PIURA",
+            "vuelo": "H25229",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "23:45",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25142",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "19:25",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2069",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/02/2026",
+            "hora_prog": "23:20",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2070",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "01/03/2026",
+            "hora_prog": "10:15",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2238",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "01/03/2026",
+            "hora_prog": "06:15",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2141",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "01/03/2026",
+            "hora_prog": "09:20",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2142",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "01/03/2026",
+            "hora_prog": "13:45",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2239",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "10:10",
+            "hora_real": "",
+            "ciudad": "PUCALLPA",
+            "vuelo": "H25422",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "10:20",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25702",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "11:15",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25712",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "14:40",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25008",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "21:15",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25415",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "21:35",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25363",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "21:45",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25018",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/03/2026",
+            "hora_prog": "22:05",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25080",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "09:10",
+            "hora_real": "",
+            "ciudad": "PIURA",
+            "vuelo": "H25226",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "10:20",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25702",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "10:10",
+            "hora_real": "",
+            "ciudad": "PUCALLPA",
+            "vuelo": "H25422",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "11:15",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25712",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "14:40",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25008",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "21:15",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25415",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "21:35",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25363",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "21:45",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25018",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "03/03/2026",
+            "hora_prog": "22:05",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25080",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "09:00",
+            "hora_real": "",
+            "ciudad": "TUMBES",
+            "vuelo": "H25924",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "09:10",
+            "hora_real": "",
+            "ciudad": "PIURA",
+            "vuelo": "H25226",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "10:10",
+            "hora_real": "",
+            "ciudad": "PUCALLPA",
+            "vuelo": "H25422",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "10:20",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25702",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "11:15",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25712",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "13:20",
+            "hora_real": "",
+            "ciudad": "TUMBES",
+            "vuelo": "H25925",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "14:40",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25008",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "21:15",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25415",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "21:35",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25363",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "21:45",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25018",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "22:05",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25080",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "14:45",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2228",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "11:40",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2227",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "14:50",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A068",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "17:30",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A069",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        }
+    ]
+}

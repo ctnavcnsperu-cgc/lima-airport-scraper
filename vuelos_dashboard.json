@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "04/03/2026 16:10:47",
-    "conteo": 13,
+    "ultima_sincronizacion": "04/03/2026 16:31:52",
+    "conteo": 15,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -130,6 +130,26 @@
             "ciudad": "TRUJILLO",
             "vuelo": "LA2227",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "14:50",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A068",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/03/2026",
+            "hora_prog": "17:30",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A069",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
