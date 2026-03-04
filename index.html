@@ -849,7 +849,7 @@
                 const hubHtml = `<div class="hub-container"><div class="hub-radar-pulse"></div><div class="hub-center-dot"></div></div>`;
                 const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [80, 80], iconAnchor: [40, 40] });
                 const hubMarker = L.marker(LIMA_COORDS, { icon: hubMarkIcon }).addTo(map);
-                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'bottom', className: 'leaflet-tooltip-hub', offset: [0, 15] });
+                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'bottom', className: 'leaflet-tooltip-hub', offset: [0, 5] });
 
                 Object.keys(vuelosPorCiudad).forEach(ciudadKey => {
                     const vuelosLugar = vuelosPorCiudad[ciudadKey];
