@@ -1,7 +1,127 @@
 {
-    "ultima_sincronizacion": "04/03/2026 17:30:37",
-    "conteo": 139,
+    "ultima_sincronizacion": "04/03/2026 17:41:07",
+    "conteo": 151,
     "vuelos": [
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "16/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2232",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "16/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25107",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "16/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2113",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "16/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2330",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "16/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "PUCALLPA",
+            "vuelo": "2I3233",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "16/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2225",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "17/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "JAEN",
+            "vuelo": "LA2680",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "17/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2231",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "17/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2203",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "17/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CHACHAPOYAS",
+            "vuelo": "4A4001",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "17/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2276",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "DESCONOCIDO",
+            "fecha": "17/02/2026",
+            "hora_prog": "--:--",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2233",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
         {
             "tipo": "LLEGADAS",
             "fecha": "17/02/2026",
