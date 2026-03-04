@@ -829,16 +829,22 @@
                         const [lat, lon] = COORDENADAS[ciudadKey];
                         const isSalida = vuelosLugar.some(v => v.tipo === 'SALIDAS');
 
-                        // 2. Dibujar Lineas de Trayectoria sin tocar la tabla
-                        L.polyline([LIMA_COORDS, [lat, lon]], {
-                            color: isSalida ? '#94a3b8' : '#7dd3fc',
+                        // 2. Dibujar Trayectorias Amarillas y Curvadas
+                        const midpoint = [
+                            (LIMA_COORDS[0] + lat) / 2 + (lon - LIMA_COORDS[1]) * 0.15,
+                            (LIMA_COORDS[1] + lon) / 2 + (LIMA_COORDS[0] - lat) * 0.15
+                        ];
+
+                        L.polyline([LIMA_COORDS, midpoint, [lat, lon]], {
+                            color: '#FFD700',
                             weight: 1.2,
-                            opacity: 0.4,
-                            dashArray: '6, 6',
+                            opacity: 0.35,
+                            dashArray: '5, 5',
+                            smoothFactor: 1.5,
                             className: 'flight-path'
                         }).addTo(map);
 
-                        // Airplane Icon SVG (similar to FlightRadar24)
+                        // 3. Dibujar el Avión (sin cambios)
                         const airplaneSvg = `
                             <div class="airplane-icon-wrapper ${isSalida ? 'airplane-departure' : 'airplane-arrival'}">
                                 <svg viewBox="0 0 24 24">
