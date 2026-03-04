@@ -42,7 +42,7 @@ def parse_historial_vuelos(solo_hoy=False):
             continue
             
         partes = linea.split("_")
-        if len(partes) < 4:
+        if len(partes) < 3:
             continue
             
         fecha = partes[0]
@@ -53,15 +53,17 @@ def parse_historial_vuelos(solo_hoy=False):
         hora = "--:--"
         vuelo = ""
         ciudad = ""
-        sentido = ""
+        sentido = "DESCONOCIDO"
 
-        # Detección inteligente de formato (con o sin hora)
+        # Detección inteligente de formato (con o sin hora, con o sin sentido)
         if ":" in partes[1] and len(partes[1]) == 5:
+            # Formato nuevo: FECHA_HORA_VUELO_CIUDAD_SENTIDO
             hora = partes[1]
             vuelo = partes[2]
-            ciudad = partes[3]
+            ciudad = partes[3] 
             sentido = partes[4] if len(partes) > 4 else "DESCONOCIDO"
         else:
+            # Formato clásico: FECHA_VUELO_CIUDAD_SENTIDO
             hora = "--:--"
             vuelo = partes[1]
             ciudad = partes[2]

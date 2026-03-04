@@ -94,17 +94,40 @@
         .filter-controls {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
             background: rgba(255, 255, 255, 0.05);
-            padding: 6px 15px;
-            border-radius: 6px;
+            padding: 8px 15px;
+            border-radius: 8px;
             border: 1px solid var(--border-dark);
         }
 
         .date-group {
             display: flex;
             align-items: center;
+            gap: 10px;
+        }
+
+        .btn-search {
+            background: #2563eb;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
             gap: 8px;
+            white-space: nowrap;
+        }
+
+        .btn-search:hover {
+            background: #1d4ed8;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
         }
 
         .filter-controls label {
@@ -831,6 +854,9 @@
                     </svg>
                 </div>
             </div>
+            <button id="btn-search-history" class="btn-search">
+                <span>🔍</span> CONSULTAR
+            </button>
             <div id="sync-time" class="status-bar" style="margin-left: 10px;">Cargando historial...</div>
         </div>
     </header>
@@ -915,25 +941,26 @@
         let lastData = null;
         let activeFilters = { fecha: [], tipo: [], vuelo: [], aerolinea: [], ciudad: [] };
 
-        // Set default dates
-        const today = new Date().toISOString().split('T')[0];
-        const lastWeek = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+        // Set default dates: Yesterday to Today
+        const dateObj = new Date();
+        const today = dateObj.toISOString().split('T')[0];
+        dateObj.setDate(dateObj.getDate() - 1);
+        const yesterday = dateObj.toISOString().split('T')[0];
+
         document.getElementById('date-to').value = today;
-        document.getElementById('date-from').value = lastWeek;
+        document.getElementById('date-from').value = yesterday;
+
+        // Helper to parse DD/MM/YYYY into YYYY-MM-DD for comparison
+        function parseDate(dateStr) {
+            if (!dateStr || dateStr === "--/--/----") return null;
+            const [d, m, y] = dateStr.split('/');
+            return `${y}-${m}-${d}`;
+        }
 
         async function updateDashboard() {
             try {
-                // In a real scenario, this would be a historical endpoint
-                // For now we use the main one or a mock historical file
                 const response = await fetch('vuelos_history.json');
                 const data = await response.json();
-
-                // MOCK historical data: Let's add current date to the data if it's missing
-                data.vuelos = data.vuelos.map(v => ({
-                    ...v,
-                    fecha: v.fecha || today // Ensure fecha exists
-                }));
-
                 lastData = data;
                 renderDashboard(data);
             } catch (e) {
@@ -1005,9 +1032,10 @@
             const vuelosFiltrados = data.vuelos.filter(v => {
                 let match = true;
 
-                // Date Range Filter
-                if (dateFrom && v.fecha < dateFrom) match = false;
-                if (dateTo && v.fecha > dateTo) match = false;
+                // Date Range Filter (Translate DD/MM/YYYY to ISO for comparison)
+                const flightDateISO = parseDate(v.fecha);
+                if (dateFrom && flightDateISO < dateFrom) match = false;
+                if (dateTo && flightDateISO > dateTo) match = false;
 
                 // Column Filters
                 Object.keys(activeFilters).forEach(field => {
@@ -1023,6 +1051,12 @@
 
             // Update Chart
             updateChart(vuelosFiltrados);
+
+            vuelosFiltrados.sort((a, b) => {
+                const dateA = parseDate(a.fecha) + " " + (a.hora_prog || "00:00");
+                const dateB = parseDate(b.fecha) + " " + (b.hora_prog || "00:00");
+                return dateB.localeCompare(dateA); // Newest first
+            });
 
             vuelosFiltrados.forEach(vuelo => {
                 const isSalida = vuelo.tipo === 'SALIDAS';
@@ -1101,6 +1135,10 @@
             applyFilters();
         });
 
+        document.getElementById('btn-search-history').addEventListener('click', () => {
+            renderDashboard(lastData);
+        });
+
         document.querySelectorAll('th[data-field]').forEach(th => {
             th.querySelector('.th-content').addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -1108,13 +1146,10 @@
             });
         });
 
-        document.getElementById('date-from').addEventListener('change', () => renderDashboard(lastData));
-        document.getElementById('date-to').addEventListener('change', () => renderDashboard(lastData));
         document.addEventListener('click', (e) => { if (!e.target.closest('.filter-panel')) closeAllPanels(); });
 
         // Init
         updateDashboard();
-        setInterval(updateDashboard, 300000); // 5 min for history
     </script>
 </body>
 
