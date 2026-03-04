@@ -150,13 +150,46 @@
             color: var(--text-bright);
         }
 
-        .legend-dot {
-            width: 12px;
-            height: 12px;
-            background: var(--punto-alerta);
-            border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 0 0 1px var(--punto-alerta);
+        .legend-airplane {
+            width: 18px;
+            height: 18px;
+            color: #FFD700;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .airplane-marker {
+            background: none !important;
+            border: none !important;
+            transition: transform 0.3s ease-out;
+        }
+
+        .airplane-icon-wrapper {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+
+        .airplane-icon-wrapper svg {
+            width: 100%;
+            height: 100%;
+            fill: #FFD700;
+            /* Amarillo pro */
+            stroke: #222;
+            stroke-width: 1.5px;
+        }
+
+        .airplane-arrival {
+            transform: rotate(180deg);
+        }
+
+        .airplane-departure {
+            transform: rotate(0deg);
         }
 
         /* Filtros Pro en Cabecera */
@@ -351,34 +384,6 @@
         }
 
         /* Marcadores Mapa */
-        @keyframes pulse-red {
-            0% {
-                transform: scale(0.6);
-                opacity: 1;
-            }
-
-            100% {
-                transform: scale(3);
-                opacity: 0;
-            }
-        }
-
-        .radar-pulse {
-            width: 20px;
-            height: 20px;
-            background: rgba(231, 76, 60, 0.4);
-            border-radius: 50%;
-            position: absolute;
-            animation: pulse-red 1.8s infinite ease-out;
-            pointer-events: none;
-        }
-
-        .dot-marker-pro {
-            background: var(--punto-alerta);
-            border: 2.5px solid white;
-            border-radius: 50%;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        }
 
         .leaflet-tooltip-own {
             background: none !important;
@@ -490,8 +495,13 @@
             <div class="card-title-fixed">MONITOREO OPERATIVO PERÚ</div>
             <div id="map"></div>
             <div class="map-legend">
-                <div class="legend-dot"></div>
-                <span>Vuelos Cancelados Hoy</span>
+                <div class="legend-airplane">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+                    </svg>
+                </div>
+                <span>Vuelos Cancelados</span>
             </div>
         </div>
 
@@ -750,11 +760,24 @@
                     const vuelosLugar = vuelosPorCiudad[ciudadKey];
                     if (COORDENADAS[ciudadKey]) {
                         const [lat, lon] = COORDENADAS[ciudadKey];
-                        const pulseIcon = L.divIcon({ className: 'custom-div-icon', html: '<div class="radar-pulse"></div>', iconSize: [20, 20], iconAnchor: [10, 10] });
-                        L.marker([lat, lon], { icon: pulseIcon, interactive: false }).addTo(map);
+                        const isSalida = vuelosLugar.some(v => v.tipo === 'SALIDAS');
 
-                        const dotIcon = L.divIcon({ className: 'dot-marker-pro', iconSize: [12, 12], iconAnchor: [6, 6] });
-                        const marker = L.marker([lat, lon], { icon: dotIcon }).addTo(map);
+                        // Airplane Icon SVG (similar to FlightRadar24)
+                        const airplaneSvg = `
+                            <div class="airplane-icon-wrapper ${isSalida ? 'airplane-departure' : 'airplane-arrival'}">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                                </svg>
+                            </div>`;
+
+                        const planeIcon = L.divIcon({
+                            className: 'airplane-marker',
+                            html: airplaneSvg,
+                            iconSize: [28, 28],
+                            iconAnchor: [14, 14]
+                        });
+
+                        const marker = L.marker([lat, lon], { icon: planeIcon }).addTo(map);
 
                         marker.bindTooltip(vuelosLugar.map(v => v.vuelo).join('-'), { permanent: true, direction: 'right', className: 'leaflet-tooltip-own', offset: [12, 0], interactive: true });
 
