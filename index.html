@@ -402,11 +402,22 @@
             letter-spacing: 0.5px;
         }
 
-        .leaflet-tooltip-left::before,
-        .leaflet-tooltip-right::before,
-        .leaflet-tooltip-top::before,
-        .leaflet-tooltip-bottom::before {
-            display: none !important;
+        /* Popups Mapa Dark */
+        .leaflet-popup-content-wrapper,
+        .leaflet-popup-tip {
+            background: var(--card-bg) !important;
+            color: var(--text-bright) !important;
+            border: 1px solid var(--border-dark);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .leaflet-popup-close-button {
+            color: var(--text-muted) !important;
+            padding: 8px !important;
+        }
+
+        .leaflet-popup-close-button:hover {
+            color: var(--text-bright) !important;
         }
 
         .badge-salida {
@@ -886,16 +897,16 @@
 
                         let popup = `<div style="font-family: 'Inter', sans-serif; min-width: 220px; padding: 5px;">
                             <div style="text-align:center; border-bottom: 2px solid var(--punto-alerta); margin-bottom: 12px; padding-bottom: 8px;">
-                                <b style="font-size:1.1rem; color:var(--azul-oscuro); text-transform:uppercase;">${ciudadKey}</b>
+                                <b style="font-size:1.1rem; color:var(--text-bright); text-transform:uppercase;">${ciudadKey}</b>
                             </div><div style="display:flex; flex-direction:column; gap:10px;">`;
 
                         vuelosLugar.forEach(v => {
-                            popup += `<div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                            popup += `<div style="border-bottom: 1px solid var(--border-dark); padding-bottom: 8px;">
                                 <div style="display:flex; justify-content:space-between; align-items:center;">
-                                    <b style="color:var(--azul-oscuro);">${v.vuelo}</b>
-                                    <span style="font-size:0.75rem;">${v.hora_prog}</span>
+                                    <b style="color:var(--text-bright);">${v.vuelo}</b>
+                                    <span style="font-size:0.75rem; color:var(--text-muted);">${v.hora_prog}</span>
                                 </div>
-                                <div style="font-size:0.75rem;">${v.tipo === 'SALIDAS' ? '🛫' : '🛬'} ${v.aerolinea}</div>
+                                <div style="font-size:0.75rem; color:var(--text-muted);">${v.tipo === 'SALIDAS' ? '🛫' : '🛬'} ${v.aerolinea}</div>
                             </div>`;
                         });
                         popup += `</div></div>`;
