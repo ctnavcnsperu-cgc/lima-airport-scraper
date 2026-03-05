@@ -303,6 +303,26 @@
             width: 100% !important;
         }
 
+        .total-count-summary {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-bright);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid var(--border-dark);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .total-count-summary span {
+            color: var(--punto-alerta);
+        }
+
         .table-wrapper {
             flex: 1;
             overflow-y: auto;
@@ -932,10 +952,12 @@
                 <div class="chart-container-inner">
                     <div class="chart-label-pro">VOLUMEN DE CANCELACIONES POR OPERADOR</div>
                     <canvas id="cancellationsChart"></canvas>
+                    <div class="total-count-summary">TOTAL: <span id="total-bar-value">0</span></div>
                 </div>
                 <div class="chart-container-inner">
                     <div class="chart-label-pro">PARTICIPACIÓN % EN CANCELACIONES</div>
                     <canvas id="pieChart"></canvas>
+                    <div class="total-count-summary">TOTAL: <span id="total-pie-value">0</span></div>
                 </div>
             </div>
             <div
@@ -1156,6 +1178,10 @@
         }
 
         function updateChart(vuelos) {
+            const total = vuelos.length;
+            document.getElementById('total-bar-value').innerText = total;
+            document.getElementById('total-pie-value').innerText = total;
+
             const counts = {};
             vuelos.forEach(v => {
                 counts[v.aerolinea] = (counts[v.aerolinea] || 0) + 1;
