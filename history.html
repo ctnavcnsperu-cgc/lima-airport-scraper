@@ -902,10 +902,157 @@
             border: 2px solid #1a1d23;
             box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
         }
+
+        /* --- ESTILOS DE IMPRESIÓN PRO --- */
+        @media print {
+
+            header,
+            .btn-live,
+            .filter-controls,
+            .status-bar,
+            .btn-clear-all,
+            .filter-panel,
+            .card-title-fixed::before,
+            .chart-label-pro::before,
+            .legend-airplane {
+                display: none !important;
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            main {
+                display: block !important;
+                padding: 10px !important;
+            }
+
+            .card-container {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0 !important;
+                background: white !important;
+                margin-bottom: 20px !important;
+                min-height: auto !important;
+            }
+
+            .card-title-fixed {
+                color: #0f172a !important;
+                background: #f8fafc !important;
+                border-bottom: 2px solid #0f172a !important;
+                font-size: 1rem !important;
+            }
+
+            .chart-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 15px !important;
+                padding: 10px !important;
+                flex: none !important;
+            }
+
+            .chart-container-inner {
+                background: white !important;
+                border: 1px solid #e2e8f0 !important;
+                min-height: 380px !important;
+                padding: 15px !important;
+            }
+
+            .total-count-summary {
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                border: 1px solid #cbd5e1 !important;
+                margin-top: 15px !important;
+                box-shadow: none !important;
+            }
+
+            .total-count-summary span {
+                color: #dc2626 !important;
+            }
+
+            .table-wrapper {
+                max-height: none !important;
+                overflow: visible !important;
+            }
+
+            table {
+                width: 100% !important;
+                border: 1px solid #e2e8f0 !important;
+            }
+
+            th {
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                border-bottom: 2px solid #0f172a !important;
+                padding: 10px !important;
+            }
+
+            td {
+                color: #334155 !important;
+                border-bottom: 1px solid #e2e8f0 !important;
+                padding: 8px !important;
+            }
+
+            .vuelo-id {
+                color: #0f172a !important;
+            }
+
+            .badge-cancel {
+                background: #fee2e2 !important;
+                color: #dc2626 !important;
+                border: 1px solid #fecaca !important;
+                font-weight: 900 !important;
+            }
+
+            .badge-salida {
+                background: #f1f5f9 !important;
+                color: #475569 !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+
+            .badge-llegada {
+                background: #e0f2fe !important;
+                color: #0369a1 !important;
+                border: 1px solid #bae6fd !important;
+            }
+
+            .print-only-header {
+                display: block !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Encabezado exclusivo para impresión PDF -->
+    <div class="print-only-header" style="display: none; padding: 0 20px;">
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0f172a; padding-bottom: 15px; margin-bottom: 25px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="width: 12px; height: 50px; background: #dc2626;"></div>
+                <div>
+                    <h1
+                        style="font-size: 1.8rem; color: #0f172a; margin: 0; font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.5px;">
+                        REPORTE TÉCNICO DE CANCELACIONES</h1>
+                    <p style="font-size: 0.9rem; color: #64748b; margin: 3px 0 0 0; font-weight: 600;">
+                        AIJCH - Sistema de Monitoreo Lima Airport</p>
+                </div>
+            </div>
+            <div style="text-align: right; font-family: 'Inter', sans-serif;">
+                <p id="print-date" style="font-size: 0.8rem; color: #64748b; margin: 0;">Fecha: --/--/----</p>
+                <p id="print-range" style="font-size: 0.9rem; color: #0f172a; margin: 5px 0 0 0; font-weight: 800;">
+                    Rango: ---</p>
+            </div>
+        </div>
+    </div>
 
     <header>
         <div class="header-title-group">
@@ -940,6 +1087,9 @@
             </div>
             <button id="btn-search-history" class="btn-search">
                 <span>🔍</span> CONSULTAR
+            </button>
+            <button id="btn-print-pdf" class="btn-search" style="background: #475569;">
+                <span>📄</span> IMPRIMIR PDF
             </button>
             <div id="sync-time" class="status-bar" style="margin-left: 10px;">Cargando historial...</div>
         </div>
@@ -1306,6 +1456,19 @@
 
         document.getElementById('btn-search-history').addEventListener('click', () => {
             renderDashboard(lastData);
+        });
+
+        // Lógica de Impresión PDF
+        document.getElementById('btn-print-pdf').addEventListener('click', () => {
+            const dateFrom = document.getElementById('date-from').value;
+            const dateTo = document.getElementById('date-to').value;
+            const now = new Date();
+            const nowStr = now.toLocaleString('es-PE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+            document.getElementById('print-date').innerText = `Generado el: ${nowStr}`;
+            document.getElementById('print-range').innerText = `PERÍODO: ${dateFrom} AL ${dateTo}`;
+
+            window.print();
         });
 
         document.querySelectorAll('th[data-field]').forEach(th => {
