@@ -1,30 +1,10 @@
 {
-    "ultima_sincronizacion": "04/03/2026 23:50:46",
-    "conteo": 15,
+    "ultima_sincronizacion": "05/03/2026 00:01:01",
+    "conteo": 8,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "04/03/2026",
-            "hora_prog": "09:00",
-            "hora_real": "",
-            "ciudad": "TUMBES",
-            "vuelo": "H25924",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "04/03/2026",
-            "hora_prog": "09:10",
-            "hora_real": "",
-            "ciudad": "PIURA",
-            "vuelo": "H25226",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "04/03/2026",
+            "fecha": "05/03/2026",
             "hora_prog": "10:10",
             "hora_real": "",
             "ciudad": "PUCALLPA",
@@ -34,7 +14,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
+            "fecha": "05/03/2026",
             "hora_prog": "10:20",
             "hora_real": "",
             "ciudad": "AREQUIPA",
@@ -44,7 +24,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
+            "fecha": "05/03/2026",
             "hora_prog": "11:15",
             "hora_real": "",
             "ciudad": "CUSCO",
@@ -54,17 +34,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
-            "hora_prog": "13:20",
-            "hora_real": "",
-            "ciudad": "TUMBES",
-            "vuelo": "H25925",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
+            "fecha": "05/03/2026",
             "hora_prog": "14:40",
             "hora_real": "",
             "ciudad": "CUSCO",
@@ -74,7 +44,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
+            "fecha": "05/03/2026",
             "hora_prog": "21:15",
             "hora_real": "",
             "ciudad": "TARAPOTO",
@@ -84,7 +54,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
+            "fecha": "05/03/2026",
             "hora_prog": "21:35",
             "hora_real": "",
             "ciudad": "IQUITOS",
@@ -94,7 +64,7 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
+            "fecha": "05/03/2026",
             "hora_prog": "21:45",
             "hora_real": "",
             "ciudad": "CUSCO",
@@ -104,52 +74,12 @@
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
+            "fecha": "05/03/2026",
             "hora_prog": "22:05",
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "H25080",
             "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
-            "hora_prog": "14:45",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2228",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "04/03/2026",
-            "hora_prog": "11:40",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2227",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "04/03/2026",
-            "hora_prog": "14:50",
-            "hora_real": "",
-            "ciudad": "NUEVO MUNDO",
-            "vuelo": "4A068",
-            "aerolinea": "ATSA Aero Transporte",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "04/03/2026",
-            "hora_prog": "17:30",
-            "hora_real": "",
-            "ciudad": "NUEVO MUNDO",
-            "vuelo": "4A069",
-            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
