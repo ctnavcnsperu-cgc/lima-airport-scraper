@@ -985,11 +985,19 @@
         let lastData = null;
         let activeFilters = { fecha: [], tipo: [], vuelo: [], aerolinea: [], ciudad: [] };
 
-        // Set default dates: Yesterday Only
-        const dateObj = new Date();
-        dateObj.setDate(dateObj.getDate() - 1);
-        const yesterday = dateObj.toISOString().split('T')[0];
+        // Helper to get date in Peru (UTC-5)
+        function getPeruDate(offsetDays = 0) {
+            const now = new Date();
+            const peruTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Lima" }));
+            peruTime.setDate(peruTime.getDate() + offsetDays);
+            const y = peruTime.getFullYear();
+            const m = String(peruTime.getMonth() + 1).padStart(2, '0');
+            const d = String(peruTime.getDate()).padStart(2, '0');
+            return `${y}-${m}-${d}`;
+        }
 
+        // Set default dates: Yesterday Only (Peru Time)
+        const yesterday = getPeruDate(-1);
         document.getElementById('date-to').value = yesterday;
         document.getElementById('date-from').value = yesterday;
 
@@ -1067,7 +1075,7 @@
 
         function renderDashboard(data) {
             if (!data) return;
-            document.getElementById('sync-time').innerText = `HISTORIAL ACTUALIZADO`;
+            document.getElementById('sync-time').innerText = `ACTUALIZADO: ${data.ultima_sincronizacion || '---'}`;
 
             const dateFrom = document.getElementById('date-from').value;
             const dateTo = document.getElementById('date-to').value;
