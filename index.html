@@ -722,8 +722,10 @@
         /* Estilo para las líneas de conexión */
         .connection-line {
             stroke-dasharray: 4, 8;
-            animation: dash-animation 20s linear infinite;
-            filter: drop-shadow(0 0 3px #FFD700);
+            animation: dash-animation 40s linear infinite;
+            /* Animación más lenta y sutil */
+            filter: drop-shadow(0 0 1px #FFD700);
+            /* Menos resplandor */
             pointer-events: none;
         }
 
@@ -1064,8 +1066,8 @@
                         if (COORDENADAS[ciudadKey] && ciudadKey !== "LIMA") {
                             L.polyline([LIMA_COORDS, COORDENADAS[ciudadKey]], {
                                 color: '#FFD700',
-                                weight: 2,
-                                opacity: 0.6,
+                                weight: 1, // Más delgada
+                                opacity: 0.3, // Más tenue
                                 className: 'connection-line'
                             }).addTo(window.hoverLinesGroup);
                         }
@@ -1106,8 +1108,8 @@
                             window.hoverLinesGroup.clearLayers(); // Limpiamos por si hay otras activas
                             L.polyline([[lat, lon], LIMA_COORDS], {
                                 color: '#FFD700',
-                                weight: 3,
-                                opacity: 0.8,
+                                weight: 1.2, // Más delgada
+                                opacity: 0.4, // Más tenue
                                 className: 'connection-line'
                             }).addTo(window.hoverLinesGroup);
                         });
