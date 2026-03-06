@@ -1109,8 +1109,8 @@
                             window.hoverLinesGroup.clearLayers(); // Limpiamos por si hay otras activas
                             L.polyline([[lat, lon], LIMA_COORDS], {
                                 color: '#FFFFFF', // Blanco
-                                weight: 2.2, // Un poco más fuerte
-                                opacity: 0.7, // Un poco más fuerte
+                                weight: 1.5, // Igualado a la malla del HUB
+                                opacity: 0.5, // Igualado a la malla del HUB
                                 className: 'connection-line'
                             }).addTo(window.hoverLinesGroup);
                         });
