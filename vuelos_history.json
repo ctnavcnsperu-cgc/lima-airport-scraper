@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/03/2026 16:10:43",
-    "conteo": 149,
+    "ultima_sincronizacion": "06/03/2026 16:20:43",
+    "conteo": 150,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1489,6 +1489,16 @@
             "hora_real": "",
             "ciudad": "MAZAMARI",
             "vuelo": "4A4096",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "13:00",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A1875",
             "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
