@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/03/2026 09:00:51",
-    "conteo": 146,
+    "ultima_sincronizacion": "06/03/2026 09:11:03",
+    "conteo": 147,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1460,6 +1460,16 @@
             "ciudad": "CUSCO",
             "vuelo": "H25080",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "08:39",
+            "hora_real": "",
+            "ciudad": "CHAGUA",
+            "vuelo": "L4A1983",
+            "aerolinea": "AEROLÍNEA",
             "estado": "CANCELADO"
         }
     ]
