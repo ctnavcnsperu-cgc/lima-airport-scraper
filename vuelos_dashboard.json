@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/03/2026 13:50:50",
-    "conteo": 1,
+    "ultima_sincronizacion": "06/03/2026 14:00:49",
+    "conteo": 3,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -10,6 +10,26 @@
             "ciudad": "CHAGUA",
             "vuelo": "L4A1983",
             "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "13:35",
+            "hora_real": "",
+            "ciudad": "MAZAMARI",
+            "vuelo": "4A4095",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "11:35",
+            "hora_real": "",
+            "ciudad": "MAZAMARI",
+            "vuelo": "4A4096",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
