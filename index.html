@@ -1054,9 +1054,11 @@
 
                 // 1. Dibujar HUB LIMA con pulso muy amplio y lento
                 const hubHtml = `<div class="hub-container"><div class="hub-radar-pulse"></div><div class="hub-center-dot"></div></div>`;
-                const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [80, 80], iconAnchor: [40, 40] });
+                // Ajustamos iconAnchor de [40, 40] a [40, 20] para bajar el marcador 20px
+                const hubMarkIcon = L.divIcon({ className: 'custom-hub', html: hubHtml, iconSize: [80, 80], iconAnchor: [40, 20] });
                 const hubMarker = L.marker(LIMA_COORDS, { icon: hubMarkIcon }).addTo(map);
-                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -25] });
+                // Ajustamos offset de [0, -25] a [0, -5] para bajar el nombre 20px
+                hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -5] });
 
                 // Evento para el HUB: Mostrar todas las líneas
                 hubMarker.on('mouseover', () => {
