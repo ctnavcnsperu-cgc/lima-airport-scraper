@@ -718,6 +718,20 @@
             border: 2px solid #1a1d23;
             box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
         }
+
+        /* Estilo para las líneas de conexión */
+        .connection-line {
+            stroke-dasharray: 4, 8;
+            animation: dash-animation 20s linear infinite;
+            filter: drop-shadow(0 0 3px #FFD700);
+            pointer-events: none;
+        }
+
+        @keyframes dash-animation {
+            to {
+                stroke-dashoffset: -500;
+            }
+        }
     </style>
 </head>
 
@@ -1006,7 +1020,14 @@
 
             const tableBody = document.getElementById('table-body');
             tableBody.innerHTML = '';
-            map.eachLayer(layer => { if (layer instanceof L.Marker) map.removeLayer(layer); });
+
+            // Limpiar marcadores y líneas previas
+            if (window.hoverLinesGroup) window.hoverLinesGroup.clearLayers();
+            else window.hoverLinesGroup = L.layerGroup().addTo(map);
+
+            map.eachLayer(layer => {
+                if (layer instanceof L.Marker || layer instanceof L.Polyline) map.removeLayer(layer);
+            });
 
             if (vuelosFiltrados.length > 0) {
                 const vuelosPorCiudad = {};
@@ -1036,6 +1057,24 @@
                 const hubMarker = L.marker(LIMA_COORDS, { icon: hubMarkIcon }).addTo(map);
                 hubMarker.bindTooltip("AIJCH", { permanent: true, direction: 'top', className: 'leaflet-tooltip-hub', offset: [0, -25] });
 
+                // Evento para el HUB: Mostrar todas las líneas
+                hubMarker.on('mouseover', () => {
+                    window.hoverLinesGroup.clearLayers();
+                    Object.keys(vuelosPorCiudad).forEach(ciudadKey => {
+                        if (COORDENADAS[ciudadKey] && ciudadKey !== "LIMA") {
+                            L.polyline([LIMA_COORDS, COORDENADAS[ciudadKey]], {
+                                color: '#FFD700',
+                                weight: 2,
+                                opacity: 0.6,
+                                className: 'connection-line'
+                            }).addTo(window.hoverLinesGroup);
+                        }
+                    });
+                });
+                hubMarker.on('mouseout', () => {
+                    window.hoverLinesGroup.clearLayers();
+                });
+
                 Object.keys(vuelosPorCiudad).forEach(ciudadKey => {
                     const vuelosLugar = vuelosPorCiudad[ciudadKey];
                     if (COORDENADAS[ciudadKey] && ciudadKey !== "LIMA") {
@@ -1061,6 +1100,20 @@
                         });
 
                         const marker = L.marker([lat, lon], { icon: planeIcon }).addTo(map);
+
+                        // Evento para el avión: Mostrar su propia línea al HUB
+                        marker.on('mouseover', () => {
+                            window.hoverLinesGroup.clearLayers(); // Limpiamos por si hay otras activas
+                            L.polyline([[lat, lon], LIMA_COORDS], {
+                                color: '#FFD700',
+                                weight: 3,
+                                opacity: 0.8,
+                                className: 'connection-line'
+                            }).addTo(window.hoverLinesGroup);
+                        });
+                        marker.on('mouseout', () => {
+                            window.hoverLinesGroup.clearLayers();
+                        });
 
                         const flightLabels = vuelosLugar.map(v => v.vuelo).join(' · ');
                         const tooltipHtml = `<div>${flightLabels}</div><div class="tooltip-city-label">${ciudadKey}</div>`;
