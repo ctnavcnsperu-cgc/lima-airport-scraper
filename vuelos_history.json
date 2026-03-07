@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "07/03/2026 06:20:47",
-    "conteo": 158,
+    "ultima_sincronizacion": "07/03/2026 06:30:42",
+    "conteo": 159,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1580,6 +1580,16 @@
             "ciudad": "AREQUIPA",
             "vuelo": "H25142",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "07/03/2026",
+            "hora_prog": "11:30",
+            "hora_real": "",
+            "ciudad": "MAZAMARI",
+            "vuelo": "4A1985",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
