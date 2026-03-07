@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/03/2026 20:20:45",
-    "conteo": 156,
+    "ultima_sincronizacion": "06/03/2026 20:30:43",
+    "conteo": 158,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1560,6 +1560,26 @@
             "ciudad": "AREQUIPA",
             "vuelo": "LA2349",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "19:20",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25141",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "23:15",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "H25142",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
