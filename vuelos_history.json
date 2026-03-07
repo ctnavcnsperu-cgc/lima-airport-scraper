@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/03/2026 19:40:46",
-    "conteo": 153,
+    "ultima_sincronizacion": "06/03/2026 19:50:43",
+    "conteo": 154,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1530,6 +1530,16 @@
             "ciudad": "NUEVO MUNDO",
             "vuelo": "4A2195",
             "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "21:55",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2116",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
