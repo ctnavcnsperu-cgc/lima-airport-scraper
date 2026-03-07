@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/03/2026 19:50:43",
-    "conteo": 154,
+    "ultima_sincronizacion": "06/03/2026 20:00:54",
+    "conteo": 156,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1539,6 +1539,26 @@
             "hora_real": "",
             "ciudad": "AREQUIPA",
             "vuelo": "LA2116",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "21:30",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2117",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "06/03/2026",
+            "hora_prog": "21:25",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2349",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
