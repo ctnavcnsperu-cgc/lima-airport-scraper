@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "07/03/2026 11:50:50",
-    "conteo": 2,
+    "ultima_sincronizacion": "07/03/2026 12:00:50",
+    "conteo": 3,
     "vuelos": [
         {
             "tipo": "LLEGADAS",
@@ -19,6 +19,16 @@
             "hora_real": "",
             "ciudad": "MAZAMARI",
             "vuelo": "4A1985",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "07/03/2026",
+            "hora_prog": "17:15",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "4A4042",
             "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
