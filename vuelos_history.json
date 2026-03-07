@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "07/03/2026 07:10:48",
-    "conteo": 159,
+    "ultima_sincronizacion": "07/03/2026 07:20:44",
+    "conteo": 160,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1586,6 +1586,16 @@
             "tipo": "LLEGADAS",
             "fecha": "07/03/2026",
             "hora_prog": "11:30",
+            "hora_real": "",
+            "ciudad": "MAZAMARI",
+            "vuelo": "4A1985",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "07/03/2026",
+            "hora_prog": "08:40",
             "hora_real": "",
             "ciudad": "MAZAMARI",
             "vuelo": "4A1985",
