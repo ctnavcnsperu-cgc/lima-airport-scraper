@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "10/03/2026 21:50:42",
-    "conteo": 161,
+    "ultima_sincronizacion": "10/03/2026 22:00:54",
+    "conteo": 162,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1610,6 +1610,16 @@
             "ciudad": "HUANUCO",
             "vuelo": "4A4042",
             "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "10/03/2026",
+            "hora_prog": "21:20",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2034",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
