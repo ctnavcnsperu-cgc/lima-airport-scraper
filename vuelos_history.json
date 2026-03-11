@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "11/03/2026 11:00:46",
-    "conteo": 166,
+    "ultima_sincronizacion": "11/03/2026 11:10:57",
+    "conteo": 168,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1659,6 +1659,26 @@
             "hora_real": "",
             "ciudad": "CHACHAPOYAS",
             "vuelo": "4A4002",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "11/03/2026",
+            "hora_prog": "07:00",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "4A4029",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/03/2026",
+            "hora_prog": "09:10",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "4A4030",
             "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
