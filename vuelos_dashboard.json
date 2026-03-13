@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "13/03/2026 17:20:47",
-    "conteo": 4,
+    "ultima_sincronizacion": "13/03/2026 17:30:47",
+    "conteo": 6,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -40,6 +40,26 @@
             "ciudad": "CUSCO",
             "vuelo": "JA7020",
             "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "13/03/2026",
+            "hora_prog": "17:50",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2297",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/03/2026",
+            "hora_prog": "18:25",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2296",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
