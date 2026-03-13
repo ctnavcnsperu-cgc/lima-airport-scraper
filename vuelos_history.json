@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "12/03/2026 23:50:43",
-    "conteo": 172,
+    "ultima_sincronizacion": "13/03/2026 00:00:55",
+    "conteo": 176,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1720,6 +1720,46 @@
             "ciudad": "TARAPOTO",
             "vuelo": "2I3244",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "13/03/2026",
+            "hora_prog": "07:15",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2123",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "13/03/2026",
+            "hora_prog": "09:00",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7021",
+            "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/03/2026",
+            "hora_prog": "10:20",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2124",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/03/2026",
+            "hora_prog": "12:35",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7020",
+            "aerolinea": "JetSmart",
             "estado": "CANCELADO"
         }
     ]

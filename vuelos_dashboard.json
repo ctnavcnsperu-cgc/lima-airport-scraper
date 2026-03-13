@@ -1,45 +1,45 @@
 {
-    "ultima_sincronizacion": "12/03/2026 23:50:43",
+    "ultima_sincronizacion": "13/03/2026 00:00:55",
     "conteo": 4,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "12/03/2026",
-            "hora_prog": "14:25",
+            "fecha": "13/03/2026",
+            "hora_prog": "07:15",
             "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "JA7005",
-            "aerolinea": "JetSmart",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2123",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "12/03/2026",
-            "hora_prog": "19:05",
+            "fecha": "13/03/2026",
+            "hora_prog": "09:00",
             "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3243",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "12/03/2026",
-            "hora_prog": "18:10",
-            "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "JA7004",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7021",
             "aerolinea": "JetSmart",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "12/03/2026",
-            "hora_prog": "22:00",
+            "fecha": "13/03/2026",
+            "hora_prog": "10:20",
             "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3244",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2124",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/03/2026",
+            "hora_prog": "12:35",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7020",
+            "aerolinea": "JetSmart",
             "estado": "CANCELADO"
         }
     ]
