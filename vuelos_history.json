@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "14/03/2026 21:30:38",
-    "conteo": 178,
+    "ultima_sincronizacion": "14/03/2026 21:40:44",
+    "conteo": 179,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1780,6 +1780,16 @@
             "ciudad": "CAJAMARCA",
             "vuelo": "LA2296",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "14/03/2026",
+            "hora_prog": "21:00",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "H25288",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
