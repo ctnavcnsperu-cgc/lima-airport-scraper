@@ -1,14 +1,14 @@
 {
-    "ultima_sincronizacion": "14/03/2026 23:50:44",
+    "ultima_sincronizacion": "15/03/2026 00:00:56",
     "conteo": 1,
     "vuelos": [
         {
-            "tipo": "SALIDAS",
-            "fecha": "14/03/2026",
-            "hora_prog": "21:00",
+            "tipo": "LLEGADAS",
+            "fecha": "15/03/2026",
+            "hora_prog": "00:10",
             "hora_real": "",
             "ciudad": "TRUJILLO",
-            "vuelo": "H25288",
+            "vuelo": "H25289",
             "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
