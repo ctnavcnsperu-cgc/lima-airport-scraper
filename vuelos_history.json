@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "15/03/2026 01:30:51",
-    "conteo": 180,
+    "ultima_sincronizacion": "15/03/2026 01:40:49",
+    "conteo": 181,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1800,6 +1800,16 @@
             "ciudad": "TRUJILLO",
             "vuelo": "H25289",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "15/03/2026",
+            "hora_prog": "00:15",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2036",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
