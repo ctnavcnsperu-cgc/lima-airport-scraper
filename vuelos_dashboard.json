@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "15/03/2026 22:20:45",
-    "conteo": 6,
+    "ultima_sincronizacion": "15/03/2026 22:30:46",
+    "conteo": 7,
     "vuelos": [
         {
             "tipo": "LLEGADAS",
@@ -60,6 +60,16 @@
             "ciudad": "TRUJILLO",
             "vuelo": "LA2138",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "15/03/2026",
+            "hora_prog": "23:40",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "H25367",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
