@@ -1,85 +1,95 @@
 {
-    "ultima_sincronizacion": "15/03/2026 23:50:41",
-    "conteo": 8,
+    "ultima_sincronizacion": "16/03/2026 00:01:02",
+    "conteo": 9,
     "vuelos": [
         {
-            "tipo": "LLEGADAS",
-            "fecha": "15/03/2026",
-            "hora_prog": "00:10",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "H25289",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "15/03/2026",
-            "hora_prog": "00:15",
+            "tipo": "SALIDAS",
+            "fecha": "16/03/2026",
+            "hora_prog": "00:37",
             "hora_real": "",
             "ciudad": "CUSCO",
-            "vuelo": "LA2036",
+            "vuelo": "LA2221",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "15/03/2026",
-            "hora_prog": "20:29",
+            "fecha": "16/03/2026",
+            "hora_prog": "07:50",
             "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2139",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "15/03/2026",
-            "hora_prog": "21:00",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2140",
-            "aerolinea": "LATAM Airlines",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2233",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "15/03/2026",
-            "hora_prog": "19:30",
+            "fecha": "16/03/2026",
+            "hora_prog": "12:20",
             "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2137",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "15/03/2026",
-            "hora_prog": "22:25",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2138",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "15/03/2026",
-            "hora_prog": "23:40",
-            "hora_real": "",
-            "ciudad": "IQUITOS",
-            "vuelo": "H25367",
-            "aerolinea": "Sky Airline",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2227",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "15/03/2026",
-            "hora_prog": "23:20",
+            "fecha": "16/03/2026",
+            "hora_prog": "19:05",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3243",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/03/2026",
+            "hora_prog": "01:35",
             "hora_real": "",
             "ciudad": "CUSCO",
-            "vuelo": "LA2166",
+            "vuelo": "LA2222",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/03/2026",
+            "hora_prog": "06:30",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2167",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/03/2026",
+            "hora_prog": "10:35",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2234",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/03/2026",
+            "hora_prog": "15:35",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2228",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/03/2026",
+            "hora_prog": "22:00",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3244",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
