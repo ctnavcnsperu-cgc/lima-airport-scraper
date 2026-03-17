@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "16/03/2026 21:31:05",
-    "conteo": 197,
+    "ultima_sincronizacion": "16/03/2026 21:40:42",
+    "conteo": 198,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1969,6 +1969,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "H25082",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "16/03/2026",
+            "hora_prog": "22:16",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25081",
             "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
