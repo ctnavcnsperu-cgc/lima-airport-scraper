@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "16/03/2026 21:40:42",
-    "conteo": 11,
+    "ultima_sincronizacion": "16/03/2026 21:50:50",
+    "conteo": 12,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -110,6 +110,16 @@
             "ciudad": "CUSCO",
             "vuelo": "H25081",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/03/2026",
+            "hora_prog": "22:30",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7032",
+            "aerolinea": "JetSmart",
             "estado": "CANCELADO"
         }
     ]
