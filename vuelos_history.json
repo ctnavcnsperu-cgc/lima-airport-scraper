@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "17/03/2026 23:50:46",
-    "conteo": 205,
+    "ultima_sincronizacion": "18/03/2026 00:01:00",
+    "conteo": 211,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2050,6 +2050,66 @@
             "ciudad": "CAJAMARCA",
             "vuelo": "JA7319",
             "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/03/2026",
+            "hora_prog": "07:50",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2233",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/03/2026",
+            "hora_prog": "12:20",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2227",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/03/2026",
+            "hora_prog": "14:05",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3143",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/03/2026",
+            "hora_prog": "10:35",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2234",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/03/2026",
+            "hora_prog": "15:35",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2228",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/03/2026",
+            "hora_prog": "17:00",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3144",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
