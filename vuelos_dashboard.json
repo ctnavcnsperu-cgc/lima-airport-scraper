@@ -1,30 +1,10 @@
 {
-    "ultima_sincronizacion": "20/03/2026 23:50:43",
-    "conteo": 13,
+    "ultima_sincronizacion": "21/03/2026 00:00:53",
+    "conteo": 4,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "07:50",
-            "hora_real": "",
-            "ciudad": "CAJAMARCA",
-            "vuelo": "2I2233",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "11:25",
-            "hora_real": "",
-            "ciudad": "CHICLAYO",
-            "vuelo": "2I2227",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "20/03/2026",
+            "fecha": "21/03/2026",
             "hora_prog": "14:05",
             "hora_real": "",
             "ciudad": "TARAPOTO",
@@ -34,47 +14,17 @@
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "15:00",
-            "hora_real": "",
-            "ciudad": "MAZAMARI",
-            "vuelo": "4A4095",
-            "aerolinea": "ATSA Aero Transporte",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "10:35",
-            "hora_real": "",
-            "ciudad": "CAJAMARCA",
-            "vuelo": "2I2234",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "14:25",
+            "fecha": "21/03/2026",
+            "hora_prog": "18:55",
             "hora_real": "",
             "ciudad": "CHICLAYO",
-            "vuelo": "2I2228",
+            "vuelo": "2I2225",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "16:00",
-            "hora_real": "",
-            "ciudad": "MAZAMARI",
-            "vuelo": "4A4096",
-            "aerolinea": "ATSA Aero Transporte",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "20/03/2026",
+            "fecha": "21/03/2026",
             "hora_prog": "17:00",
             "hora_real": "",
             "ciudad": "TARAPOTO",
@@ -83,53 +33,13 @@
             "estado": "CANCELADO"
         },
         {
-            "tipo": "SALIDAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "15:00",
-            "hora_real": "",
-            "ciudad": "MAZAMARI",
-            "vuelo": "4A1875",
-            "aerolinea": "ATSA Aero Transporte",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "19:40",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "H25011",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
             "tipo": "LLEGADAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "20:15",
+            "fecha": "21/03/2026",
+            "hora_prog": "22:00",
             "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "H25012",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "20:25",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2277",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "20/03/2026",
-            "hora_prog": "19:50",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2276",
-            "aerolinea": "LATAM Airlines",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2226",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
