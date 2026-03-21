@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "20/03/2026 19:00:42",
-    "conteo": 225,
+    "ultima_sincronizacion": "20/03/2026 19:10:42",
+    "conteo": 226,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2250,6 +2250,16 @@
             "ciudad": "CUSCO",
             "vuelo": "H25012",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "20/03/2026",
+            "hora_prog": "20:25",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2277",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
