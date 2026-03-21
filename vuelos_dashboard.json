@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "20/03/2026 18:51:01",
-    "conteo": 9,
+    "ultima_sincronizacion": "20/03/2026 19:00:42",
+    "conteo": 11,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -90,6 +90,26 @@
             "ciudad": "MAZAMARI",
             "vuelo": "4A1875",
             "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/03/2026",
+            "hora_prog": "19:40",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25011",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "20/03/2026",
+            "hora_prog": "20:15",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25012",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
