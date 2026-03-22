@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "21/03/2026 23:10:43",
-    "conteo": 231,
+    "ultima_sincronizacion": "21/03/2026 23:20:43",
+    "conteo": 232,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2310,6 +2310,16 @@
             "ciudad": "CHICLAYO",
             "vuelo": "2I2226",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/03/2026",
+            "hora_prog": "23:00",
+            "hora_real": "",
+            "ciudad": "TUMBES",
+            "vuelo": "LA2074",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
