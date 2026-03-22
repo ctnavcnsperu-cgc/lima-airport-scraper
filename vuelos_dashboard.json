@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "22/03/2026 10:30:49",
-    "conteo": 9,
+    "ultima_sincronizacion": "22/03/2026 10:40:54",
+    "conteo": 10,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -89,6 +89,16 @@
             "hora_real": "",
             "ciudad": "TRUJILLO",
             "vuelo": "LA2227",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/03/2026",
+            "hora_prog": "14:45",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2228",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
