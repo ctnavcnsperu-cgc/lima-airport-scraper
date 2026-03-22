@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "22/03/2026 04:50:49",
-    "conteo": 237,
+    "ultima_sincronizacion": "22/03/2026 05:00:53",
+    "conteo": 238,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2369,6 +2369,16 @@
             "hora_real": "",
             "ciudad": "PIURA",
             "vuelo": "LA2305",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/03/2026",
+            "hora_prog": "23:00",
+            "hora_real": "",
+            "ciudad": "TUMBES",
+            "vuelo": "LA2074",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
