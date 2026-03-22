@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "22/03/2026 03:10:53",
-    "conteo": 232,
+    "ultima_sincronizacion": "22/03/2026 03:20:50",
+    "conteo": 235,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2319,6 +2319,36 @@
             "hora_real": "",
             "ciudad": "TUMBES",
             "vuelo": "LA2074",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "22/03/2026",
+            "hora_prog": "07:35",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2013",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/03/2026",
+            "hora_prog": "06:30",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2167",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/03/2026",
+            "hora_prog": "11:10",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2014",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }

@@ -1,5 +1,36 @@
 {
-    "ultima_sincronizacion": "22/03/2026 03:10:53",
-    "conteo": 0,
-    "vuelos": []
+    "ultima_sincronizacion": "22/03/2026 03:20:50",
+    "conteo": 3,
+    "vuelos": [
+        {
+            "tipo": "SALIDAS",
+            "fecha": "22/03/2026",
+            "hora_prog": "07:35",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2013",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/03/2026",
+            "hora_prog": "06:30",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2167",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "22/03/2026",
+            "hora_prog": "11:10",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2014",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        }
+    ]
 }
