@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "22/03/2026 23:50:43",
-    "conteo": 244,
+    "ultima_sincronizacion": "23/03/2026 00:01:05",
+    "conteo": 250,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2439,6 +2439,66 @@
             "hora_real": "",
             "ciudad": "IQUITOS",
             "vuelo": "LA2242",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "23/03/2026",
+            "hora_prog": "05:30",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "LA2272",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "23/03/2026",
+            "hora_prog": "13:55",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2061",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "23/03/2026",
+            "hora_prog": "18:15",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2117",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "23/03/2026",
+            "hora_prog": "08:55",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "LA2273",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "23/03/2026",
+            "hora_prog": "17:25",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2062",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "23/03/2026",
+            "hora_prog": "21:55",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2116",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }

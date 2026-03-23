@@ -1,124 +1,64 @@
 {
-    "ultima_sincronizacion": "22/03/2026 23:50:43",
-    "conteo": 12,
+    "ultima_sincronizacion": "23/03/2026 00:01:05",
+    "conteo": 6,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "07:35",
+            "fecha": "23/03/2026",
+            "hora_prog": "05:30",
             "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2013",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "06:30",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2167",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "11:10",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2014",
+            "ciudad": "CHICLAYO",
+            "vuelo": "LA2272",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "07:10",
+            "fecha": "23/03/2026",
+            "hora_prog": "13:55",
             "hora_real": "",
-            "ciudad": "PIURA",
-            "vuelo": "LA2304",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "11:05",
-            "hora_real": "",
-            "ciudad": "PIURA",
-            "vuelo": "LA2305",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "23:00",
-            "hora_real": "",
-            "ciudad": "TUMBES",
-            "vuelo": "LA2074",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2061",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "11:45",
+            "fecha": "23/03/2026",
+            "hora_prog": "18:15",
             "hora_real": "",
             "ciudad": "AREQUIPA",
-            "vuelo": "LA2111",
+            "vuelo": "LA2117",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "15:25",
+            "fecha": "23/03/2026",
+            "hora_prog": "08:55",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "LA2273",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "23/03/2026",
+            "hora_prog": "17:25",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2062",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "23/03/2026",
+            "hora_prog": "21:55",
             "hora_real": "",
             "ciudad": "AREQUIPA",
-            "vuelo": "LA2110",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "11:40",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2227",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "14:45",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2228",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "23:38",
-            "hora_real": "",
-            "ciudad": "IQUITOS",
-            "vuelo": "LA2243",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "22/03/2026",
-            "hora_prog": "23:55",
-            "hora_real": "",
-            "ciudad": "IQUITOS",
-            "vuelo": "LA2242",
+            "vuelo": "LA2116",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
