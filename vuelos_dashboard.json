@@ -1,75 +1,25 @@
 {
-    "ultima_sincronizacion": "23/03/2026 23:50:40",
-    "conteo": 7,
+    "ultima_sincronizacion": "24/03/2026 00:00:48",
+    "conteo": 2,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "23/03/2026",
-            "hora_prog": "05:30",
+            "fecha": "24/03/2026",
+            "hora_prog": "07:55",
             "hora_real": "",
-            "ciudad": "CHICLAYO",
-            "vuelo": "LA2272",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "23/03/2026",
-            "hora_prog": "13:55",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2061",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "23/03/2026",
-            "hora_prog": "18:15",
-            "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "LA2117",
-            "aerolinea": "LATAM Airlines",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3147",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "23/03/2026",
-            "hora_prog": "08:55",
+            "fecha": "24/03/2026",
+            "hora_prog": "11:00",
             "hora_real": "",
-            "ciudad": "CHICLAYO",
-            "vuelo": "LA2273",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "23/03/2026",
-            "hora_prog": "17:25",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2062",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "23/03/2026",
-            "hora_prog": "21:55",
-            "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "LA2116",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "23/03/2026",
-            "hora_prog": "13:20",
-            "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "H25104",
-            "aerolinea": "Sky Airline",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3148",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
