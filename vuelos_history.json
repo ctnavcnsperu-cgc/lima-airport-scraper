@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "25/03/2026 08:30:53",
-    "conteo": 266,
+    "ultima_sincronizacion": "25/03/2026 08:40:40",
+    "conteo": 267,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2660,6 +2660,16 @@
             "ciudad": "TARAPOTO",
             "vuelo": "H25403",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "25/03/2026",
+            "hora_prog": "09:00",
+            "hora_real": "",
+            "ciudad": "PUERTO MALDONADO",
+            "vuelo": "LA2192",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
