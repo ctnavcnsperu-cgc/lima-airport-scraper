@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "25/03/2026 21:00:49",
-    "conteo": 269,
+    "ultima_sincronizacion": "25/03/2026 21:10:45",
+    "conteo": 270,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2689,6 +2689,16 @@
             "hora_real": "",
             "ciudad": "PUERTO MALDONADO",
             "vuelo": "LA2024",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "25/03/2026",
+            "hora_prog": "20:40",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2012",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
