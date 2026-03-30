@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "30/03/2026 13:40:39",
-    "conteo": 16,
+    "ultima_sincronizacion": "30/03/2026 13:50:46",
+    "conteo": 17,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -160,6 +160,16 @@
             "ciudad": "AREQUIPA",
             "vuelo": "LA2112",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "30/03/2026",
+            "hora_prog": "15:00",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4220",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
