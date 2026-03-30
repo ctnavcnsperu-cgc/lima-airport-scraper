@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "30/03/2026 08:10:50",
-    "conteo": 11,
+    "ultima_sincronizacion": "30/03/2026 08:20:50",
+    "conteo": 13,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -109,6 +109,26 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2238",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "30/03/2026",
+            "hora_prog": "07:15",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "LA2184",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "30/03/2026",
+            "hora_prog": "09:55",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "LA2183",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
