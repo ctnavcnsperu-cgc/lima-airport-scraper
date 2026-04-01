@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "01/04/2026 18:20:40",
-    "conteo": 1,
+    "ultima_sincronizacion": "01/04/2026 18:30:41",
+    "conteo": 2,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -9,6 +9,16 @@
             "hora_real": "",
             "ciudad": "IQUITOS",
             "vuelo": "LA2164",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "01/04/2026",
+            "hora_prog": "18:25",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2296",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
