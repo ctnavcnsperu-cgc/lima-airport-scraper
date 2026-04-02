@@ -1,5 +1,16 @@
 {
-    "ultima_sincronizacion": "02/04/2026 16:20:36",
-    "conteo": 0,
-    "vuelos": []
+    "ultima_sincronizacion": "02/04/2026 16:30:44",
+    "conteo": 1,
+    "vuelos": [
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/04/2026",
+            "hora_prog": "16:35",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H24252",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        }
+    ]
 }
