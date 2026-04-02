@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "02/04/2026 16:40:54",
-    "conteo": 1,
+    "ultima_sincronizacion": "02/04/2026 16:50:46",
+    "conteo": 3,
     "vuelos": [
         {
             "tipo": "LLEGADAS",
@@ -10,6 +10,26 @@
             "ciudad": "CUSCO",
             "vuelo": "H24252",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "02/04/2026",
+            "hora_prog": "15:05",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "JA7262",
+            "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/04/2026",
+            "hora_prog": "18:35",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "JA7263",
+            "aerolinea": "JetSmart",
             "estado": "CANCELADO"
         }
     ]
