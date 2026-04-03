@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "02/04/2026 19:40:49",
-    "conteo": 318,
+    "ultima_sincronizacion": "02/04/2026 19:50:47",
+    "conteo": 321,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -3180,6 +3180,36 @@
             "ciudad": "TARAPOTO",
             "vuelo": "JA7263",
             "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "02/04/2026",
+            "hora_prog": "18:35",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "LA2091",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/04/2026",
+            "hora_prog": "17:30",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "LA2088",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/04/2026",
+            "hora_prog": "22:05",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "LA2092",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
