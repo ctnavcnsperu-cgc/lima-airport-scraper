@@ -1,5 +1,26 @@
 {
-    "ultima_sincronizacion": "05/04/2026 07:40:38",
-    "conteo": 0,
-    "vuelos": []
+    "ultima_sincronizacion": "05/04/2026 07:50:49",
+    "conteo": 2,
+    "vuelos": [
+        {
+            "tipo": "SALIDAS",
+            "fecha": "05/04/2026",
+            "hora_prog": "09:25",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25402",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "05/04/2026",
+            "hora_prog": "09:00",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25403",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        }
+    ]
 }
