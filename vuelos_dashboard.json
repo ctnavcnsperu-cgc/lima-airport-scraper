@@ -1,5 +1,16 @@
 {
-    "ultima_sincronizacion": "06/04/2026 06:50:41",
-    "conteo": 0,
-    "vuelos": []
+    "ultima_sincronizacion": "06/04/2026 07:00:58",
+    "conteo": 1,
+    "vuelos": [
+        {
+            "tipo": "SALIDAS",
+            "fecha": "06/04/2026",
+            "hora_prog": "18:15",
+            "hora_real": "",
+            "ciudad": "PUCALLPA",
+            "vuelo": "2I3233",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        }
+    ]
 }
