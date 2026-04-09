@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "09/04/2026 14:31:03",
-    "conteo": 393,
+    "ultima_sincronizacion": "09/04/2026 14:40:44",
+    "conteo": 394,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -3929,6 +3929,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2324",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "17:20",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "LA2213",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
