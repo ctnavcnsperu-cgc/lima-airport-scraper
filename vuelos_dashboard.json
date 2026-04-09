@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "09/04/2026 17:00:52",
-    "conteo": 26,
+    "ultima_sincronizacion": "09/04/2026 17:10:44",
+    "conteo": 27,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -259,6 +259,16 @@
             "hora_real": "",
             "ciudad": "CHICLAYO",
             "vuelo": "2I2226",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "18:55",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2225",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
