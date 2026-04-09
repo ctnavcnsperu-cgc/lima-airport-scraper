@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "09/04/2026 09:30:48",
-    "conteo": 9,
+    "ultima_sincronizacion": "09/04/2026 09:40:44",
+    "conteo": 12,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -90,6 +90,36 @@
             "ciudad": "PIURA",
             "vuelo": "H25229",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "10:30",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2005",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "10:50",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2032",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "10:00",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2033",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
