@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "09/04/2026 14:40:44",
-    "conteo": 394,
+    "ultima_sincronizacion": "09/04/2026 14:50:55",
+    "conteo": 397,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -3939,6 +3939,36 @@
             "hora_real": "",
             "ciudad": "CHICLAYO",
             "vuelo": "LA2213",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "20:10",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "LA2278",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "20:40",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "LA2214",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "23:35",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "LA2279",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
