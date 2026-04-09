@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "09/04/2026 16:50:43",
-    "conteo": 25,
+    "ultima_sincronizacion": "09/04/2026 17:00:52",
+    "conteo": 26,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -250,6 +250,16 @@
             "ciudad": "CHICLAYO",
             "vuelo": "JA7161",
             "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "09/04/2026",
+            "hora_prog": "22:00",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2226",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
