@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "10/04/2026 16:00:38",
-    "conteo": 403,
+    "ultima_sincronizacion": "10/04/2026 16:10:48",
+    "conteo": 405,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -4030,6 +4030,26 @@
             "ciudad": "TARAPOTO",
             "vuelo": "2I3143",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "10/04/2026",
+            "hora_prog": "13:55",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A072",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "10/04/2026",
+            "hora_prog": "14:00",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A068",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
