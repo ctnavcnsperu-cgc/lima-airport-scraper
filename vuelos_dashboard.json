@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "10/04/2026 16:10:48",
-    "conteo": 4,
+    "ultima_sincronizacion": "10/04/2026 16:20:39",
+    "conteo": 6,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -39,6 +39,26 @@
             "hora_real": "",
             "ciudad": "NUEVO MUNDO",
             "vuelo": "4A068",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "10/04/2026",
+            "hora_prog": "16:45",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A069",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "10/04/2026",
+            "hora_prog": "16:45",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A073",
             "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
