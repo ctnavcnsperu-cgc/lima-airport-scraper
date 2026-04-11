@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "10/04/2026 23:50:43",
-    "conteo": 409,
+    "ultima_sincronizacion": "11/04/2026 00:00:55",
+    "conteo": 415,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -4090,6 +4090,66 @@
             "ciudad": "TALARA",
             "vuelo": "LA2255",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "11/04/2026",
+            "hora_prog": "07:55",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3147",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "11/04/2026",
+            "hora_prog": "18:55",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2225",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "11/04/2026",
+            "hora_prog": "19:05",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3243",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/04/2026",
+            "hora_prog": "10:50",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3148",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/04/2026",
+            "hora_prog": "22:00",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3244",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/04/2026",
+            "hora_prog": "22:00",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2226",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
