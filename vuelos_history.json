@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "10/04/2026 20:20:38",
-    "conteo": 407,
+    "ultima_sincronizacion": "10/04/2026 20:30:42",
+    "conteo": 408,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -4070,6 +4070,16 @@
             "ciudad": "NUEVO MUNDO",
             "vuelo": "4A073",
             "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "10/04/2026",
+            "hora_prog": "23:20",
+            "hora_real": "",
+            "ciudad": "TALARA",
+            "vuelo": "LA2256",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
