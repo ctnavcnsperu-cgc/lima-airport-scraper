@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "11/04/2026 00:30:45",
-    "conteo": 6,
+    "ultima_sincronizacion": "11/04/2026 00:40:54",
+    "conteo": 8,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -60,6 +60,26 @@
             "ciudad": "CHICLAYO",
             "vuelo": "2I2226",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "11/04/2026",
+            "hora_prog": "02:10",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "LA2164",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/04/2026",
+            "hora_prog": "01:55",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "LA2165",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
