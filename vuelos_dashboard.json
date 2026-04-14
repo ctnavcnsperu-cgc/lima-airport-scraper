@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "14/04/2026 04:41:39",
-    "conteo": 13,
+    "ultima_sincronizacion": "14/04/2026 04:50:49",
+    "conteo": 15,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -130,6 +130,26 @@
             "ciudad": "CHICLAYO",
             "vuelo": "2I2226",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "14/04/2026",
+            "hora_prog": "06:15",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2032",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "14/04/2026",
+            "hora_prog": "10:00",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2033",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
