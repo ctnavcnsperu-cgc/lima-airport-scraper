@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "16/04/2026 07:20:53",
-    "conteo": 13,
+    "ultima_sincronizacion": "16/04/2026 07:30:49",
+    "conteo": 17,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -130,6 +130,46 @@
             "ciudad": "CUSCO",
             "vuelo": "H25018",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "16/04/2026",
+            "hora_prog": "08:00",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2131",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "16/04/2026",
+            "hora_prog": "08:15",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2141",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/04/2026",
+            "hora_prog": "07:25",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2132",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/04/2026",
+            "hora_prog": "07:45",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2142",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
