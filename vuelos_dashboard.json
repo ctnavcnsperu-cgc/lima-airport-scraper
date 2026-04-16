@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "16/04/2026 15:10:45",
-    "conteo": 17,
+    "ultima_sincronizacion": "16/04/2026 15:20:45",
+    "conteo": 18,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -170,6 +170,16 @@
             "ciudad": "TRUJILLO",
             "vuelo": "LA2142",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "16/04/2026",
+            "hora_prog": "13:55",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A072",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
