@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "17/04/2026 15:20:41",
-    "conteo": 491,
+    "ultima_sincronizacion": "17/04/2026 15:30:40",
+    "conteo": 492,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -4910,6 +4910,16 @@
             "ciudad": "TRUJILLO",
             "vuelo": "H25263",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "17/04/2026",
+            "hora_prog": "16:45",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A069",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
