@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "16/04/2026 23:51:25",
-    "conteo": 486,
+    "ultima_sincronizacion": "17/04/2026 00:00:46",
+    "conteo": 487,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -4859,6 +4859,16 @@
             "hora_real": "",
             "ciudad": "NUEVO MUNDO",
             "vuelo": "4A073",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "17/04/2026",
+            "hora_prog": "12:35",
+            "hora_real": "",
+            "ciudad": "CHACHAPOYAS",
+            "vuelo": "4A4002",
             "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
