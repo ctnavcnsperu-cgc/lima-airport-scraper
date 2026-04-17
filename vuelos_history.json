@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "17/04/2026 11:20:47",
-    "conteo": 489,
+    "ultima_sincronizacion": "17/04/2026 11:30:43",
+    "conteo": 491,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -4890,6 +4890,26 @@
             "ciudad": "CUSCO",
             "vuelo": "JA7018",
             "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "17/04/2026",
+            "hora_prog": "09:40",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "H25262",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "17/04/2026",
+            "hora_prog": "12:55",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "H25263",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
