@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "17/04/2026 06:40:45",
-    "conteo": 1,
+    "ultima_sincronizacion": "17/04/2026 06:50:46",
+    "conteo": 2,
     "vuelos": [
         {
             "tipo": "LLEGADAS",
@@ -10,6 +10,16 @@
             "ciudad": "CHACHAPOYAS",
             "vuelo": "4A4002",
             "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "17/04/2026",
+            "hora_prog": "08:22",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7019",
+            "aerolinea": "JetSmart",
             "estado": "CANCELADO"
         }
     ]
