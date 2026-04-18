@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "18/04/2026 18:30:41",
-    "conteo": 6,
+    "ultima_sincronizacion": "18/04/2026 18:40:45",
+    "conteo": 7,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -60,6 +60,16 @@
             "ciudad": "TARAPOTO",
             "vuelo": "2I3244",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/04/2026",
+            "hora_prog": "17:20",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "4A4044",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
