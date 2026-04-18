@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "17/04/2026 22:20:43",
-    "conteo": 9,
+    "ultima_sincronizacion": "17/04/2026 22:30:44",
+    "conteo": 10,
     "vuelos": [
         {
             "tipo": "LLEGADAS",
@@ -90,6 +90,16 @@
             "ciudad": "MAZAMARI",
             "vuelo": "4A4096",
             "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "17/04/2026",
+            "hora_prog": "20:40",
+            "hora_real": "",
+            "ciudad": "PIURA",
+            "vuelo": "LA2305",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
