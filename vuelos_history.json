@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "18/04/2026 23:50:37",
-    "conteo": 503,
+    "ultima_sincronizacion": "19/04/2026 00:01:00",
+    "conteo": 509,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -5030,6 +5030,66 @@
             "ciudad": "HUANUCO",
             "vuelo": "4A4044",
             "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "19/04/2026",
+            "hora_prog": "07:15",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2123",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "19/04/2026",
+            "hora_prog": "07:50",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2233",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "19/04/2026",
+            "hora_prog": "19:05",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3243",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "19/04/2026",
+            "hora_prog": "10:20",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2124",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "19/04/2026",
+            "hora_prog": "10:30",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2234",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "19/04/2026",
+            "hora_prog": "22:00",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3244",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
