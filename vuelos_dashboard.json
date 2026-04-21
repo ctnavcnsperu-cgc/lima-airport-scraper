@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "21/04/2026 08:20:51",
-    "conteo": 10,
+    "ultima_sincronizacion": "21/04/2026 08:30:54",
+    "conteo": 11,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -99,6 +99,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2343",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "08:40",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2344",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
