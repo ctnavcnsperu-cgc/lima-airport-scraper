@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "20/04/2026 23:50:40",
-    "conteo": 527,
+    "ultima_sincronizacion": "21/04/2026 00:01:00",
+    "conteo": 535,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -5270,6 +5270,86 @@
             "ciudad": "AREQUIPA",
             "vuelo": "LA2108",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "07:55",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3147",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "11:45",
+            "hora_real": "",
+            "ciudad": "PUCALLPA",
+            "vuelo": "2I3131",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "18:55",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2225",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "19:05",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3243",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "10:50",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3148",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "16:50",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "2I3131",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "22:00",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3244",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "22:00",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2226",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
