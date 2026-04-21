@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "21/04/2026 07:30:41",
-    "conteo": 536,
+    "ultima_sincronizacion": "21/04/2026 07:40:41",
+    "conteo": 537,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -5360,6 +5360,16 @@
             "ciudad": "CUSCO",
             "vuelo": "JA7030",
             "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "21/04/2026",
+            "hora_prog": "08:20",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2343",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
