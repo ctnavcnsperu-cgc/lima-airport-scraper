@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "23/04/2026 08:00:51",
-    "conteo": 561,
+    "ultima_sincronizacion": "23/04/2026 08:10:54",
+    "conteo": 563,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -5610,6 +5610,26 @@
             "ciudad": "PIURA",
             "vuelo": "H25229",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "23/04/2026",
+            "hora_prog": "09:00",
+            "hora_real": "",
+            "ciudad": "ANDAHUAYLAS",
+            "vuelo": "4A4071",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "23/04/2026",
+            "hora_prog": "09:00",
+            "hora_real": "",
+            "ciudad": "ANDAHUAYLAS",
+            "vuelo": "4A4072",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
