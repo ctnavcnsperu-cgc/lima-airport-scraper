@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "26/04/2026 13:10:45",
-    "conteo": 4,
+    "ultima_sincronizacion": "26/04/2026 13:20:35",
+    "conteo": 6,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -39,6 +39,26 @@
             "hora_real": "",
             "ciudad": "TARAPOTO",
             "vuelo": "2I3116",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "26/04/2026",
+            "hora_prog": "19:30",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "2I3220",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/04/2026",
+            "hora_prog": "23:45",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "2I3221",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
