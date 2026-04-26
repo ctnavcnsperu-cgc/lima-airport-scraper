@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "26/04/2026 17:40:39",
-    "conteo": 22,
+    "ultima_sincronizacion": "26/04/2026 17:50:45",
+    "conteo": 23,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -220,6 +220,16 @@
             "ciudad": "IQUITOS",
             "vuelo": "2I3221",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "26/04/2026",
+            "hora_prog": "17:50",
+            "hora_real": "",
+            "ciudad": "JULIACA",
+            "vuelo": "H25168",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
