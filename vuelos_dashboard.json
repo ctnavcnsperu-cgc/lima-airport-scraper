@@ -1,84 +1,44 @@
 {
-    "ultima_sincronizacion": "25/04/2026 23:50:45",
-    "conteo": 8,
+    "ultima_sincronizacion": "26/04/2026 00:00:44",
+    "conteo": 4,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "25/04/2026",
-            "hora_prog": "05:25",
+            "fecha": "26/04/2026",
+            "hora_prog": "07:15",
             "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "H25402",
-            "aerolinea": "Sky Airline",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2123",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "25/04/2026",
-            "hora_prog": "06:45",
-            "hora_real": "",
-            "ciudad": "AYACUCHO",
-            "vuelo": "H25205",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "25/04/2026",
+            "fecha": "26/04/2026",
             "hora_prog": "07:55",
             "hora_real": "",
             "ciudad": "TARAPOTO",
-            "vuelo": "2I3147",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "25/04/2026",
-            "hora_prog": "19:05",
-            "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3243",
+            "vuelo": "2I3115",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "25/04/2026",
-            "hora_prog": "09:00",
+            "fecha": "26/04/2026",
+            "hora_prog": "10:20",
             "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "H25403",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "25/04/2026",
-            "hora_prog": "09:35",
-            "hora_real": "",
-            "ciudad": "AYACUCHO",
-            "vuelo": "H25206",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "25/04/2026",
-            "hora_prog": "10:50",
-            "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3148",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2124",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "25/04/2026",
-            "hora_prog": "22:00",
+            "fecha": "26/04/2026",
+            "hora_prog": "14:00",
             "hora_real": "",
             "ciudad": "TARAPOTO",
-            "vuelo": "2I3244",
+            "vuelo": "2I3116",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
