@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "28/04/2026 11:51:04",
-    "conteo": 47,
+    "ultima_sincronizacion": "28/04/2026 12:01:24",
+    "conteo": 48,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -470,6 +470,16 @@
             "ciudad": "TARAPOTO",
             "vuelo": "2I3244",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "11:00",
+            "hora_real": "",
+            "ciudad": "PALMA DEL ESPIN",
+            "vuelo": "O4A2088",
+            "aerolinea": "AEROLÍNEA",
             "estado": "CANCELADO"
         }
     ]
