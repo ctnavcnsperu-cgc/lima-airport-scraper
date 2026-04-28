@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "28/04/2026 17:20:55",
-    "conteo": 50,
+    "ultima_sincronizacion": "28/04/2026 17:30:40",
+    "conteo": 51,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -499,6 +499,16 @@
             "hora_real": "",
             "ciudad": "AYACUCHO",
             "vuelo": "LA2185",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "17:15",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2294",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
