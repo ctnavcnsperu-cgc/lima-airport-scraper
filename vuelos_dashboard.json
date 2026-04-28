@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "28/04/2026 15:11:03",
-    "conteo": 14,
+    "ultima_sincronizacion": "28/04/2026 15:20:55",
+    "conteo": 16,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -140,6 +140,26 @@
             "ciudad": "PALMA DEL ESPIN",
             "vuelo": "O4A2088",
             "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "15:05",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "LA2186",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "17:55",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "LA2185",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
