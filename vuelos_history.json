@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "27/04/2026 23:50:48",
-    "conteo": 34,
+    "ultima_sincronizacion": "28/04/2026 00:01:03",
+    "conteo": 47,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -339,6 +339,136 @@
             "hora_real": "",
             "ciudad": "TARAPOTO",
             "vuelo": "2I3144",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "05:55",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7021",
+            "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "07:15",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "2I3111",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "07:50",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2233",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "07:55",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3147",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "11:55",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4222",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "19:05",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3243",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "09:35",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7020",
+            "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "10:30",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "2I2234",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "10:50",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3148",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "12:20",
+            "hora_real": "",
+            "ciudad": "PUCALLPA",
+            "vuelo": "2I3111",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "14:10",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4223",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "16:50",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "2I3131",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "28/04/2026",
+            "hora_prog": "22:00",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3244",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
