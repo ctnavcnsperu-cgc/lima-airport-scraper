@@ -1,64 +1,44 @@
 {
-    "ultima_sincronizacion": "29/04/2026 23:50:43",
-    "conteo": 6,
+    "ultima_sincronizacion": "30/04/2026 00:00:51",
+    "conteo": 4,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "29/04/2026",
-            "hora_prog": "07:15",
-            "hora_real": "",
-            "ciudad": "CHICLAYO",
-            "vuelo": "2I2123",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "29/04/2026",
+            "fecha": "30/04/2026",
             "hora_prog": "07:55",
             "hora_real": "",
             "ciudad": "TARAPOTO",
-            "vuelo": "2I3115",
+            "vuelo": "2I3147",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "29/04/2026",
-            "hora_prog": "19:05",
+            "fecha": "30/04/2026",
+            "hora_prog": "15:00",
             "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3243",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4220",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "29/04/2026",
-            "hora_prog": "10:20",
+            "fecha": "30/04/2026",
+            "hora_prog": "10:50",
             "hora_real": "",
-            "ciudad": "CHICLAYO",
-            "vuelo": "2I2124",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3148",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "29/04/2026",
-            "hora_prog": "14:00",
+            "fecha": "30/04/2026",
+            "hora_prog": "17:15",
             "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3116",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "29/04/2026",
-            "hora_prog": "22:00",
-            "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3244",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4221",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
