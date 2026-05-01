@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "01/05/2026 18:30:47",
-    "conteo": 66,
+    "ultima_sincronizacion": "01/05/2026 18:40:49",
+    "conteo": 68,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -659,6 +659,26 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2120",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "01/05/2026",
+            "hora_prog": "18:25",
+            "hora_real": "",
+            "ciudad": "CAJAMARCA",
+            "vuelo": "LA2296",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "01/05/2026",
+            "hora_prog": "20:25",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2277",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
