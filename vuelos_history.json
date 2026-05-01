@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "01/05/2026 10:30:53",
-    "conteo": 62,
+    "ultima_sincronizacion": "01/05/2026 10:40:46",
+    "conteo": 64,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -619,6 +619,26 @@
             "hora_real": "",
             "ciudad": "IQUITOS",
             "vuelo": "LA2242",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "01/05/2026",
+            "hora_prog": "12:50",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2043",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "01/05/2026",
+            "hora_prog": "16:40",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2044",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
