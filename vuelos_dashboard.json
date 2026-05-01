@@ -1,45 +1,15 @@
 {
-    "ultima_sincronizacion": "30/04/2026 23:50:50",
-    "conteo": 4,
+    "ultima_sincronizacion": "01/05/2026 00:00:46",
+    "conteo": 1,
     "vuelos": [
         {
-            "tipo": "SALIDAS",
-            "fecha": "30/04/2026",
-            "hora_prog": "07:55",
-            "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3147",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "30/04/2026",
-            "hora_prog": "15:00",
-            "hora_real": "",
-            "ciudad": "HUANUCO",
-            "vuelo": "2I4220",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
             "tipo": "LLEGADAS",
-            "fecha": "30/04/2026",
-            "hora_prog": "10:50",
+            "fecha": "01/05/2026",
+            "hora_prog": "00:05",
             "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3148",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "30/04/2026",
-            "hora_prog": "17:15",
-            "hora_real": "",
-            "ciudad": "HUANUCO",
-            "vuelo": "2I4221",
-            "aerolinea": "Star Peru",
+            "ciudad": "IQUITOS",
+            "vuelo": "LA2242",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]

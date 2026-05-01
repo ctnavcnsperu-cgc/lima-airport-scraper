@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "30/04/2026 23:50:50",
-    "conteo": 61,
+    "ultima_sincronizacion": "01/05/2026 00:00:46",
+    "conteo": 62,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -610,6 +610,16 @@
             "ciudad": "HUANUCO",
             "vuelo": "2I4221",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "01/05/2026",
+            "hora_prog": "00:05",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "LA2242",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
