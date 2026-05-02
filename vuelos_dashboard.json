@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "02/05/2026 18:00:48",
-    "conteo": 14,
+    "ultima_sincronizacion": "02/05/2026 18:10:48",
+    "conteo": 16,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -140,6 +140,26 @@
             "ciudad": "JULIACA",
             "vuelo": "H25175",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "02/05/2026",
+            "hora_prog": "18:35",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2117",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/05/2026",
+            "hora_prog": "22:20",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2116",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
