@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "02/05/2026 17:50:46",
-    "conteo": 13,
+    "ultima_sincronizacion": "02/05/2026 18:00:48",
+    "conteo": 14,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -130,6 +130,16 @@
             "ciudad": "CAJAMARCA",
             "vuelo": "LA2296",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "02/05/2026",
+            "hora_prog": "20:35",
+            "hora_real": "",
+            "ciudad": "JULIACA",
+            "vuelo": "H25175",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
