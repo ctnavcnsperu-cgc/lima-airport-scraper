@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "03/05/2026 13:00:46",
-    "conteo": 6,
+    "ultima_sincronizacion": "03/05/2026 13:10:41",
+    "conteo": 7,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -59,6 +59,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2062",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "03/05/2026",
+            "hora_prog": "15:05",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2113",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
