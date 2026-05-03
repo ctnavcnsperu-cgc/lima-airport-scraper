@@ -1,165 +1,45 @@
 {
-    "ultima_sincronizacion": "02/05/2026 23:50:46",
-    "conteo": 16,
+    "ultima_sincronizacion": "03/05/2026 00:00:53",
+    "conteo": 4,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "02/05/2026",
+            "fecha": "03/05/2026",
             "hora_prog": "07:15",
             "hora_real": "",
-            "ciudad": "IQUITOS",
-            "vuelo": "2I3111",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2123",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "SALIDAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "07:50",
-            "hora_real": "",
-            "ciudad": "CAJAMARCA",
-            "vuelo": "2I2233",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "02/05/2026",
+            "fecha": "03/05/2026",
             "hora_prog": "07:55",
             "hora_real": "",
             "ciudad": "TARAPOTO",
-            "vuelo": "2I3147",
+            "vuelo": "2I3115",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
-            "tipo": "SALIDAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "11:55",
+            "tipo": "LLEGADAS",
+            "fecha": "03/05/2026",
+            "hora_prog": "10:20",
             "hora_real": "",
-            "ciudad": "HUANUCO",
-            "vuelo": "2I4222",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2124",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
-            "tipo": "SALIDAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "14:05",
+            "tipo": "LLEGADAS",
+            "fecha": "03/05/2026",
+            "hora_prog": "14:00",
             "hora_real": "",
             "ciudad": "TARAPOTO",
-            "vuelo": "2I3143",
+            "vuelo": "2I3116",
             "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "18:15",
-            "hora_real": "",
-            "ciudad": "PUCALLPA",
-            "vuelo": "2I3233",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "10:30",
-            "hora_real": "",
-            "ciudad": "CAJAMARCA",
-            "vuelo": "2I2234",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "10:50",
-            "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3148",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "12:20",
-            "hora_real": "",
-            "ciudad": "PUCALLPA",
-            "vuelo": "2I3111",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "14:10",
-            "hora_real": "",
-            "ciudad": "HUANUCO",
-            "vuelo": "2I4223",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "16:55",
-            "hora_real": "",
-            "ciudad": "TARAPOTO",
-            "vuelo": "2I3144",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "20:55",
-            "hora_real": "",
-            "ciudad": "PUCALLPA",
-            "vuelo": "2I3234",
-            "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "18:25",
-            "hora_real": "",
-            "ciudad": "CAJAMARCA",
-            "vuelo": "LA2296",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "20:35",
-            "hora_real": "",
-            "ciudad": "JULIACA",
-            "vuelo": "H25175",
-            "aerolinea": "Sky Airline",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "18:35",
-            "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "LA2117",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "02/05/2026",
-            "hora_prog": "22:20",
-            "hora_real": "",
-            "ciudad": "AREQUIPA",
-            "vuelo": "LA2116",
-            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
