@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "04/05/2026 15:40:50",
-    "conteo": 112,
+    "ultima_sincronizacion": "04/05/2026 15:50:57",
+    "conteo": 113,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1120,6 +1120,16 @@
             "ciudad": "CUSCO",
             "vuelo": "LA2062",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/05/2026",
+            "hora_prog": "15:24",
+            "hora_real": "",
+            "ciudad": "MALVINA",
+            "vuelo": "S2I104",
+            "aerolinea": "AEROLÍNEA",
             "estado": "CANCELADO"
         }
     ]
