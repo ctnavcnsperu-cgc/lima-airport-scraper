@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "04/05/2026 10:51:00",
-    "conteo": 15,
+    "ultima_sincronizacion": "04/05/2026 11:10:53",
+    "conteo": 17,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -150,6 +150,26 @@
             "ciudad": "CUSCO",
             "vuelo": "LA2061",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/05/2026",
+            "hora_prog": "12:05",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25025",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/05/2026",
+            "hora_prog": "16:00",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25026",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
