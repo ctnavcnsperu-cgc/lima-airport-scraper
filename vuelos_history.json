@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "03/05/2026 22:10:40",
-    "conteo": 93,
+    "ultima_sincronizacion": "03/05/2026 22:20:45",
+    "conteo": 94,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -929,6 +929,16 @@
             "hora_real": "",
             "ciudad": "AREQUIPA",
             "vuelo": "LA2112",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "03/05/2026",
+            "hora_prog": "23:15",
+            "hora_real": "",
+            "ciudad": "TACNA",
+            "vuelo": "LA2199",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
