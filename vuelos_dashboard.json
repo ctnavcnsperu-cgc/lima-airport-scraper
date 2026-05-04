@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "04/05/2026 05:40:48",
-    "conteo": 10,
+    "ultima_sincronizacion": "04/05/2026 05:50:52",
+    "conteo": 11,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -100,6 +100,16 @@
             "ciudad": "TARAPOTO",
             "vuelo": "2I3144",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/05/2026",
+            "hora_prog": "08:10",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2130",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
