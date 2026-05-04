@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "04/05/2026 09:40:57",
-    "conteo": 14,
+    "ultima_sincronizacion": "04/05/2026 09:50:56",
+    "conteo": 15,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -139,6 +139,16 @@
             "hora_real": "",
             "ciudad": "TRUJILLO",
             "vuelo": "LA2228",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "04/05/2026",
+            "hora_prog": "11:40",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2061",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
