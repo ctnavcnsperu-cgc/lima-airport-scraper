@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "04/05/2026 16:30:38",
-    "conteo": 113,
+    "ultima_sincronizacion": "04/05/2026 16:40:42",
+    "conteo": 114,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1129,6 +1129,16 @@
             "hora_real": "",
             "ciudad": "MALVINA",
             "vuelo": "S2I104",
+            "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "04/05/2026",
+            "hora_prog": "16:00",
+            "hora_real": "",
+            "ciudad": "MALVINA",
+            "vuelo": "S2I105",
             "aerolinea": "AEROLÍNEA",
             "estado": "CANCELADO"
         }
