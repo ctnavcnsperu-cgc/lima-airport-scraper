@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "05/05/2026 14:40:41",
-    "conteo": 129,
+    "ultima_sincronizacion": "05/05/2026 14:50:44",
+    "conteo": 130,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1290,6 +1290,16 @@
             "ciudad": "CHICLAYO",
             "vuelo": "2I2226",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "05/05/2026",
+            "hora_prog": "19:55",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "JA7023",
+            "aerolinea": "JetSmart",
             "estado": "CANCELADO"
         }
     ]
