@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/05/2026 09:41:01",
-    "conteo": 12,
+    "ultima_sincronizacion": "06/05/2026 09:50:44",
+    "conteo": 13,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -119,6 +119,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2238",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "06/05/2026",
+            "hora_prog": "11:10",
+            "hora_real": "",
+            "ciudad": "PIURA",
+            "vuelo": "LA2126",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
