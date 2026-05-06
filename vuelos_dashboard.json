@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/05/2026 10:10:48",
-    "conteo": 13,
+    "ultima_sincronizacion": "06/05/2026 10:20:47",
+    "conteo": 14,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -129,6 +129,16 @@
             "hora_real": "",
             "ciudad": "PIURA",
             "vuelo": "LA2126",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "06/05/2026",
+            "hora_prog": "07:20",
+            "hora_real": "",
+            "ciudad": "PIURA",
+            "vuelo": "LA2125",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
