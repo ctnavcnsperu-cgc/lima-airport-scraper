@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "06/05/2026 08:40:56",
-    "conteo": 11,
+    "ultima_sincronizacion": "06/05/2026 08:51:02",
+    "conteo": 12,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -109,6 +109,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2239",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "06/05/2026",
+            "hora_prog": "10:10",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2238",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
