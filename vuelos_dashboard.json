@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "07/05/2026 16:10:45",
-    "conteo": 14,
+    "ultima_sincronizacion": "07/05/2026 16:20:54",
+    "conteo": 15,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -140,6 +140,16 @@
             "ciudad": "CUSCO",
             "vuelo": "JA7020",
             "aerolinea": "JetSmart",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "07/05/2026",
+            "hora_prog": "16:42",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "LA2186",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
