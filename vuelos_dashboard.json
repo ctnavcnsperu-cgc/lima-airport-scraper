@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "07/05/2026 16:20:54",
-    "conteo": 15,
+    "ultima_sincronizacion": "07/05/2026 16:30:40",
+    "conteo": 16,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -149,6 +149,16 @@
             "hora_real": "",
             "ciudad": "AYACUCHO",
             "vuelo": "LA2186",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "07/05/2026",
+            "hora_prog": "17:55",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "LA2185",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
