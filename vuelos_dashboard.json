@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "07/05/2026 07:20:51",
-    "conteo": 10,
+    "ultima_sincronizacion": "07/05/2026 07:30:56",
+    "conteo": 11,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -100,6 +100,16 @@
             "ciudad": "TARAPOTO",
             "vuelo": "2I3244",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "07/05/2026",
+            "hora_prog": "08:15",
+            "hora_real": "",
+            "ciudad": "ANDAHUAYLAS",
+            "vuelo": "4A4071",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
