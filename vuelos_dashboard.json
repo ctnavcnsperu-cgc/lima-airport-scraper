@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "07/05/2026 07:50:52",
-    "conteo": 11,
+    "ultima_sincronizacion": "07/05/2026 08:00:58",
+    "conteo": 12,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -109,6 +109,16 @@
             "hora_real": "",
             "ciudad": "ANDAHUAYLAS",
             "vuelo": "4A4071",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "07/05/2026",
+            "hora_prog": "09:00",
+            "hora_real": "",
+            "ciudad": "ANDAHUAYLAS",
+            "vuelo": "4A4072",
             "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
