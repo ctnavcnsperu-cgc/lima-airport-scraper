@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "08/05/2026 04:50:47",
-    "conteo": 170,
+    "ultima_sincronizacion": "08/05/2026 05:00:58",
+    "conteo": 171,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1700,6 +1700,16 @@
             "ciudad": "NUEVO MUNDO",
             "vuelo": "4A069",
             "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "08/05/2026",
+            "hora_prog": "06:30",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2292",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
