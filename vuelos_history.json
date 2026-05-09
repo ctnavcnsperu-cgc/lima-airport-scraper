@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "09/05/2026 07:21:01",
-    "conteo": 175,
+    "ultima_sincronizacion": "09/05/2026 07:30:54",
+    "conteo": 176,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1750,6 +1750,16 @@
             "ciudad": "TARAPOTO",
             "vuelo": "2I3244",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "09/05/2026",
+            "hora_prog": "08:40",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2013",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
