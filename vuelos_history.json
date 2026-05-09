@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "09/05/2026 09:30:50",
-    "conteo": 178,
+    "ultima_sincronizacion": "09/05/2026 09:40:45",
+    "conteo": 180,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1779,6 +1779,26 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2128",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "09/05/2026",
+            "hora_prog": "09:41",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2292",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "09/05/2026",
+            "hora_prog": "11:40",
+            "hora_real": "",
+            "ciudad": "TRUJILLO",
+            "vuelo": "LA2227",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
