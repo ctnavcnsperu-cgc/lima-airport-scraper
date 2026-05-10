@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "10/05/2026 03:20:50",
-    "conteo": 184,
+    "ultima_sincronizacion": "10/05/2026 03:30:57",
+    "conteo": 185,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1839,6 +1839,16 @@
             "hora_real": "",
             "ciudad": "AREQUIPA",
             "vuelo": "LA2123",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "10/05/2026",
+            "hora_prog": "13:10",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2124",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
