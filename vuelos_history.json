@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "10/05/2026 02:20:48",
-    "conteo": 183,
+    "ultima_sincronizacion": "10/05/2026 02:30:55",
+    "conteo": 184,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1830,6 +1830,16 @@
             "ciudad": "TARAPOTO",
             "vuelo": "2I3116",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "10/05/2026",
+            "hora_prog": "09:15",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2123",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
