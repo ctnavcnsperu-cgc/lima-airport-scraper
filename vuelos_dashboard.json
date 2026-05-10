@@ -1,85 +1,25 @@
 {
-    "ultima_sincronizacion": "09/05/2026 23:50:46",
-    "conteo": 8,
+    "ultima_sincronizacion": "10/05/2026 00:00:51",
+    "conteo": 2,
     "vuelos": [
         {
             "tipo": "SALIDAS",
-            "fecha": "09/05/2026",
-            "hora_prog": "19:05",
+            "fecha": "10/05/2026",
+            "hora_prog": "07:55",
             "hora_real": "",
             "ciudad": "TARAPOTO",
-            "vuelo": "2I3243",
+            "vuelo": "2I3115",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         },
         {
             "tipo": "LLEGADAS",
-            "fecha": "09/05/2026",
-            "hora_prog": "22:00",
+            "fecha": "10/05/2026",
+            "hora_prog": "14:00",
             "hora_real": "",
             "ciudad": "TARAPOTO",
-            "vuelo": "2I3244",
+            "vuelo": "2I3116",
             "aerolinea": "Star Peru",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "09/05/2026",
-            "hora_prog": "08:40",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2013",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "09/05/2026",
-            "hora_prog": "12:10",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2014",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "09/05/2026",
-            "hora_prog": "10:40",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2128",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "09/05/2026",
-            "hora_prog": "09:41",
-            "hora_real": "",
-            "ciudad": "CUSCO",
-            "vuelo": "LA2292",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "SALIDAS",
-            "fecha": "09/05/2026",
-            "hora_prog": "11:40",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2227",
-            "aerolinea": "LATAM Airlines",
-            "estado": "CANCELADO"
-        },
-        {
-            "tipo": "LLEGADAS",
-            "fecha": "09/05/2026",
-            "hora_prog": "14:45",
-            "hora_real": "",
-            "ciudad": "TRUJILLO",
-            "vuelo": "LA2228",
-            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
