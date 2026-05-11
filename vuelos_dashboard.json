@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "11/05/2026 11:00:59",
-    "conteo": 3,
+    "ultima_sincronizacion": "11/05/2026 11:10:42",
+    "conteo": 6,
     "vuelos": [
         {
             "tipo": "LLEGADAS",
@@ -29,6 +29,36 @@
             "hora_real": "",
             "ciudad": "AYACUCHO",
             "vuelo": "H25206",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "11/05/2026",
+            "hora_prog": "15:55",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25011",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/05/2026",
+            "hora_prog": "09:30",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "H25403",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/05/2026",
+            "hora_prog": "19:50",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "H25012",
             "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
