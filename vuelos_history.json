@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "11/05/2026 08:20:47",
-    "conteo": 187,
+    "ultima_sincronizacion": "11/05/2026 08:30:57",
+    "conteo": 189,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1870,6 +1870,26 @@
             "ciudad": "CUSCO",
             "vuelo": "LA2357",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "11/05/2026",
+            "hora_prog": "09:10",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "H25205",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/05/2026",
+            "hora_prog": "09:35",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "H25206",
+            "aerolinea": "Sky Airline",
             "estado": "CANCELADO"
         }
     ]
