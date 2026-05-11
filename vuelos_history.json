@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "11/05/2026 11:50:46",
-    "conteo": 192,
+    "ultima_sincronizacion": "11/05/2026 12:00:58",
+    "conteo": 193,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -1920,6 +1920,16 @@
             "ciudad": "CUSCO",
             "vuelo": "H25012",
             "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "11/05/2026",
+            "hora_prog": "13:27",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2811",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
