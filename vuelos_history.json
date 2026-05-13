@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "12/05/2026 23:50:43",
-    "conteo": 203,
+    "ultima_sincronizacion": "13/05/2026 00:01:03",
+    "conteo": 213,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2030,6 +2030,106 @@
             "ciudad": "AREQUIPA",
             "vuelo": "LA2116",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "07:15",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2123",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "07:55",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3115",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "08:25",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4120",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "11:55",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4222",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "14:00",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A072",
+            "aerolinea": "ATSA Aero Transporte",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "10:20",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2124",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "10:35",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4121",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "14:00",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3116",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "14:10",
+            "hora_real": "",
+            "ciudad": "HUANUCO",
+            "vuelo": "2I4223",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "13/05/2026",
+            "hora_prog": "16:45",
+            "hora_real": "",
+            "ciudad": "NUEVO MUNDO",
+            "vuelo": "4A073",
+            "aerolinea": "ATSA Aero Transporte",
             "estado": "CANCELADO"
         }
     ]
