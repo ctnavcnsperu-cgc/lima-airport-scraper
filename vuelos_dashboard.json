@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "12/05/2026 18:50:47",
-    "conteo": 7,
+    "ultima_sincronizacion": "12/05/2026 19:00:56",
+    "conteo": 8,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -70,6 +70,16 @@
             "ciudad": "LAS PALMA",
             "vuelo": "SGN1928",
             "aerolinea": "AEROLÍNEA",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "12/05/2026",
+            "hora_prog": "18:35",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2117",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
