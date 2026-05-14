@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "14/05/2026 12:11:19",
-    "conteo": 219,
+    "ultima_sincronizacion": "14/05/2026 12:20:53",
+    "conteo": 221,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2190,6 +2190,26 @@
             "ciudad": "HUANUCO",
             "vuelo": "2I4221",
             "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "14/05/2026",
+            "hora_prog": "10:45",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2075",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "14/05/2026",
+            "hora_prog": "14:20",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2076",
+            "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
     ]
