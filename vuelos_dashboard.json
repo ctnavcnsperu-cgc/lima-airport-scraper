@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "15/05/2026 15:51:08",
-    "conteo": 7,
+    "ultima_sincronizacion": "15/05/2026 16:00:43",
+    "conteo": 8,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -69,6 +69,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2129",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "15/05/2026",
+            "hora_prog": "17:30",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "LA2301",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
