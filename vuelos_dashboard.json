@@ -1,5 +1,16 @@
 {
-    "ultima_sincronizacion": "16/05/2026 14:10:51",
-    "conteo": 0,
-    "vuelos": []
+    "ultima_sincronizacion": "16/05/2026 14:20:45",
+    "conteo": 1,
+    "vuelos": [
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/05/2026",
+            "hora_prog": "18:55",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2112",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        }
+    ]
 }

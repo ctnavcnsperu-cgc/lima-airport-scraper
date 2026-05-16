@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "16/05/2026 14:10:51",
-    "conteo": 231,
+    "ultima_sincronizacion": "16/05/2026 14:20:45",
+    "conteo": 232,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2309,6 +2309,16 @@
             "hora_real": "",
             "ciudad": "TARAPOTO",
             "vuelo": "LA2300",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/05/2026",
+            "hora_prog": "18:55",
+            "hora_real": "",
+            "ciudad": "AREQUIPA",
+            "vuelo": "LA2112",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
