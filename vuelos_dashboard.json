@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "16/05/2026 21:10:44",
-    "conteo": 2,
+    "ultima_sincronizacion": "16/05/2026 21:20:53",
+    "conteo": 3,
     "vuelos": [
         {
             "tipo": "LLEGADAS",
@@ -19,6 +19,16 @@
             "hora_real": "",
             "ciudad": "CUSCO",
             "vuelo": "LA2217",
+            "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "16/05/2026",
+            "hora_prog": "21:55",
+            "hora_real": "",
+            "ciudad": "CUSCO",
+            "vuelo": "LA2218",
             "aerolinea": "LATAM Airlines",
             "estado": "CANCELADO"
         }
