@@ -1,5 +1,66 @@
 {
-    "ultima_sincronizacion": "17/05/2026 23:51:11",
-    "conteo": 0,
-    "vuelos": []
+    "ultima_sincronizacion": "18/05/2026 00:00:59",
+    "conteo": 6,
+    "vuelos": [
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/05/2026",
+            "hora_prog": "06:45",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "H25205",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/05/2026",
+            "hora_prog": "07:15",
+            "hora_real": "",
+            "ciudad": "IQUITOS",
+            "vuelo": "2I3111",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "18/05/2026",
+            "hora_prog": "12:20",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2227",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/05/2026",
+            "hora_prog": "09:35",
+            "hora_real": "",
+            "ciudad": "AYACUCHO",
+            "vuelo": "H25206",
+            "aerolinea": "Sky Airline",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/05/2026",
+            "hora_prog": "12:20",
+            "hora_real": "",
+            "ciudad": "PUCALLPA",
+            "vuelo": "2I3111",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "LLEGADAS",
+            "fecha": "18/05/2026",
+            "hora_prog": "15:25",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2228",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        }
+    ]
 }
