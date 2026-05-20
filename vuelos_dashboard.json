@@ -1,5 +1,16 @@
 {
-    "ultima_sincronizacion": "20/05/2026 05:40:50",
-    "conteo": 0,
-    "vuelos": []
+    "ultima_sincronizacion": "20/05/2026 05:50:46",
+    "conteo": 1,
+    "vuelos": [
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/05/2026",
+            "hora_prog": "07:15",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2123",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        }
+    ]
 }
