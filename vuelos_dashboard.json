@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "20/05/2026 06:20:55",
-    "conteo": 1,
+    "ultima_sincronizacion": "20/05/2026 06:30:47",
+    "conteo": 2,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -9,6 +9,16 @@
             "hora_real": "",
             "ciudad": "CHICLAYO",
             "vuelo": "2I2123",
+            "aerolinea": "Star Peru",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/05/2026",
+            "hora_prog": "07:55",
+            "hora_real": "",
+            "ciudad": "TARAPOTO",
+            "vuelo": "2I3115",
             "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
