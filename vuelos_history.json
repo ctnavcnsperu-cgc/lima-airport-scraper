@@ -1,6 +1,6 @@
 {
-    "ultima_sincronizacion": "20/05/2026 08:20:57",
-    "conteo": 248,
+    "ultima_sincronizacion": "20/05/2026 08:30:51",
+    "conteo": 249,
     "vuelos": [
         {
             "tipo": "SALIDAS",
@@ -2480,6 +2480,16 @@
             "ciudad": "AREQUIPA",
             "vuelo": "LA2123",
             "aerolinea": "LATAM Airlines",
+            "estado": "CANCELADO"
+        },
+        {
+            "tipo": "SALIDAS",
+            "fecha": "20/05/2026",
+            "hora_prog": "12:20",
+            "hora_real": "",
+            "ciudad": "CHICLAYO",
+            "vuelo": "2I2227",
+            "aerolinea": "Star Peru",
             "estado": "CANCELADO"
         }
     ]
